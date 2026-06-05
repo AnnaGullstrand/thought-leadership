@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      if (sessionStorage.getItem('menti-auth') !== '1') {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('gate').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+      }
+    })();
+  </script>
   <title>Thought Leadership — Mentimeter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -684,6 +694,24 @@
 </head>
 <body>
 
+  <!-- Password Gate -->
+  <div id="gate" style="display:none; position:fixed; inset:0; z-index:1000; background:#323C7C; align-items:center; justify-content:center; flex-direction:column; gap:32px; font-family:'Inter',sans-serif;">
+    <div style="text-align:center; color:#fff;">
+      <div style="font-family:'MentiCompressed',sans-serif; font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:8px;">Mentimeter</div>
+      <div style="font-size:15px; color:rgba(255,255,255,0.6);">Internal resource — enter password to continue</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:320px;">
+      <input id="gate-input" type="password" placeholder="Password" autofocus
+        style="width:100%; padding:14px 18px; border-radius:8px; border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; font-size:15px; outline:none; font-family:'Inter',sans-serif;"
+        onkeydown="if(event.key==='Enter') checkPassword()">
+      <div id="gate-error" style="color:#FF7471; font-size:13px; text-align:center; min-height:18px;"></div>
+      <button onclick="checkPassword()"
+        style="width:100%; padding:14px; border-radius:8px; border:none; background:#5769E7; color:#fff; font-size:15px; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;">
+        Enter
+      </button>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <a href="/" class="nav-logo">Mentimeter</a>
@@ -778,6 +806,19 @@
     let activeFilters = { domains: new Set(), useCases: new Set(), tools: new Set() };
 
     // ── Fetch & Boot ──────────────────────────────────────────
+    function checkPassword() {
+      const val = document.getElementById('gate-input').value;
+      if (val === 'Menti2026') {
+        sessionStorage.setItem('menti-auth', '1');
+        document.getElementById('gate').style.display = 'none';
+        document.body.style.overflow = '';
+      } else {
+        document.getElementById('gate-error').textContent = 'Incorrect password — try again.';
+        document.getElementById('gate-input').value = '';
+        document.getElementById('gate-input').focus();
+      }
+    }
+
     fetch('./data/content.json')
       .then(r => r.json())
       .then(d => { data = d; init(); })
