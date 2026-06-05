@@ -124,13 +124,14 @@
     /* ─── Hero ─────────────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 82vh;
+      min-height: 300px;
+      height: 28vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       overflow: hidden;
-      padding: 80px 40px;
+      padding: 40px 40px;
     }
 
     .hero-bg {
@@ -166,47 +167,21 @@
 
     .hero-headline {
       font-family: var(--font-display);
-      font-size: clamp(64px, 8vw, 108px);
+      font-size: clamp(40px, 5vw, 64px);
       font-weight: 700;
-      line-height: 0.95;
+      line-height: 1;
       color: var(--white);
-      letter-spacing: -1px;
-      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
 
     .hero-sub {
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(14px, 1.5vw, 16px);
       font-weight: 400;
       line-height: 1.6;
       color: rgba(255,255,255,0.82);
-      max-width: 560px;
+      max-width: 480px;
       margin: 0 auto;
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.5);
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .hero-scroll-line {
-      width: 1px;
-      height: 36px;
-      background: rgba(255,255,255,0.3);
-      animation: scrollPulse 2s ease infinite;
-    }
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.8; }
     }
 
     /* ─── Skills Section ────────────────────────────────────── */
@@ -675,20 +650,66 @@
     @media (max-width: 1200px) {
       .skills-grid { grid-template-columns: repeat(4, 1fr); }
     }
+
     @media (max-width: 900px) {
       .skills-grid { grid-template-columns: repeat(3, 1fr); }
       .nav-cta { display: none; }
+      .nav-links a { font-size: 13px; padding: 6px 10px; }
     }
+
     @media (max-width: 640px) {
-      .nav { padding: 0 20px; }
-      .skills-section { padding: 48px 20px 60px; }
-      .hero { padding: 60px 20px; min-height: 70vh; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .filter-group-label { min-width: 60px; }
-      .modal-panel { width: 100vw; top: auto; height: 92vh; transform: translateY(100%); border-radius: 16px 16px 0 0; }
+      /* Nav */
+      .nav { padding: 0 16px; height: 56px; }
+      .nav-logo { font-size: 18px; }
+      .nav-links { gap: 2px; }
+      .nav-links a { font-size: 12px; padding: 5px 8px; }
+
+      /* Hero */
+      .hero { padding: 28px 20px; height: auto; min-height: 180px; }
+      .hero-label { font-size: 10px; margin-bottom: 10px; }
+
+      /* Skills section */
+      .skills-section { padding: 32px 16px 48px; }
+      .skills-header { margin-bottom: 24px; }
+      .skills-header p { font-size: 14px; }
+
+      /* Filter bar */
+      .filter-bar { padding: 12px 0 14px; top: 56px; }
+      .filter-group { gap: 6px; margin-bottom: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
+      .filter-group::-webkit-scrollbar { display: none; }
+      .filter-group-label { min-width: 56px; font-size: 10px; flex-shrink: 0; }
+      .filter-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .filter-chips::-webkit-scrollbar { display: none; }
+      .chip { font-size: 12px; padding: 4px 10px; white-space: nowrap; flex-shrink: 0; }
+      .filter-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .filter-count { font-size: 12px; }
+
+      /* Grid */
+      .skills-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .card { padding: 16px; gap: 8px; }
+      .card-headline { font-size: 13px; }
+      .card-problem, .card-solution { font-size: 12px; }
+      .card-domain-tag { font-size: 10px; padding: 2px 8px; }
+
+      /* Modal — slides up from bottom */
+      .modal-panel {
+        width: 100vw;
+        top: auto;
+        height: 92dvh;
+        transform: translateY(100%);
+        border-radius: 16px 16px 0 0;
+      }
       .modal-panel.open { transform: translateY(0); }
-      .modal-header { padding: 24px 24px 20px; }
-      .modal-body { padding: 20px 24px 40px; }
+      .modal-header { padding: 20px 20px 16px; }
+      .modal-headline { font-size: 24px; }
+      .modal-body { padding: 16px 20px 40px; gap: 20px; }
+      .modal-principle { font-size: 14px; padding: 14px 16px; }
+      .modal-tag-label { min-width: 70px; font-size: 10px; }
+    }
+
+    @media (max-width: 380px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
@@ -730,10 +751,6 @@
       <span class="hero-label">Science-Informed Thought Leadership</span>
       <h1 class="hero-headline">Switch people on.</h1>
       <p class="hero-sub">The science behind how great leaders educate, communicate, and facilitate — and how Mentimeter makes it happen.</p>
-    </div>
-    <div class="hero-scroll">
-      <span>Explore</span>
-      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
