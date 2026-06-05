@@ -1,0 +1,374 @@
+{
+  "hero": {
+    "headline": "Switch people on.",
+    "subheadline": "The science behind how great leaders educate, communicate, and facilitate — and how Mentimeter makes it happen.",
+    "backgroundImage": "/assets/images/hero-speaker.jpg",
+    "overlayColor": "rgba(50, 60, 124, 0.55)"
+  },
+
+  "filters": {
+    "domains": [
+      { "id": "individual-cognition", "label": "Individual Cognition", "color": "#5769E7" },
+      { "id": "learning-science",     "label": "Learning Science",     "color": "#FF7471" },
+      { "id": "social-psychology",    "label": "Social Psychology",    "color": "#6C67CF" },
+      { "id": "decision-science",     "label": "Decision Science",     "color": "#52AD6E" },
+      { "id": "behavioral-science",   "label": "Behavioral Science",   "color": "#DBAB30" }
+    ],
+    "useCases": [
+      { "id": "training",     "label": "Training & Learning" },
+      { "id": "townhall",     "label": "Town Hall / All-Hands" },
+      { "id": "team-meeting", "label": "Team Meeting" },
+      { "id": "check-in",     "label": "Team Check-In" },
+      { "id": "workshop",     "label": "Workshop" },
+      { "id": "onboarding",   "label": "Onboarding" },
+      { "id": "presentation", "label": "Presentation / Keynote" },
+      { "id": "advisory",     "label": "Advisory / Consulting" }
+    ],
+    "tools": [
+      { "id": "menti-live",        "label": "Menti Live" },
+      { "id": "menti-pulse",       "label": "Menti Pulse" },
+      { "id": "menti-form",        "label": "Menti Form" },
+      { "id": "engagement-suite",  "label": "Engagement Suite" },
+      { "id": "menti-workshop",    "label": "Menti Workshop" }
+    ]
+  },
+
+  "scienceSkills": [
+    {
+      "id": "reset-attention",
+      "domain": "individual-cognition",
+      "headline": "Reset Attention Continuously",
+      "problem": "Attention fluctuates. People drift — not because they don't care, but because passive listening isn't enough to stay present.",
+      "solution": "Build interaction moments into every session to re-orient focus and bring people back into active processing.",
+      "source": {
+        "text": "Posner & Petersen (1990); Mayer (2009)",
+        "url": "https://doi.org/10.1146/annurev.ne.13.030190.000325"
+      },
+      "back": {
+        "principle": "Attention is limited and decays over time without stimulation. Passive listening leads to shallow processing.",
+        "whatHappened": "You were asked a question — and you started thinking.",
+        "whyItWorks": "Questions don't just ask for answers. They activate attention and create a sense of involvement.",
+        "scienceBehind": "Attention systems require periodic reactivation. Multimedia learning research confirms that interaction points improve retention and engagement.",
+        "inPractice": "Don't let people listen for more than a few minutes without a question or interaction. Use pulse checks, quick polls, or open questions to reset.",
+        "relatedOpinion": "Activate Participation"
+      },
+      "useCases": ["training", "townhall", "team-meeting", "presentation", "workshop", "onboarding", "check-in", "advisory"],
+      "tools": ["menti-live", "engagement-suite"]
+    },
+    {
+      "id": "reduce-cognitive-overload",
+      "domain": "individual-cognition",
+      "headline": "Reduce Cognitive Overload",
+      "problem": "Working memory is small. Too much information at once leads to confusion, not comprehension.",
+      "solution": "Break content into smaller, focused parts. One idea at a time. One question at a time.",
+      "source": {
+        "text": "Sweller (1988); Sweller, Ayres & Kalyuga (2011)",
+        "url": "https://doi.org/10.1207/s15516709cog1202_4"
+      },
+      "back": {
+        "principle": "Cognitive Load Theory shows that excess information degrades understanding. The brain needs space to process.",
+        "whatHappened": "When content was chunked, you followed it — when it wasn't, you lost the thread.",
+        "whyItWorks": "Structure reduces the cognitive effort needed to follow and understand content.",
+        "scienceBehind": "Working memory can hold roughly 4±1 items at a time. Overloading it blocks learning and reduces decision quality.",
+        "inPractice": "Structure beats density. Remove slides, split long questions, and pause before moving on.",
+        "relatedOpinion": "Make People Understand Deeply"
+      },
+      "useCases": ["training", "presentation", "townhall", "onboarding", "advisory"],
+      "tools": ["menti-live"]
+    },
+    {
+      "id": "protect-individual-thinking",
+      "domain": "individual-cognition",
+      "headline": "Protect Individual Thinking",
+      "problem": "Early opinions anchor the group. The loudest voice shapes everyone else's view before they've had time to think.",
+      "solution": "Capture individual input before any group discussion begins — ideally anonymously.",
+      "source": {
+        "text": "Asch (1955); Stasser & Titus (1985)",
+        "url": "https://doi.org/10.1037/0022-3514.48.6.1467"
+      },
+      "back": {
+        "principle": "Social influence and information sampling bias show that group discussion often narrows rather than expands thinking.",
+        "whatHappened": "When you answered before seeing others' responses, your answer was genuinely yours.",
+        "whyItWorks": "Anonymity and individual-first sequencing preserve independent judgment.",
+        "scienceBehind": "Conformity research (Asch) and hidden profile studies (Stasser) show groups systematically suppress minority views without structure.",
+        "inPractice": "Always ask people to respond individually before revealing results or opening discussion.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "townhall", "check-in"],
+      "tools": ["menti-live", "engagement-suite", "menti-workshop"]
+    },
+    {
+      "id": "make-thinking-visible",
+      "domain": "individual-cognition",
+      "headline": "Make Thinking Visible",
+      "problem": "Assumptions and patterns stay hidden in people's heads. What isn't shared can't be challenged or built upon.",
+      "solution": "Externalize input so individuals and groups can see, compare, and make sense of what matters.",
+      "source": {
+        "text": "Stasser & Titus (1985); Chi et al. (1989)",
+        "url": "https://doi.org/10.1037/0022-3514.48.6.1467"
+      },
+      "back": {
+        "principle": "Shared information becomes group knowledge only when it is externalized. Hidden assumptions drive poor decisions.",
+        "whatHappened": "When responses were displayed, you saw patterns and perspectives you didn't know existed.",
+        "whyItWorks": "Visibility creates a shared object to react to, discuss, and decide from.",
+        "scienceBehind": "Self-explanation and externalization research shows that making thinking visible improves individual understanding and collective sense-making.",
+        "inPractice": "Use word clouds, open text, and rating distributions to surface what would otherwise stay inside people's heads.",
+        "relatedOpinion": "Structure How People Think Together"
+      },
+      "useCases": ["team-meeting", "workshop", "townhall", "advisory", "training"],
+      "tools": ["menti-live", "menti-workshop", "engagement-suite"]
+    },
+    {
+      "id": "use-retrieval",
+      "domain": "learning-science",
+      "headline": "Use Retrieval Instead of Repetition",
+      "problem": "Repeating information doesn't strengthen memory. People hear the same thing and forget it just the same.",
+      "solution": "Ask people to recall information before reviewing it. The act of retrieval is the learning.",
+      "source": {
+        "text": "Roediger & Karpicke (2006); Karpicke & Blunt (2011)",
+        "url": "https://doi.org/10.1111/j.1467-9280.2006.01693.x"
+      },
+      "back": {
+        "principle": "The 'testing effect' — retrieving information from memory strengthens memory traces more than re-reading or re-listening.",
+        "whatHappened": "When asked 'What do you remember?', you worked harder — and retained more.",
+        "whyItWorks": "Effortful retrieval creates stronger memory consolidation than passive re-exposure.",
+        "scienceBehind": "Test-Enhanced Learning research shows retrieval practice produces more durable learning than elaborative studying.",
+        "inPractice": "Start sessions with 'What do you remember from last week?' before presenting anything new.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "onboarding", "check-in"],
+      "tools": ["menti-pulse", "menti-live"]
+    },
+    {
+      "id": "generate-own-answers",
+      "domain": "learning-science",
+      "headline": "Let People Generate Their Own Answers",
+      "problem": "When people receive the answer first, they process it passively — and remember little of it.",
+      "solution": "Ask people to generate their own answer before revealing the solution or insight.",
+      "source": {
+        "text": "Slamecka & Graf (1978); McDaniel et al. (2009)",
+        "url": "https://doi.org/10.1037/0278-7393.4.6.592"
+      },
+      "back": {
+        "principle": "The 'generation effect' — self-generated material is better retained than passively received material.",
+        "whatHappened": "When asked for your opinion before being told the answer, you thought harder.",
+        "whyItWorks": "Generation creates effortful processing and deeper encoding in long-term memory.",
+        "scienceBehind": "Producing material requires active engagement with prior knowledge, creating stronger memory traces than passive reception.",
+        "inPractice": "Before sharing a key insight, ask people to generate their own answer first. Then reveal and compare.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "useCases": ["training", "workshop", "advisory", "onboarding"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "activate-prior-knowledge",
+      "domain": "learning-science",
+      "headline": "Activate Prior Knowledge",
+      "problem": "New information floats without an anchor. Without connection to what people already know, it doesn't stick.",
+      "solution": "Start every learning moment by asking what people already know or believe about the topic.",
+      "source": {
+        "text": "Bransford, Brown & Cocking (2000)",
+        "url": "https://doi.org/10.17226/9853"
+      },
+      "back": {
+        "principle": "Prior knowledge activation improves subsequent learning by creating cognitive hooks for new information.",
+        "whatHappened": "Before being taught, you were asked what you already knew — making the new information feel connected.",
+        "whyItWorks": "Learning builds on existing structures. Activating them first makes new content easier to integrate.",
+        "scienceBehind": "Schema theory and constructivist learning research show that prior knowledge is the strongest predictor of new learning.",
+        "inPractice": "Open every training or presentation with a question about existing knowledge or belief on the topic.",
+        "relatedOpinion": "Make People Understand Deeply"
+      },
+      "useCases": ["training", "onboarding", "advisory"],
+      "tools": ["menti-live"]
+    },
+    {
+      "id": "reinforce-over-time",
+      "domain": "learning-science",
+      "headline": "Reinforce Over Time",
+      "problem": "One-off sessions don't change performance. Without follow-up, learning fades within days.",
+      "solution": "Space out questions and practice moments over time to strengthen long-term memory retention.",
+      "source": {
+        "text": "Ebbinghaus (1885); Cepeda et al. (2006)",
+        "url": "https://doi.org/10.1111/j.1467-9280.2006.01701.x"
+      },
+      "back": {
+        "principle": "The 'spacing effect' — distributed practice produces stronger retention than massed practice (cramming).",
+        "whatHappened": "Revisiting content days later — not just once — is what makes it stay.",
+        "whyItWorks": "Each retrieval after a delay re-consolidates the memory, making it more durable.",
+        "scienceBehind": "Forgetting curve research shows memory decays rapidly without reinforcement. Spaced repetition counteracts this.",
+        "inPractice": "Build follow-up questions, check-ins, and micro-practice moments into the days and weeks after any learning event.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "onboarding", "check-in"],
+      "tools": ["menti-pulse", "menti-form"]
+    },
+    {
+      "id": "learn-socially",
+      "domain": "social-psychology",
+      "headline": "Learn Socially",
+      "problem": "Individual reflection has limits. Without discussing and comparing with others, understanding stays shallow.",
+      "solution": "After individual thinking, share and compare — use the diversity of responses as the teaching moment.",
+      "source": {
+        "text": "Vygotsky (1978); Johnson & Johnson (1989)",
+        "url": "https://doi.org/10.1007/978-1-4615-7153-1"
+      },
+      "back": {
+        "principle": "Social learning increases cognitive engagement, motivation, and retention through discussion and comparison.",
+        "whatHappened": "Seeing how others responded to the same question expanded your own thinking.",
+        "whyItWorks": "Explaining and comparing ideas with others forces deeper processing than solo reflection.",
+        "scienceBehind": "Collaborative learning research shows that articulating ideas to others improves understanding and long-term retention.",
+        "inPractice": "Show results after individual responses and use the distribution to guide a short discussion.",
+        "relatedOpinion": "Structure How People Think Together"
+      },
+      "useCases": ["training", "workshop", "team-meeting", "advisory"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "distribute-participation",
+      "domain": "social-psychology",
+      "headline": "Distribute Participation",
+      "problem": "A few voices dominate. Most people stay silent — not because they have nothing to say, but because the structure doesn't invite them.",
+      "solution": "Use tools and formats that ensure everyone contributes, not just the confident or the senior.",
+      "source": {
+        "text": "Woolley et al. (2010); Stasser & Titus (1985)",
+        "url": "https://doi.org/10.1126/science.1193147"
+      },
+      "back": {
+        "principle": "Groups that hear from all members make better decisions. Broad participation improves idea diversity and collective performance.",
+        "whatHappened": "When everyone submitted a response simultaneously, the room's full range of thinking became visible.",
+        "whyItWorks": "Equal participation reduces dominance effects and surfaces knowledge held by quieter people.",
+        "scienceBehind": "Collective intelligence research shows that the strongest predictor of team performance is equal distribution of speaking time.",
+        "inPractice": "Anonymous contribution tools level the playing field. Set the expectation: everyone answers before anyone speaks.",
+        "relatedOpinion": "Activate Participation"
+      },
+      "useCases": ["townhall", "team-meeting", "workshop", "presentation"],
+      "tools": ["menti-live", "engagement-suite"]
+    },
+    {
+      "id": "surface-disagreement",
+      "domain": "social-psychology",
+      "headline": "Surface Disagreement & Diverse Perspectives",
+      "problem": "Groups converge too quickly. Agreement can hide weak thinking, unspoken doubt, and unconsidered options.",
+      "solution": "Actively surface disagreement and minority views before converging on a decision.",
+      "source": {
+        "text": "Nemeth (1986); Janis (1972)",
+        "url": "https://doi.org/10.1037/0022-3514.57.5.729"
+      },
+      "back": {
+        "principle": "Groupthink and cascade effects suppress minority views. Diverse perspectives improve decisions.",
+        "whatHappened": "When the spread of opinions was displayed, you saw the disagreement that would have stayed hidden.",
+        "whyItWorks": "Visible disagreement challenges assumptions and triggers deeper evaluation of options.",
+        "scienceBehind": "Deviant minority research (Nemeth) shows that minority viewpoints — even when wrong — improve group decision quality by prompting deeper analysis.",
+        "inPractice": "Visualize the spread of opinions. If everyone agrees immediately, treat that as a signal to probe further.",
+        "relatedOpinion": "Structure How People Think Together"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "clarify-decision",
+      "domain": "decision-science",
+      "headline": "Clarify Decision Type & Criteria",
+      "problem": "People evaluate options inconsistently when the decision type and success criteria aren't defined upfront.",
+      "solution": "Define what you're deciding and what a good decision looks like before evaluating any options.",
+      "source": {
+        "text": "Kahneman, Sibony & Sunstein (2021) — Noise",
+        "url": "https://doi.org/10.1007/s10551-021-04951-3"
+      },
+      "back": {
+        "principle": "Noise — inconsistency in judgment — decreases dramatically when criteria are shared and explicit.",
+        "whatHappened": "When the decision and evaluation criteria were set upfront, your input was more focused and useful.",
+        "whyItWorks": "Shared criteria align thinking and reduce the variance in how people evaluate the same options.",
+        "scienceBehind": "Decision science research shows that inconsistent judgments (noise) are as damaging as bias — and harder to detect.",
+        "inPractice": "Before any vote or evaluation: ask 'What are we deciding, and what does a good decision look like here?'",
+        "relatedOpinion": "Structure How People Think Together"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "goal-clarity",
+      "domain": "behavioral-science",
+      "headline": "Goal Clarity & Specificity",
+      "problem": "Vague goals produce vague effort. 'Do your best' is not a strategy.",
+      "solution": "Set clear, specific goals and success criteria before any session or initiative begins.",
+      "source": {
+        "text": "Locke & Latham (2002)",
+        "url": "https://doi.org/10.1037/0003-066X.57.9.705"
+      },
+      "back": {
+        "principle": "Goal-setting theory shows that specific, challenging goals drive higher performance than vague or easy ones.",
+        "whatHappened": "When the outcome was defined clearly before the session started, thinking became more directed.",
+        "whyItWorks": "Specificity creates focus. When people know what success looks like, they allocate effort more effectively.",
+        "scienceBehind": "Decades of goal-setting research (Locke & Latham) show that specificity and challenge are the two strongest predictors of goal performance.",
+        "inPractice": "Start every meeting or training with: 'What outcome are we trying to achieve, and how will we know we succeeded?'",
+        "relatedOpinion": "Clarify Intent"
+      },
+      "useCases": ["team-meeting", "training", "workshop", "advisory", "townhall", "onboarding"],
+      "tools": ["menti-live", "menti-form"]
+    },
+    {
+      "id": "implementation-intentions",
+      "domain": "behavioral-science",
+      "headline": "Implementation Intentions",
+      "problem": "Good intentions don't automatically become actions. The gap between 'I will' and 'I did' is where most change fails.",
+      "solution": "Link intended behaviors to specific situations: 'If X happens, then I will do Y.'",
+      "source": {
+        "text": "Gollwitzer (1999)",
+        "url": "https://doi.org/10.1037/0003-066X.54.7.493"
+      },
+      "back": {
+        "principle": "If–then planning bridges the intention–action gap by pre-deciding behavior in specific contexts.",
+        "whatHappened": "When asked 'When specifically will you do this?', the commitment became concrete.",
+        "whyItWorks": "Linking an intention to a specific trigger removes the need for in-the-moment decision-making.",
+        "scienceBehind": "Implementation intention research shows 2–3× higher follow-through rates compared to simple goal-setting.",
+        "inPractice": "End sessions with: 'What will you do differently — and when and where specifically will you do it?'",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "check-in", "workshop", "onboarding"],
+      "tools": ["menti-pulse", "menti-form"]
+    },
+    {
+      "id": "psychological-safety",
+      "domain": "behavioral-science",
+      "headline": "Create Psychological Safety",
+      "problem": "People hold back when there is social risk. The most important ideas stay unspoken.",
+      "solution": "Design for safety: use anonymity, model openness, and make it genuinely easy to speak up.",
+      "source": {
+        "text": "Edmondson (1999)",
+        "url": "https://doi.org/10.2307/2666999"
+      },
+      "back": {
+        "principle": "Teams with high psychological safety outperform those without — across all measures of performance.",
+        "whatHappened": "When responses were anonymous, people shared what they actually thought.",
+        "whyItWorks": "Removing social risk increases honesty, openness, and cognitive flexibility.",
+        "scienceBehind": "Edmondson's team research shows psychological safety is the single strongest predictor of team learning and performance.",
+        "inPractice": "Anonymity is a design tool, not a fallback. Build it in by default for sensitive or evaluative questions.",
+        "relatedOpinion": "Create Ownership & Commitment"
+      },
+      "useCases": ["team-meeting", "townhall", "workshop", "check-in", "advisory"],
+      "tools": ["menti-live", "engagement-suite"]
+    },
+    {
+      "id": "feedback-loops",
+      "domain": "behavioral-science",
+      "headline": "Build Feedback Loops",
+      "problem": "Progress stalls without feedback. People don't know if they're improving — or how.",
+      "solution": "Provide timely, specific feedback that makes progress visible and actionable.",
+      "source": {
+        "text": "Hattie & Timperley (2007)",
+        "url": "https://doi.org/10.3102/003465430298487"
+      },
+      "back": {
+        "principle": "Feedback is one of the most powerful drivers of behavior change — but only when it is timely and actionable.",
+        "whatHappened": "Seeing your results immediately and in context of others gave you something concrete to respond to.",
+        "whyItWorks": "Feedback closes the loop between effort and outcome, enabling learning and course-correction.",
+        "scienceBehind": "Meta-analysis of feedback research (Hattie) shows it has one of the highest effect sizes on learning of any intervention.",
+        "inPractice": "Show results immediately. Let people see how their input compared to others. Make learning visible in the room.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "check-in", "onboarding", "team-meeting"],
+      "tools": ["menti-pulse", "menti-live"]
+    }
+  ]
+}

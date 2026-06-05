@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thought Leadership — Mentimeter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-800:  #323C7C;
+      --blue-500:  #5769E7;
+      --blue-100:  #D5DAF7;
+      --coral-800: #802E2D;
+      --coral-500: #FF7471;
+      --coral-100: #FFDEDD;
+      --sand-800:  #615B55;
+      --sand-500:  #A59D94;
+      --sand-100:  #F3EDE7;
+      --white:     #FFFFFF;
+      --black:     #111111;
+
+      --domain-individual-cognition: #5769E7;
+      --domain-learning-science:     #FF7471;
+      --domain-social-psychology:    #6C67CF;
+      --domain-decision-science:     #52AD6E;
+      --domain-behavioral-science:   #DBAB30;
+
+      --font-display: 'MentiCompressed', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --radius-card:  12px;
+      --radius-chip:  100px;
+      --shadow-card:  0 2px 12px rgba(0,0,0,0.07);
+      --shadow-hover: 0 8px 28px rgba(0,0,0,0.13);
+      --transition:   all 200ms ease;
+    }
+
+    @font-face {
+      font-family: 'MentiCompressed';
+      src: url('assets/fonts/MentiCompressed-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Navigation ───────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: box-shadow 200ms ease;
+    }
+    .nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue-800);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--sand-800);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue-500);
+      background: var(--blue-100);
+    }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--blue-500);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .nav-cta:hover { background: var(--blue-800); }
+
+    /* ─── Hero ─────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 80px 40px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/images/hero-speaker.jpg');
+      background-size: cover;
+      background-position: center 25%;
+      z-index: 0;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(50, 60, 124, 0.58);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--coral-100);
+      margin-bottom: 20px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(64px, 8vw, 108px);
+      font-weight: 700;
+      line-height: 0.95;
+      color: var(--white);
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 400;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 36px;
+      background: rgba(255,255,255,0.3);
+      animation: scrollPulse 2s ease infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* ─── Skills Section ────────────────────────────────────── */
+    .skills-section {
+      background: var(--sand-100);
+      padding: 72px 40px 80px;
+    }
+
+    .skills-header {
+      max-width: 1280px;
+      margin: 0 auto 40px;
+    }
+    .skills-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 700;
+      color: var(--blue-800);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .skills-header p {
+      font-size: 16px;
+      color: var(--sand-800);
+      max-width: 480px;
+    }
+
+    /* ─── Filter Bar ────────────────────────────────────────── */
+    .filter-bar {
+      position: sticky;
+      top: 64px;
+      z-index: 50;
+      background: var(--sand-100);
+      padding: 16px 0 20px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .filter-bar-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .filter-group:last-child { margin-bottom: 0; }
+
+    .filter-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      min-width: 90px;
+      flex-shrink: 0;
+    }
+
+    .filter-chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: var(--radius-chip);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: var(--transition);
+      background: var(--white);
+      color: var(--sand-800);
+      border-color: rgba(0,0,0,0.1);
+      user-select: none;
+      white-space: nowrap;
+    }
+    .chip:hover {
+      border-color: var(--blue-500);
+      color: var(--blue-500);
+    }
+    .chip.active {
+      background: var(--blue-500);
+      color: var(--white);
+      border-color: var(--blue-500);
+    }
+    .chip.domain-chip.active { background: var(--chip-color, var(--blue-500)); border-color: var(--chip-color, var(--blue-500)); }
+
+    .chip-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.7;
+    }
+
+    .filter-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 12px auto 0;
+    }
+    .filter-count {
+      font-size: 13px;
+      color: var(--sand-800);
+    }
+    .filter-count strong { color: var(--black); }
+
+    .reset-btn {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue-500);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .reset-btn.visible { opacity: 1; }
+    .reset-btn:hover { text-decoration: underline; }
+
+    /* ─── Grid ──────────────────────────────────────────────── */
+    .skills-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .card-wrapper {
+      transition: opacity 300ms ease, transform 300ms ease;
+    }
+    .card-wrapper.hidden {
+      display: none;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-card);
+      border: 1.5px solid rgba(0,0,0,0.07);
+      padding: 24px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-card);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(87,105,231,0.25);
+    }
+
+    .card-domain-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--tag-color, var(--blue-500));
+      padding: 3px 10px;
+      border-radius: 100px;
+      align-self: flex-start;
+    }
+
+    .card-headline {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--black);
+    }
+
+    .card-problem {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--sand-800);
+      font-style: italic;
+    }
+
+    .card-solution {
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--black);
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      margin-top: auto;
+    }
+    .card-source {
+      font-size: 11px;
+      color: var(--blue-500);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .card-source:hover { text-decoration: underline; }
+
+    .card-more {
+      font-size: 11px;
+      color: var(--sand-500);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-more svg { transition: transform 200ms ease; }
+    .card:hover .card-more svg { transform: translateX(2px); }
+
+    /* Empty state */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--sand-800);
+      display: none;
+    }
+    .empty-state.visible { display: block; }
+    .empty-state h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    /* ─── Modal ─────────────────────────────────────────────── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms ease;
+      backdrop-filter: blur(3px);
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 520px;
+      max-width: 100vw;
+      background: var(--white);
+      z-index: 201;
+      transform: translateX(100%);
+      transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-panel.open { transform: translateX(0); }
+
+    .modal-header {
+      padding: 32px 36px 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 1;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--sand-100);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sand-800);
+      transition: var(--transition);
+    }
+    .modal-close:hover { background: var(--coral-100); color: var(--coral-800); }
+
+    .modal-domain-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--tag-color, var(--blue-500));
+      padding: 3px 10px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    .modal-headline {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--blue-800);
+      padding-right: 40px;
+    }
+
+    .modal-body {
+      padding: 28px 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .modal-principle {
+      background: var(--blue-100);
+      border-left: 3px solid var(--blue-500);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.55;
+      color: var(--blue-800);
+    }
+
+    .modal-section { display: flex; flex-direction: column; gap: 8px; }
+
+    .modal-section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+    }
+
+    .modal-section-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--black);
+    }
+
+    .modal-science-box {
+      background: var(--sand-100);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .modal-science-row { display: flex; flex-direction: column; gap: 4px; }
+
+    .modal-science-row .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+    }
+    .modal-science-row .value {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--black);
+    }
+
+    .modal-tags-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modal-tag-group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+    .modal-tag-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      min-width: 90px;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--sand-100);
+      color: var(--sand-800);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .modal-opinion {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--coral-100);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+    .modal-opinion-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .modal-opinion-text { display: flex; flex-direction: column; gap: 2px; }
+    .modal-opinion-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--coral-800);
+    }
+    .modal-opinion-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    .modal-source-link {
+      font-size: 13px;
+      color: var(--blue-500);
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .modal-source-link:hover { text-decoration: underline; }
+
+    /* ─── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--blue-800);
+      color: rgba(255,255,255,0.6);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer .footer-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    footer p { font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 1200px) {
+      .skills-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .skills-grid { grid-template-columns: repeat(3, 1fr); }
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 0 20px; }
+      .skills-section { padding: 48px 20px 60px; }
+      .hero { padding: 60px 20px; min-height: 70vh; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .filter-group-label { min-width: 60px; }
+      .modal-panel { width: 100vw; top: auto; height: 92vh; transform: translateY(100%); border-radius: 16px 16px 0 0; }
+      .modal-panel.open { transform: translateY(0); }
+      .modal-header { padding: 24px 24px 20px; }
+      .modal-body { padding: 20px 24px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="/" class="nav-logo">Mentimeter</a>
+    <ul class="nav-links">
+      <li><a href="#">Our Thought Leadership</a></li>
+      <li><a href="#science" class="active">Science Dictionary</a></li>
+      <li><a href="#">Menti Application</a></li>
+    </ul>
+    <a href="https://www.mentimeter.com" target="_blank" class="nav-cta">Try Mentimeter ↗</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-label">Science-Informed Thought Leadership</span>
+      <h1 class="hero-headline">Switch people on.</h1>
+      <p class="hero-sub">The science behind how great leaders educate, communicate, and facilitate — and how Mentimeter makes it happen.</p>
+    </div>
+    <div class="hero-scroll">
+      <span>Explore</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="science">
+
+    <div class="skills-header">
+      <h2>Science Dictionary</h2>
+      <p>16 science mechanics — each one a lever for better leadership. Filter by domain, use case, or Menti tool.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-bar-inner">
+        <div class="filter-group">
+          <span class="filter-group-label">Domain</span>
+          <div class="filter-chips" id="filter-domains"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group-label">Use Case</span>
+          <div class="filter-chips" id="filter-usecases"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-group-label">Tool</span>
+          <div class="filter-chips" id="filter-tools"></div>
+        </div>
+      </div>
+      <div class="filter-meta">
+        <span class="filter-count" id="filter-count">Loading…</span>
+        <button class="reset-btn" id="reset-btn" onclick="resetFilters()">Clear all filters</button>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="skills-grid" id="skills-grid">
+      <div class="empty-state" id="empty-state">
+        <h3>No skills match these filters</h3>
+        <p>Try removing a filter or <button onclick="resetFilters()" style="background:none;border:none;color:var(--blue-500);cursor:pointer;font-size:inherit;font-weight:500">clear all</button>.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Modal overlay -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+  <!-- Modal panel -->
+  <div class="modal-panel" id="modal-panel">
+    <div class="modal-header" id="modal-header">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-domain-tag" id="modal-tag"></div>
+      <h2 class="modal-headline" id="modal-headline"></h2>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Mentimeter</div>
+    <p>Internal resource — Thought Leadership & Science · 2025</p>
+    <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
+  <script>
+    let data = null;
+    let activeFilters = { domains: new Set(), useCases: new Set(), tools: new Set() };
+
+    // ── Fetch & Boot ──────────────────────────────────────────
+    fetch('./data/content.json')
+      .then(r => r.json())
+      .then(d => { data = d; init(); })
+      .catch(() => {
+        document.getElementById('filter-count').textContent = 'Could not load content — is the server running?';
+      });
+
+    function init() {
+      buildFilters();
+      renderCards();
+      document.getElementById('nav').addEventListener('scroll', () => {});
+      window.addEventListener('scroll', () => {
+        document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+      });
+    }
+
+    // ── Filters ───────────────────────────────────────────────
+    function buildFilters() {
+      renderChips('filter-domains', data.filters.domains, 'domains', true);
+      renderChips('filter-usecases', data.filters.useCases, 'useCases', false);
+      renderChips('filter-tools', data.filters.tools, 'tools', false);
+    }
+
+    function renderChips(containerId, items, group, isDomain) {
+      const container = document.getElementById(containerId);
+      items.forEach(item => {
+        const chip = document.createElement('div');
+        chip.className = 'chip' + (isDomain ? ' domain-chip' : '');
+        if (isDomain) chip.style.setProperty('--chip-color', item.color);
+        chip.dataset.id = item.id;
+        chip.dataset.group = group;
+
+        if (isDomain) {
+          chip.innerHTML = `<span class="chip-dot" style="background:${item.color}"></span>${item.label}`;
+        } else {
+          chip.textContent = item.label;
+        }
+
+        chip.addEventListener('click', () => toggleFilter(chip, group, item.id));
+        container.appendChild(chip);
+      });
+    }
+
+    function toggleFilter(chip, group, id) {
+      const set = activeFilters[group];
+      if (set.has(id)) { set.delete(id); chip.classList.remove('active'); }
+      else             { set.add(id);    chip.classList.add('active'); }
+      updateResetBtn();
+      renderCards();
+    }
+
+    function resetFilters() {
+      activeFilters = { domains: new Set(), useCases: new Set(), tools: new Set() };
+      document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+      updateResetBtn();
+      renderCards();
+    }
+
+    function updateResetBtn() {
+      const hasActive = activeFilters.domains.size || activeFilters.useCases.size || activeFilters.tools.size;
+      document.getElementById('reset-btn').classList.toggle('visible', !!hasActive);
+    }
+
+    function skillMatches(skill) {
+      const { domains, useCases, tools } = activeFilters;
+      if (domains.size && !domains.has(skill.domain)) return false;
+      if (useCases.size && !skill.useCases.some(u => useCases.has(u))) return false;
+      if (tools.size && !skill.tools.some(t => tools.has(t))) return false;
+      return true;
+    }
+
+    // ── Cards ─────────────────────────────────────────────────
+    function domainColor(domainId) {
+      const map = {
+        'individual-cognition': '#5769E7',
+        'learning-science':     '#FF7471',
+        'social-psychology':    '#6C67CF',
+        'decision-science':     '#52AD6E',
+        'behavioral-science':   '#DBAB30',
+      };
+      return map[domainId] || '#5769E7';
+    }
+
+    function domainLabel(domainId) {
+      return (data.filters.domains.find(d => d.id === domainId) || {}).label || domainId;
+    }
+
+    function renderCards() {
+      const grid = document.getElementById('skills-grid');
+      const empty = document.getElementById('empty-state');
+
+      // Remove existing cards (keep empty state node)
+      grid.querySelectorAll('.card-wrapper').forEach(el => el.remove());
+
+      let visible = 0;
+      data.scienceSkills.forEach(skill => {
+        const matches = skillMatches(skill);
+        if (!matches) return;
+        visible++;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'card-wrapper';
+        wrapper.innerHTML = cardHTML(skill);
+        wrapper.querySelector('.card').addEventListener('click', () => openModal(skill));
+        grid.insertBefore(wrapper, empty);
+      });
+
+      const total = data.scienceSkills.length;
+      const countEl = document.getElementById('filter-count');
+      countEl.innerHTML = visible === total
+        ? `Showing all <strong>${total}</strong> science skills`
+        : `Showing <strong>${visible}</strong> of <strong>${total}</strong> skills`;
+
+      empty.classList.toggle('visible', visible === 0);
+    }
+
+    function cardHTML(skill) {
+      const color = domainColor(skill.domain);
+      return `
+        <div class="card">
+          <div class="card-domain-tag" style="--tag-color:${color}">${domainLabel(skill.domain)}</div>
+          <div class="card-headline">${skill.headline}</div>
+          <div class="card-problem">${skill.problem}</div>
+          <div class="card-solution">${skill.solution}</div>
+          <div class="card-footer">
+            <a class="card-source" href="${skill.source.url}" target="_blank" onclick="event.stopPropagation()">
+              ${skill.source.text.split(';')[0]}
+            </a>
+            <span class="card-more">
+              Read more
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>`;
+    }
+
+    // ── Modal ─────────────────────────────────────────────────
+    function openModal(skill) {
+      const color = domainColor(skill.domain);
+
+      document.getElementById('modal-tag').style.background = color;
+      document.getElementById('modal-tag').textContent = domainLabel(skill.domain);
+      document.getElementById('modal-headline').textContent = skill.headline;
+
+      // Build use case + tool labels
+      const useCaseLabels = skill.useCases.map(id => {
+        const found = data.filters.useCases.find(u => u.id === id);
+        return found ? `<span class="tag">${found.label}</span>` : '';
+      }).join('');
+
+      const toolLabels = skill.tools.map(id => {
+        const found = data.filters.tools.find(t => t.id === id);
+        return found ? `<span class="tag">${found.label}</span>` : '';
+      }).join('');
+
+      document.getElementById('modal-body').innerHTML = `
+        <div class="modal-principle">${skill.back.principle}</div>
+
+        <div class="modal-science-box">
+          <div class="modal-science-row">
+            <span class="label">What just happened</span>
+            <span class="value">${skill.back.whatHappened}</span>
+          </div>
+          <div class="modal-science-row">
+            <span class="label">Why it works</span>
+            <span class="value">${skill.back.whyItWorks}</span>
+          </div>
+          <div class="modal-science-row">
+            <span class="label">Science behind it</span>
+            <span class="value">${skill.back.scienceBehind}</span>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <span class="modal-section-label">In practice</span>
+          <p class="modal-section-text">${skill.back.inPractice}</p>
+        </div>
+
+        <div class="modal-opinion">
+          <span class="modal-opinion-icon">→</span>
+          <div class="modal-opinion-text">
+            <span class="modal-opinion-label">Related opinion</span>
+            <span class="modal-opinion-value">${skill.back.relatedOpinion}</span>
+          </div>
+        </div>
+
+        <div class="modal-tags-row">
+          <div class="modal-tag-group">
+            <span class="modal-tag-label">Use Cases</span>
+            ${useCaseLabels}
+          </div>
+          <div class="modal-tag-group">
+            <span class="modal-tag-label">Menti Tools</span>
+            ${toolLabels}
+          </div>
+        </div>
+
+        <a class="modal-source-link" href="${skill.source.url}" target="_blank">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M7 1h4m0 0v4M11 1L5.5 6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          ${skill.source.text}
+        </a>
+      `;
+
+      document.getElementById('modal-overlay').classList.add('open');
+      document.getElementById('modal-panel').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.getElementById('modal-panel').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  </script>
+</body>
+</html>
