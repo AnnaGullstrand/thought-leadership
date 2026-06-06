@@ -270,9 +270,118 @@
       color: var(--black);
     }
 
+    /* ─── Toggle bar ────────────────────────────────────────── */
+    .impact-toggle-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      margin-bottom: 48px;
+    }
+    .toggle-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+    }
+    .audience-toggle {
+      display: flex;
+      background: rgba(0,0,0,0.06);
+      border-radius: 100px;
+      padding: 3px;
+    }
+    .toggle-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 16px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 200ms ease;
+      background: transparent;
+      color: var(--sand-800);
+      white-space: nowrap;
+    }
+    .toggle-btn.active {
+      background: var(--white);
+      color: var(--blue-800);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    }
+
+    /* ─── Higher Ed specific styles ─────────────────────────── */
+    .he-intro-text {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--sand-800);
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+    .he-intro-text strong { color: var(--black); }
+    .he-definition {
+      background: var(--sand-100);
+      border-left: 4px solid var(--blue-500);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--blue-800);
+      line-height: 1.6;
+      margin-bottom: 56px;
+      max-width: 800px;
+    }
+    .he-pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+    .he-pillar {
+      background: var(--sand-100);
+      border-radius: 12px;
+      padding: 24px 20px;
+      border: 1.5px solid rgba(0,0,0,0.06);
+    }
+    .he-pillar-num {
+      font-family: var(--font-display);
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--blue-100);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .he-pillar h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--blue-800);
+      margin-bottom: 8px;
+    }
+    .he-pillar p {
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--sand-800);
+    }
+    .he-pillar ul {
+      margin: 8px 0 0 16px;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--sand-800);
+    }
+    .he-section-label {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 700;
+      color: var(--blue-800);
+      margin-bottom: 24px;
+      margin-top: 56px;
+    }
+
     /* ─── Responsive ────────────────────────────────────────── */
     @media (max-width: 1024px) {
       .impact-outcomes { grid-template-columns: repeat(2, 1fr); }
+      .he-pillars { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
       .nav-links { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; gap: 4px; }
@@ -285,6 +394,7 @@
       .sec-hero-content { padding: 24px 20px; }
       .impact-tiers { grid-template-columns: 1fr; }
       .impact-outcomes { grid-template-columns: 1fr; }
+      .he-pillars { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
       .nav { padding: 0 16px; height: 56px; }
@@ -340,21 +450,133 @@
     </div>
     <div class="sec-body">
       <div class="sec-inner">
-        <div class="impact-definition">Performance is the quality and speed of how people think, decide, learn, align, and act together to drive outcomes.</div>
-        <p class="impact-intro-text">Imagine how many meetings, trainings, and communication moments happen in an average organization every single week. Hundreds. Thousands. Each one an opportunity — or a missed one. Now imagine that all of them improve. <strong>People think more clearly. Leaders ask better questions. Decisions are based on real input.</strong> Learning sticks. Alignment happens faster. When Menti is built into an organization's ways of working, a compounding effect is created — small improvements multiply across every interaction, every team, every quarter.</p>
-        <div class="impact-tiers">
-          <div class="impact-tier"><h4>Faster Value Creation</h4><p>Speed of execution increases when people are aligned earlier and decisions are made on real input.</p></div>
-          <div class="impact-tier"><h4>Better Strategic Outcomes</h4><p>Better thinking leads to better decisions — at every level of the organization.</p></div>
-          <div class="impact-tier"><h4>Stronger Organizational Performance</h4><p>Engagement, learning, and leadership effectiveness compound over time into sustained competitive advantage.</p></div>
+
+        <!-- Toggle bar -->
+        <div class="impact-toggle-bar">
+          <span class="toggle-label">Context</span>
+          <div class="audience-toggle">
+            <button class="toggle-btn active" data-mode="business" onclick="setMode('business')">Business</button>
+            <button class="toggle-btn" data-mode="higher-ed" onclick="setMode('higher-ed')">Higher Ed</button>
+          </div>
         </div>
-        <div class="impact-outcomes">
-          <div class="impact-outcome"><h4>Speed of Execution</h4><p>When people think and contribute early, decisions are clearer, buy-in is stronger, and execution is faster.</p></div>
-          <div class="impact-outcome"><h4>Innovation &amp; Change</h4><p>When diverse thinking is surfaced through active participation, organizations generate better ideas and adapt more effectively.</p></div>
-          <div class="impact-outcome"><h4>Decision Quality</h4><p>When decisions are based on powerful questions and real input from many, they are more accurate, less biased, and more robust.</p></div>
-          <div class="impact-outcome"><h4>Continuous Learning</h4><p>When people actively think, contribute, and reflect, learning deepens, memory strengthens and capability grows over time.</p></div>
-          <div class="impact-outcome"><h4>Leadership Effectiveness</h4><p>Leaders who activate thinking and engagement create stronger alignment, ownership, and follow-through.</p></div>
-          <div class="impact-outcome"><h4>Employee Engagement</h4><p>When people think and contribute, engagement increases — driving motivation, ownership, and sustained participation over time.</p></div>
+
+        <!-- ── Business content ─────────────────────────────── -->
+        <div id="impact-business">
+          <div class="impact-definition">Performance is the quality and speed of how people think, decide, learn, align, and act together to drive outcomes.</div>
+          <p class="impact-intro-text">Imagine how many meetings, trainings, and communication moments happen in an average organization every single week. Hundreds. Thousands. Each one an opportunity — or a missed one. Now imagine that all of them improve. <strong>People think more clearly. Leaders ask better questions. Decisions are based on real input.</strong> Learning sticks. Alignment happens faster. When Menti is built into an organization's ways of working, a compounding effect is created — small improvements multiply across every interaction, every team, every quarter.</p>
+          <div class="impact-tiers">
+            <div class="impact-tier"><h4>Faster Value Creation</h4><p>Speed of execution increases when people are aligned earlier and decisions are made on real input.</p></div>
+            <div class="impact-tier"><h4>Better Strategic Outcomes</h4><p>Better thinking leads to better decisions — at every level of the organization.</p></div>
+            <div class="impact-tier"><h4>Stronger Organizational Performance</h4><p>Engagement, learning, and leadership effectiveness compound over time into sustained competitive advantage.</p></div>
+          </div>
+          <div class="impact-outcomes">
+            <div class="impact-outcome"><h4>Speed of Execution</h4><p>When people think and contribute early, decisions are clearer, buy-in is stronger, and execution is faster.</p></div>
+            <div class="impact-outcome"><h4>Innovation &amp; Change</h4><p>When diverse thinking is surfaced through active participation, organizations generate better ideas and adapt more effectively.</p></div>
+            <div class="impact-outcome"><h4>Decision Quality</h4><p>When decisions are based on powerful questions and real input from many, they are more accurate, less biased, and more robust.</p></div>
+            <div class="impact-outcome"><h4>Continuous Learning</h4><p>When people actively think, contribute, and reflect, learning deepens, memory strengthens and capability grows over time.</p></div>
+            <div class="impact-outcome"><h4>Leadership Effectiveness</h4><p>Leaders who activate thinking and engagement create stronger alignment, ownership, and follow-through.</p></div>
+            <div class="impact-outcome"><h4>Employee Engagement</h4><p>When people think and contribute, engagement increases — driving motivation, ownership, and sustained participation over time.</p></div>
+          </div>
         </div>
+
+        <!-- ── Higher Ed content ────────────────────────────── -->
+        <div id="impact-higher-ed" style="display:none;">
+          <div class="he-definition">Academic excellence is the quality of learning, the depth of research, and the degree to which an institution develops graduates who lead, generates knowledge that matters, and contributes to the world beyond campus.</div>
+          <p class="he-intro-text">Imagine how many lectures, seminars, tutorials, workshops, assessments, and student interactions happen across a university each week. Thousands. Each one either developing potential — or letting it pass. Now imagine they all improve. <strong>Students think more deeply. Teachers get real-time insight into what is landing and what isn't. Research teams collaborate more effectively.</strong> Learning sticks. Completion rates rise. When Menti is built into an institution's ways of working, a compounding effect is created — small improvements in every teaching and learning moment multiply across every student, every cohort, every generation of graduates.</p>
+
+          <div class="impact-tiers">
+            <div class="impact-tier"><h4>Academic Excellence</h4><p>Stronger learning outcomes, higher completion rates, and graduates who are measurably better prepared for what comes next.</p></div>
+            <div class="impact-tier"><h4>Research &amp; Innovation</h4><p>Research teams that think, collaborate, and decide more effectively generate higher-quality output and attract stronger external recognition.</p></div>
+            <div class="impact-tier"><h4>Institutional Reputation</h4><p>Teaching quality, student experience, and evidence of learning impact all contribute to rankings, employer perception, and global standing.</p></div>
+          </div>
+
+          <h3 class="he-section-label">What Universities Care About Most</h3>
+          <div class="he-pillars">
+            <div class="he-pillar">
+              <div class="he-pillar-num">1</div>
+              <h4>Academic Excellence</h4>
+              <p>Attract, develop, and graduate exceptional students.</p>
+              <ul>
+                <li>Student learning outcomes</li>
+                <li>Graduate employability</li>
+                <li>Retention &amp; completion rates</li>
+                <li>Student satisfaction</li>
+                <li>Teaching evaluations</li>
+              </ul>
+            </div>
+            <div class="he-pillar">
+              <div class="he-pillar-num">2</div>
+              <h4>Research Impact</h4>
+              <p>Generate new knowledge and influence society, industry, and policy.</p>
+              <ul>
+                <li>Publications in top journals</li>
+                <li>Citation impact</li>
+                <li>Research grants won</li>
+                <li>Industry partnerships</li>
+                <li>Global research rankings</li>
+              </ul>
+            </div>
+            <div class="he-pillar">
+              <div class="he-pillar-num">3</div>
+              <h4>Reputation &amp; Prestige</h4>
+              <p>Strengthen institutional standing and attract the best talent.</p>
+              <ul>
+                <li>Global rankings (QS, THE, ARWU)</li>
+                <li>Employer reputation scores</li>
+                <li>Academic reputation surveys</li>
+                <li>Distinguished alumni</li>
+              </ul>
+            </div>
+            <div class="he-pillar">
+              <div class="he-pillar-num">4</div>
+              <h4>Societal Impact</h4>
+              <p>Contribute to economic, social, and global challenges.</p>
+              <ul>
+                <li>SDG rankings</li>
+                <li>Equity &amp; inclusion outcomes</li>
+                <li>Community engagement</li>
+                <li>Social mobility</li>
+                <li>Policy influence</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="he-section-label">How Menti Creates Impact Across All Four</h3>
+          <div class="impact-outcomes">
+            <div class="impact-outcome">
+              <h4>Student Learning Outcomes</h4>
+              <p>When students actively think, contribute, and retrieve knowledge — rather than passively listen — learning deepens, memory strengthens, and academic performance improves measurably.</p>
+            </div>
+            <div class="impact-outcome">
+              <h4>Graduate Employability</h4>
+              <p>Students who learn through active participation, structured collaboration, and real-time feedback graduate with stronger critical thinking, communication, and decision-making skills — the attributes employers and postgraduate programs value most.</p>
+            </div>
+            <div class="impact-outcome">
+              <h4>Student Retention &amp; Completion</h4>
+              <p>Students who feel heard, engaged, and belonging are significantly more likely to complete their degree. Distributed participation and inclusive teaching practices directly reduce the dropout risk that costs institutions most.</p>
+            </div>
+            <div class="impact-outcome">
+              <h4>Inclusive Teaching &amp; Equity</h4>
+              <p>Structured participation ensures every student's thinking is captured — regardless of confidence, language, or background. This is the operational definition of inclusive pedagogy, measurable in equity outcome data.</p>
+            </div>
+            <div class="impact-outcome">
+              <h4>Teaching Quality &amp; Effectiveness</h4>
+              <p>Teachers who use real-time data on student understanding adapt faster, close gaps earlier, and continuously improve their practice. Teaching quality becomes evidence-based rather than intuition-based.</p>
+            </div>
+            <div class="impact-outcome">
+              <h4>Research Collaboration</h4>
+              <p>Research teams that use structured facilitation and collective intelligence methods — protecting independent thinking before group discussion — generate better ideas, make faster decisions, and reduce the noise that corrupts peer review and evaluation.</p>
+            </div>
+          </div>
+
+          <div style="background:var(--blue-100);border-radius:16px;padding:40px;margin-top:48px;">
+            <h3 style="font-family:var(--font-display);font-size:clamp(24px,3vw,36px);color:var(--blue-800);margin-bottom:16px;font-weight:700;">What senior university leaders ask</h3>
+            <p style="font-size:16px;line-height:1.7;color:var(--sand-800);max-width:680px;margin-bottom:20px;">In conversations with Provosts, Vice Chancellors, Deans, and Teaching &amp; Learning leaders, the question is rarely <em>"Did students enjoy it?"</em> — but rather:</p>
+            <p style="font-size:18px;font-weight:600;color:var(--blue-800);font-style:italic;">"Did it improve learning, retention, achievement, employability, research output, or institutional reputation?"</p>
+            <p style="font-size:15px;color:var(--sand-800);margin-top:16px;line-height:1.65;">Those are the outcomes that drive investment decisions at top-tier universities — and they are the outcomes that Menti is positioned to improve at scale.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -367,6 +589,14 @@
   </footer>
 
   <script>
+    function setMode(mode) {
+      document.getElementById('impact-business').style.display  = mode === 'business'  ? 'block' : 'none';
+      document.getElementById('impact-higher-ed').style.display = mode === 'higher-ed' ? 'block' : 'none';
+      document.querySelectorAll('.toggle-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.mode === mode);
+      });
+    }
+
     function checkPassword() {
       const val = document.getElementById('gate-input').value;
       if (val === 'Menti2026') {
