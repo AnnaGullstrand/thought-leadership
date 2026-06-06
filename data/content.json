@@ -5,34 +5,99 @@
     "backgroundImage": "/assets/images/hero-speaker.jpg",
     "overlayColor": "rgba(50, 60, 124, 0.55)"
   },
-
   "filters": {
     "domains": [
-      { "id": "individual-cognition", "label": "Individual Cognition", "color": "#5769E7" },
-      { "id": "learning-science",     "label": "Learning Science",     "color": "#FF7471" },
-      { "id": "social-psychology",    "label": "Social Psychology",    "color": "#6C67CF" },
-      { "id": "decision-science",     "label": "Decision Science",     "color": "#52AD6E" },
-      { "id": "behavioral-science",   "label": "Behavioral Science",   "color": "#DBAB30" }
+      {
+        "id": "individual-cognition",
+        "label": "Individual Cognition",
+        "color": "#5769E7"
+      },
+      {
+        "id": "learning-science",
+        "label": "Learning Science",
+        "color": "#FF7471"
+      },
+      {
+        "id": "social-psychology",
+        "label": "Social Psychology",
+        "color": "#6C67CF"
+      },
+      {
+        "id": "decision-science",
+        "label": "Decision Science",
+        "color": "#52AD6E"
+      },
+      {
+        "id": "behavioral-science",
+        "label": "Behavioral Science",
+        "color": "#DBAB30"
+      }
     ],
     "useCases": [
-      { "id": "training",     "label": "Training & Learning" },
-      { "id": "townhall",     "label": "Town Hall / All-Hands" },
-      { "id": "team-meeting", "label": "Team Meeting" },
-      { "id": "check-in",     "label": "Team Check-In" },
-      { "id": "workshop",     "label": "Workshop" },
-      { "id": "onboarding",   "label": "Onboarding" },
-      { "id": "presentation", "label": "Presentation / Keynote" },
-      { "id": "advisory",     "label": "Advisory / Consulting" }
+      {
+        "id": "training",
+        "label": "Training & Learning"
+      },
+      {
+        "id": "townhall",
+        "label": "Town Hall / All-Hands"
+      },
+      {
+        "id": "team-meeting",
+        "label": "Team Meeting"
+      },
+      {
+        "id": "check-in",
+        "label": "Team Check-In"
+      },
+      {
+        "id": "workshop",
+        "label": "Workshop"
+      },
+      {
+        "id": "onboarding",
+        "label": "Onboarding"
+      },
+      {
+        "id": "presentation",
+        "label": "Presentation / Keynote"
+      },
+      {
+        "id": "advisory",
+        "label": "Advisory / Consulting"
+      }
     ],
     "tools": [
-      { "id": "menti-live",        "label": "Menti Live" },
-      { "id": "menti-pulse",       "label": "Menti Pulse" },
-      { "id": "menti-form",        "label": "Menti Form" },
-      { "id": "engagement-suite",  "label": "Engagement Suite" },
-      { "id": "menti-workshop",    "label": "Menti Workshop" }
+      {
+        "id": "menti-live",
+        "label": "Menti Live"
+      },
+      {
+        "id": "menti-pulse",
+        "label": "Menti Pulse"
+      },
+      {
+        "id": "menti-form",
+        "label": "Menti Form"
+      },
+      {
+        "id": "engagement-suite",
+        "label": "Engagement Suite"
+      },
+      {
+        "id": "menti-workshop",
+        "label": "Menti Workshop"
+      },
+      {
+        "id": "menti-quiz",
+        "label": "Menti Quiz"
+      },
+      {
+        "id": "menti-qa",
+        "label": "Menti Q&A"
+      }
     ]
   },
-
   "scienceSkills": [
     {
       "id": "reset-attention",
@@ -53,12 +118,26 @@
         "relatedOpinion": "Activate Participation"
       },
       "mentiApplication": [
-        "Send a quick poll or word cloud after every key point to re-activate attention and bring people back into active processing.",
-        "Use a rating scale mid-session to check energy and understanding before continuing.",
-        "Set up interaction slides at regular intervals — every 10–15 minutes — as built-in attention resets."
+        "In Menti Live, insert interaction slides every 10–15 minutes — a quick word cloud, poll, or open question to bring people back into active processing.",
+        "Use Menti Quiz as an energising attention reset mid-session — a short knowledge check that refocuses the room before the next segment.",
+        "Enable Menti Q&A during lectures or town halls so people can submit questions throughout — this keeps them engaged even in longer sessions."
       ],
-      "useCases": ["training", "townhall", "team-meeting", "presentation", "workshop", "onboarding", "check-in", "advisory"],
-      "tools": ["menti-live", "engagement-suite"]
+      "useCases": [
+        "training",
+        "townhall",
+        "team-meeting",
+        "presentation",
+        "workshop",
+        "onboarding",
+        "check-in",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-quiz",
+        "menti-qa"
+      ]
     },
     {
       "id": "reduce-cognitive-overload",
@@ -79,12 +158,21 @@
         "relatedOpinion": "Make People Understand Deeply"
       },
       "mentiApplication": [
-        "Use one Menti question per concept — never combine multiple ideas in a single slide or poll.",
-        "Break a complex topic into a sequence of smaller questions that build on each other step by step.",
-        "Strip away visual noise: keep each Menti slide focused on one idea, one question, one action."
+        "In Menti Live, one slide = one concept. Never combine multiple ideas in a single poll — use sequential questions to build understanding step by step.",
+        "In Menti Workshop, break the session into clearly structured phases — each with a single purpose — so participants always know where they are and what they are doing.",
+        "Use simple poll formats (word cloud, single-choice) rather than complex multi-part questions. The simpler the format, the more cognitive space for actual thinking."
       ],
-      "useCases": ["training", "presentation", "townhall", "onboarding", "advisory"],
-      "tools": ["menti-live"]
+      "useCases": [
+        "training",
+        "presentation",
+        "townhall",
+        "onboarding",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop"
+      ]
     },
     {
       "id": "protect-individual-thinking",
@@ -105,12 +193,22 @@
         "relatedOpinion": "Ask Better Questions"
       },
       "mentiApplication": [
-        "Enable anonymous mode so participants answer independently before seeing any results.",
-        "Reveal results only after all responses are submitted — prevent anchoring by hiding live results during input.",
-        "Use Menti Workshop to capture individual input from everyone before opening group discussion."
+        "Enable anonymous mode in Menti Live and collect all responses before revealing results — this prevents anchoring and preserves independent judgment.",
+        "In Menti Workshop, structure the session so individual input is captured in the divergent phase before any group discussion or voting begins.",
+        "Use Menti Form for pre-meeting input collection — gather people's views before the meeting starts, so discussion begins from distributed thinking rather than whoever speaks first."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "townhall", "check-in"],
-      "tools": ["menti-live", "engagement-suite", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "townhall",
+        "check-in"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "make-thinking-visible",
@@ -131,12 +229,23 @@
         "relatedOpinion": "Structure How People Think Together"
       },
       "mentiApplication": [
-        "Use a word cloud to surface language patterns and recurring themes from across the room instantly.",
-        "Display open-text responses as they arrive — let people see the full spread of thinking before discussion begins.",
-        "Use a rating distribution to show where the group aligns and where it diverges — make disagreement visible."
+        "Use word clouds and open-text questions in Menti Live to surface the full spread of thinking — patterns and disagreements become visible to everyone simultaneously.",
+        "In Menti Workshop, display idea boards during the divergent phase so all contributions are visible before evaluation begins.",
+        "Use Menti Q&A in town halls to make visible what people are actually wondering — upvoted questions show what matters most to the group."
       ],
-      "useCases": ["team-meeting", "workshop", "townhall", "advisory", "training"],
-      "tools": ["menti-live", "menti-workshop", "engagement-suite"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "townhall",
+        "advisory",
+        "training"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-pulse",
+        "menti-qa"
+      ]
     },
     {
       "id": "use-retrieval",
@@ -157,12 +266,20 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Open sessions with a recall question — 'What do you remember from last time?' — before introducing any new content.",
-        "Use Menti Pulse to send retrieval questions days after a training session to strengthen long-term retention.",
-        "Replace re-teaching with a quick poll: test recall first, then address gaps."
+        "Open every training session with a Menti Quiz — a short knowledge check on previous content before introducing anything new. Retrieval before instruction.",
+        "Use Menti Pulse (in Teams/Slack) to send spaced retrieval questions 3, 7, and 14 days after a session — this is where long-term retention is actually built.",
+        "In Menti Live, replace review slides with recall questions — 'What do you remember about X?' surfaces gaps and strengthens memory at the same time."
       ],
-      "useCases": ["training", "onboarding", "check-in"],
-      "tools": ["menti-pulse", "menti-live"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "check-in"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-quiz"
+      ]
     },
     {
       "id": "generate-own-answers",
@@ -183,12 +300,21 @@
         "relatedOpinion": "Ask Better Questions"
       },
       "mentiApplication": [
-        "Before sharing a key insight, send an open question: 'What do you think?' — reveal your answer only after people have committed to theirs.",
-        "Use Menti Workshop to have participants generate ideas or hypotheses independently before you introduce the framework.",
-        "Set up a 'quick take' open-text question to capture initial thinking before any instruction begins."
+        "In Menti Live, send an open question before revealing any answer or insight — 'What do you think is the main reason for this?' Generation before explanation.",
+        "Use Menti Workshop to have participants generate ideas independently in the divergent phase before any input from the facilitator.",
+        "Design Menti Quiz questions that ask people to produce an answer rather than just recognise one — open-text quiz questions activate deeper encoding than multiple choice."
       ],
-      "useCases": ["training", "workshop", "advisory", "onboarding"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "training",
+        "workshop",
+        "advisory",
+        "onboarding"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-quiz"
+      ]
     },
     {
       "id": "activate-prior-knowledge",
@@ -209,12 +335,19 @@
         "relatedOpinion": "Make People Understand Deeply"
       },
       "mentiApplication": [
-        "Start every session with a word cloud or open question: 'What do you already know about this?' — surface existing knowledge before new content.",
-        "Use a scale: 'How confident are you about this topic?' — calibrate the room and tailor your starting point.",
-        "Use a multiple-choice question about a common belief to activate prior knowledge and create a teachable moment."
+        "Start every session with a Menti Quiz or word cloud: 'What do you already know about this?' — activate existing knowledge structures before building on them.",
+        "Use a single-choice question in Menti Live to test a common assumption or belief — the result creates a teachable moment that connects to what people already think.",
+        "Use a confidence scale in Menti Live: 'How familiar are you with this topic?' — calibrate your starting point to the room's actual knowledge level."
       ],
-      "useCases": ["training", "onboarding", "advisory"],
-      "tools": ["menti-live"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-quiz"
+      ]
     },
     {
       "id": "reinforce-over-time",
@@ -235,12 +368,20 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Schedule a Menti Pulse series with spaced recall questions sent days or weeks after the training session.",
-        "Use Menti Form to send a structured reflection at the 2-week and 4-week marks: 'What have you applied? What did you forget?'",
-        "Set up recurring check-in questions that revisit key concepts from previous sessions."
+        "Schedule a Menti Pulse series directly in Teams or Slack — send spaced retrieval questions at 3, 7, and 21 days after a training session.",
+        "Use Menti Form for structured reflection surveys at the 2-week and 4-week marks: 'What have you applied? What do you still find unclear?'",
+        "Run a Menti Quiz as a follow-up session — a short energising knowledge check that reinforces key ideas while making retention visible and fun."
       ],
-      "useCases": ["training", "onboarding", "check-in"],
-      "tools": ["menti-pulse", "menti-form"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "check-in"
+      ],
+      "tools": [
+        "menti-pulse",
+        "menti-form",
+        "menti-quiz"
+      ]
     },
     {
       "id": "learn-socially",
@@ -261,12 +402,20 @@
         "relatedOpinion": "Structure How People Think Together"
       },
       "mentiApplication": [
-        "After individual responses, display results and use the distribution as the starting point for group discussion.",
-        "Show a word cloud of the group's answers and ask: 'What patterns do you notice? What surprised you?'",
-        "Use Menti Workshop to facilitate peer explanation: each participant responds, then discusses their reasoning."
+        "In Menti Live, show results after individual responses and use the distribution as the discussion starter — 'I see we're split. Let's explore why.'",
+        "Use Menti Workshop to structure peer explanation: individual response → share → small group discussion. Social processing deepens what individual reflection starts.",
+        "Use a word cloud to surface collective language — then ask 'What do the patterns tell us?' Collective sense-making in action."
       ],
-      "useCases": ["training", "workshop", "team-meeting", "advisory"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "training",
+        "workshop",
+        "team-meeting",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop"
+      ]
     },
     {
       "id": "distribute-participation",
@@ -287,12 +436,22 @@
         "relatedOpinion": "Activate Participation"
       },
       "mentiApplication": [
-        "Use anonymous polls so everyone responds simultaneously — no raising hands, no going around the room.",
-        "Display a participation counter to ensure 100% response rates before moving forward.",
-        "Use Menti's Engagement Suite for large-scale sessions where distributed participation across hundreds of people is essential."
+        "Use anonymous Menti Live polls so everyone responds simultaneously — no hands up, no going around the room, no dominant voices.",
+        "Use Menti Q&A in large sessions so every participant can submit questions regardless of role or confidence level — upvoting shows what the group collectively cares about.",
+        "In Menti Workshop, every phase is structured to require input from all participants — voting, rating, and idea submission are built into the flow."
       ],
-      "useCases": ["townhall", "team-meeting", "workshop", "presentation"],
-      "tools": ["menti-live", "engagement-suite"]
+      "useCases": [
+        "townhall",
+        "team-meeting",
+        "workshop",
+        "presentation"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-pulse",
+        "menti-qa"
+      ]
     },
     {
       "id": "surface-disagreement",
@@ -313,12 +472,21 @@
         "relatedOpinion": "Structure How People Think Together"
       },
       "mentiApplication": [
-        "Use a rating scale and display the full distribution — visible disagreement is the starting point for better discussion.",
-        "Ask 'What's the strongest argument against this?' in an open text question to deliberately surface dissenting views.",
-        "Use Menti Workshop to run structured devil's advocate exercises — assign minority views before evaluation begins."
+        "Use a rating distribution in Menti Live to make disagreement visible — when the spread is wide, that's the most important thing to discuss.",
+        "Add a Menti Q&A session for challenging questions — anonymity removes the social cost of disagreeing, and upvoting reveals which challenges the group shares.",
+        "In Menti Workshop, build in a structured dissent phase: after ideas are generated, ask 'What's the strongest argument against this?' before evaluation begins."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "check-in"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-qa"
+      ]
     },
     {
       "id": "clarify-decision",
@@ -339,12 +507,20 @@
         "relatedOpinion": "Structure How People Think Together"
       },
       "mentiApplication": [
-        "Open decision-making sessions with: 'What are we deciding today?' — display responses to align understanding before evaluating options.",
-        "Use a scale to have everyone independently rate what 'success' looks like — surface misalignment before it derails the decision.",
-        "In Menti Workshop, define evaluation criteria together before presenting any options for assessment."
+        "Open any decision-making session in Menti Live with: 'What are we actually deciding today?' — display responses to surface misalignment before evaluating any options.",
+        "Use Menti Workshop to define evaluation criteria together before presenting options — shared criteria reduce noise and make the decision process transparent.",
+        "Send a Menti Form before strategic meetings: 'What decision do we need to make, and what does a good outcome look like?' — use responses to structure the agenda."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "goal-clarity",
@@ -365,12 +541,23 @@
         "relatedOpinion": "Clarify Intent"
       },
       "mentiApplication": [
-        "Use Menti Live to have everyone write their interpretation of the goal before presenting it — surface misalignment immediately.",
-        "Send a Menti Form before the session: 'What outcome are we trying to achieve?' — use responses to calibrate the session.",
-        "Use a quick scale: 'How clear is the goal to you right now?' — a low score is a red flag before action begins."
+        "Use Menti Live at the start of any session: 'What outcome are we trying to achieve?' — display responses to surface different interpretations of the goal.",
+        "Send a Menti Form before a project kicks off to collect structured input on goals, success criteria, and what people need to succeed.",
+        "Use Menti Pulse weekly: 'How clear is the direction to you right now?' — a persistent clarity check that surfaces drift before it becomes misalignment."
       ],
-      "useCases": ["team-meeting", "training", "workshop", "advisory", "townhall", "onboarding"],
-      "tools": ["menti-live", "menti-form"]
+      "useCases": [
+        "team-meeting",
+        "training",
+        "workshop",
+        "advisory",
+        "townhall",
+        "onboarding"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "implementation-intentions",
@@ -391,12 +578,21 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "End every session with an open question: 'What will you do, and when?' — commitment recorded in writing is more likely kept.",
-        "Use Menti Form to collect structured if-then commitments: 'If [situation], I will [action].' Follow up via Menti Pulse.",
-        "Schedule a Menti Pulse at the moment of intended action — a timely prompt that reinforces the intention."
+        "End every Menti Live session with an open question: 'What will you do, and when specifically?' — written commitment is far more likely to be acted on.",
+        "Use Menti Form to collect structured if-then plans: 'If [situation], I will [specific action].' The structure makes the intention concrete and actionable.",
+        "Schedule a Menti Pulse follow-up in Teams/Slack at the moment of intended action — a timely nudge that turns intention into a prompt."
       ],
-      "useCases": ["training", "check-in", "workshop", "onboarding"],
-      "tools": ["menti-pulse", "menti-form"]
+      "useCases": [
+        "training",
+        "check-in",
+        "workshop",
+        "onboarding"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "psychological-safety",
@@ -417,12 +613,22 @@
         "relatedOpinion": "Create Ownership & Commitment"
       },
       "mentiApplication": [
-        "Enable anonymous mode as the default for sensitive questions — make safety structural, not just cultural.",
-        "Use anonymous open-text questions to collect honest input on topics where social risk would otherwise suppress honesty.",
-        "Use anonymous Q&A in Menti's Engagement Suite to give everyone a voice in town halls and all-hands sessions."
+        "Enable anonymous mode in Menti Live as the structural default for sensitive topics — safety by design, not just by culture.",
+        "Use Menti Q&A in town halls and all-hands so anyone can ask the question they wouldn't raise their hand to ask — anonymously, with the option to upvote shared concerns.",
+        "Use Menti Form for anonymous team feedback surveys — people share more honestly in writing, asynchronously, when there is no social exposure."
       ],
-      "useCases": ["team-meeting", "townhall", "workshop", "check-in", "advisory"],
-      "tools": ["menti-live", "engagement-suite"]
+      "useCases": [
+        "team-meeting",
+        "townhall",
+        "workshop",
+        "check-in",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-qa",
+        "menti-form"
+      ]
     },
     {
       "id": "feedback-loops",
@@ -443,12 +649,21 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Display results immediately after every question — instant visibility creates instant feedback.",
-        "Use Menti Pulse to close the loop after a session: 'What did you apply? What got in the way?' — send 1–2 weeks later.",
-        "Set up a regular check-in series that tracks progress on specific goals over time."
+        "Display Menti Live results immediately after every question — instant visibility closes the feedback loop in the moment and shows people their input matters.",
+        "Use Menti Pulse 1–2 weeks after any session: 'What did you apply? What got in the way?' — timely, specific feedback that travels through Teams/Slack without friction.",
+        "Use Menti Form for structured end-of-program feedback — longer reflections that capture qualitative insight and feed into continuous improvement."
       ],
-      "useCases": ["training", "check-in", "onboarding", "team-meeting"],
-      "tools": ["menti-pulse", "menti-live"]
+      "useCases": [
+        "training",
+        "check-in",
+        "onboarding",
+        "team-meeting"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "slow-thinking-down",
@@ -469,12 +684,21 @@
         "relatedOpinion": "Ask Better Questions"
       },
       "mentiApplication": [
-        "Add a reflection prompt before any high-stakes poll: 'Before you answer, take 30 seconds to consider your reasoning.'",
-        "Use open-text questions that require written reasoning — effort creates deliberation.",
-        "In Menti Workshop, build in a structured pre-mortem before any decision: 'Imagine this failed — what went wrong?'"
+        "In Menti Live, add a reflection question before any high-stakes poll: 'Before you answer, consider your reasoning for 30 seconds.' Pause activates deliberate thinking.",
+        "In Menti Workshop, build in a pre-mortem phase before any major decision: 'Imagine this decision failed — what went wrong?' Structured worst-case thinking slows impulsive convergence.",
+        "Use Menti Form for asynchronous input collection before a decision meeting — writing forces more deliberate reasoning than spontaneous verbal response."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "check-in"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "activate-personal-relevance",
@@ -495,12 +719,21 @@
         "relatedOpinion": "Make People Understand Deeply"
       },
       "mentiApplication": [
-        "Open every session with: 'Why does this topic matter to you?' — display word cloud responses to make personal relevance visible.",
-        "Use a scale: 'How relevant is this to your current work?' before introducing content — calibrate your session accordingly.",
-        "Use open-text questions that ask people to connect content to their own situation before moving forward."
+        "Open every session in Menti Live with: 'Why does this topic matter to you?' — a word cloud of responses makes personal relevance visible and shared across the room.",
+        "Use a Menti Live scale: 'How relevant is this to your current work?' before introducing content — calibrate your starting point to the room's actual context.",
+        "Use Menti Pulse to send a personal relevance check-in before a recurring training: 'What specific challenge are you hoping this will help with?' — responses shape the session."
       ],
-      "useCases": ["training", "onboarding", "presentation", "townhall", "workshop"],
-      "tools": ["menti-live", "engagement-suite"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "presentation",
+        "townhall",
+        "workshop"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse"
+      ]
     },
     {
       "id": "strengthen-memory-with-emotion",
@@ -521,12 +754,20 @@
         "relatedOpinion": "Make People Understand Deeply"
       },
       "mentiApplication": [
-        "Ask for first emotional reactions — 'What was your gut reaction to that?' — before analysis. Emotion marks the memory.",
-        "Use open questions that connect content to personal stories: 'When have you experienced this yourself?'",
-        "Display surprising or provocative data before asking for reactions — emotional arousal improves retention."
+        "Ask for gut reactions in Menti Live before analysis: 'What was your first response to that?' — emotion is the signal the brain uses to decide what to encode.",
+        "Use Menti Quiz as an emotionally engaging energiser — the competitive, playful format creates arousal that strengthens memory encoding.",
+        "Use open-text questions that prompt personal storytelling: 'When have you experienced this yourself?' — personal narrative activates emotional memory pathways."
       ],
-      "useCases": ["training", "presentation", "onboarding", "townhall"],
-      "tools": ["menti-live"]
+      "useCases": [
+        "training",
+        "presentation",
+        "onboarding",
+        "townhall"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-quiz"
+      ]
     },
     {
       "id": "apply-learning-in-context",
@@ -547,12 +788,22 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Close every session with: 'Where will you use this, and how?' — application planning in the moment improves transfer.",
-        "Use Menti Pulse 2 weeks later: 'Where did you apply this? What worked?' — context-specific retrieval strengthens real-world use.",
-        "Use scenario-based questions — 'In this situation, what would you do?' — to practice transfer before participants leave."
+        "Close every Menti Live session with a scenario question: 'In this situation, what would you do?' — practice in context before leaving the room.",
+        "Use Menti Quiz to present realistic work scenarios as quiz questions — scenario-based retrieval builds transfer, not just recall.",
+        "Use Menti Pulse 2 weeks after training: 'Where did you apply this? What worked in practice?' — context-specific follow-up builds real-world transfer."
       ],
-      "useCases": ["training", "workshop", "onboarding", "advisory"],
-      "tools": ["menti-live", "menti-pulse", "menti-form"]
+      "useCases": [
+        "training",
+        "workshop",
+        "onboarding",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form",
+        "menti-quiz"
+      ]
     },
     {
       "id": "separate-generation-from-evaluation",
@@ -573,12 +824,20 @@
         "relatedOpinion": "Structure How People Think and Decide Together"
       },
       "mentiApplication": [
-        "Run a word cloud or open text for idea generation first — no voting, no reactions, just contribution.",
-        "Only after collecting all ideas: switch to a ranking or rating question to begin evaluation.",
-        "Use Menti Workshop to manage the full diverge-converge process: generation in one phase, structured prioritisation in the next."
+        "In Menti Workshop, the divergent phase captures all ideas via open input — no voting, no reactions, just contribution. Evaluation comes only after the generation phase closes.",
+        "In Menti Live, use a word cloud or open text for ideation — then switch to a ranking or rating question only once all ideas are visible.",
+        "Facilitate the divergent phase with anonymous contribution so social pressure doesn't filter ideas before they reach the board."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "townhall"],
-      "tools": ["menti-live", "menti-workshop", "engagement-suite"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "townhall"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop"
+      ]
     },
     {
       "id": "ask-single-focus-questions",
@@ -599,12 +858,24 @@
         "relatedOpinion": "Ask Better Questions"
       },
       "mentiApplication": [
-        "Before sending any question, test it: can it be answered in a single, clear way? If not, split it into two.",
-        "Use one question per Menti slide — never combine multiple concepts in a single poll.",
-        "In Menti Form, build surveys with one question per page to prevent respondents from conflating multiple issues."
+        "In Menti Live, one question per slide — never combine multiple concepts. If you need to ask two things, use two separate questions.",
+        "In Menti Form, build one question per page so respondents give full cognitive attention to each item without conflating multiple issues.",
+        "In Menti Pulse (Teams/Slack), send one focused question at a time — a single, clear ask gets higher response rates and more useful data than a multi-part question."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "check-in", "training", "townhall"],
-      "tools": ["menti-live", "menti-pulse", "menti-form", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "check-in",
+        "training",
+        "townhall"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form",
+        "menti-workshop"
+      ]
     },
     {
       "id": "use-neutral-wording",
@@ -625,12 +896,22 @@
         "relatedOpinion": "Ask Better Questions"
       },
       "mentiApplication": [
-        "Review every question for leading language before launching — replace 'How much do you agree that...' with 'What do you think about...'",
-        "Use symmetrical scale labels: 'Strongly Disagree → Strongly Agree' — not asymmetric or loaded descriptors.",
-        "Run a neutral pre-session question to gather unanchored baseline views before the topic is introduced."
+        "Before launching any Menti question, review it for leading language — replace 'How much do you agree that X works?' with 'What is your view on X?'",
+        "In Menti Form surveys, use symmetrical scale labels — 'Strongly Disagree ↔ Strongly Agree' — and avoid response options that are skewed in one direction.",
+        "Use Menti Pulse for pulse checks on sensitive topics — neutral, single questions sent without framing context reduce anchoring effects."
       ],
-      "useCases": ["team-meeting", "advisory", "check-in", "workshop", "training"],
-      "tools": ["menti-live", "menti-pulse", "menti-form"]
+      "useCases": [
+        "team-meeting",
+        "advisory",
+        "check-in",
+        "workshop",
+        "training"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "match-format-to-decision",
@@ -651,12 +932,21 @@
         "relatedOpinion": "Structure How People Think and Decide Together"
       },
       "mentiApplication": [
-        "For prioritisation: use a ranking question to force structured comparison between options.",
-        "For degree of opinion: use a scale. For open exploration: use open text. For binary decisions: use multiple choice. Match format to the decision.",
-        "In Menti Workshop, use the format selector consciously — ranking, rating, open text, and binary choice each serve different judgment types."
+        "Prioritisation → ranking in Menti Workshop. Degree of opinion → scale in Menti Live. Open exploration → open text. Binary → multiple choice. Match format to the cognitive task, not to habit.",
+        "In Menti Workshop, use the format selector deliberately — ranking forces comparison, rating measures degree, open text captures nuance that numbers can't.",
+        "In Menti Form, use a mix of question types matched to what you need to know: scales for attitude, multiple choice for categories, open text for explanation and reasoning."
       ],
-      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
-      "tools": ["menti-live", "menti-workshop", "menti-form"]
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "check-in"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "reduce-noise-in-evaluation",
@@ -677,12 +967,20 @@
         "relatedOpinion": "Structure How People Think and Decide Together"
       },
       "mentiApplication": [
-        "Share evaluation criteria in Menti before asking for ratings — aligned criteria produce more reliable scores.",
-        "Use anchored rating scales: define what a 1, 3, and 5 mean before anyone votes.",
-        "Collect ratings independently — prevent anyone from seeing others' scores until all responses are submitted."
+        "Before any rating exercise in Menti Live, display the evaluation criteria — everyone evaluates against the same standard, not their own implicit one.",
+        "In Menti Workshop, use anchored rating scales with point descriptions — 1 = 'Does not meet criteria', 3 = 'Partially meets', 5 = 'Fully meets.' Anchoring = consistency.",
+        "Use Menti Form for formal evaluation exercises — structured, independent, and asynchronous. All evaluators work from the same criteria before any discussion."
       ],
-      "useCases": ["team-meeting", "advisory", "workshop"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "team-meeting",
+        "advisory",
+        "workshop"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "calibrate-rigor-to-stakes",
@@ -703,12 +1001,20 @@
         "relatedOpinion": "Structure How People Think and Decide Together"
       },
       "mentiApplication": [
-        "For low-stakes decisions: use a quick poll to get directional input efficiently.",
-        "For high-stakes decisions: use Menti Workshop to run a structured evaluation — defined criteria, independent rating, visible distribution, deliberate discussion.",
-        "Add a question before any decision: 'How high-stakes is this?' — let the answer guide how much process you apply."
+        "For low-stakes decisions: a quick Menti Live poll gives directional input in under two minutes.",
+        "For high-stakes decisions: use the full Menti Workshop structure — defined criteria, anonymous individual rating, visible distribution, structured discussion, decision capture.",
+        "Use Menti Form for important asynchronous decisions where people need time to think — a structured evaluation form sent before the meeting ensures considered input arrives."
       ],
-      "useCases": ["advisory", "team-meeting", "workshop"],
-      "tools": ["menti-live", "menti-workshop"]
+      "useCases": [
+        "advisory",
+        "team-meeting",
+        "workshop"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ]
     },
     {
       "id": "design-for-habit",
@@ -729,12 +1035,19 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Use Menti Pulse to send weekly habit-check questions at the same time each week — consistent timing builds the habit of reflection.",
-        "Create a Menti Form that acts as a weekly ritual — same questions, same structure, same time — so the check-in itself becomes automatic.",
-        "Track behavior over time: 'Did you do it this week?' — visible progress reinforces the loop."
+        "Use Menti Pulse in Teams/Slack to send the same check-in question at the same time every week — consistent timing and context build the habit of reflection automatically.",
+        "Create a Menti Form weekly ritual — same structure, same questions, same time — so completing it becomes an automatic part of the workflow rather than a deliberate decision.",
+        "Set Menti Pulse to track one specific behavior over time: 'Did you do it this week?' — visible progress reinforces the habit loop."
       ],
-      "useCases": ["training", "onboarding", "check-in"],
-      "tools": ["menti-pulse", "menti-form"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "check-in"
+      ],
+      "tools": [
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "reduce-friction",
@@ -755,12 +1068,20 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Pre-schedule Menti Pulse surveys to arrive at the exact moment they are most relevant — remove the friction of remembering to reflect.",
-        "Use Menti Form with pre-filled context so participants spend time thinking, not setting up — remove every unnecessary step.",
-        "Set up recurring check-ins that run automatically — make participation the default, not a deliberate decision."
+        "Schedule Menti Pulse surveys in Teams/Slack to arrive at exactly the right moment — right after a meeting, at the end of a sprint, on Monday morning. Remove the friction of remembering.",
+        "Use Menti Form with a pre-built template so participants spend time thinking, not setting up — reduce every unnecessary step between intention and response.",
+        "Set up recurring Menti Pulse check-ins that run automatically — make participation the default, not a deliberate opt-in decision."
       ],
-      "useCases": ["training", "onboarding", "team-meeting", "check-in"],
-      "tools": ["menti-pulse", "menti-form", "engagement-suite"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "team-meeting",
+        "check-in"
+      ],
+      "tools": [
+        "menti-pulse",
+        "menti-form"
+      ]
     },
     {
       "id": "foster-intrinsic-motivation",
@@ -781,12 +1102,22 @@
         "relatedOpinion": "Create Ownership & Commitment"
       },
       "mentiApplication": [
-        "Use anonymous questions to give everyone a genuine voice — make it clear that input shapes outcomes.",
-        "After collecting responses, explicitly acknowledge what you heard and show how it influenced the direction: close the loop visibly.",
-        "Use open questions: 'What matters most to you about this?' — give people space to express what intrinsically motivates them."
+        "Use anonymous Menti Live questions to give everyone a genuine voice — then explicitly show how the input shaped the direction. Visible impact builds intrinsic motivation.",
+        "Use Menti Q&A in town halls so anyone can ask what they genuinely care about — upvoted questions show leadership what actually matters to people.",
+        "Use Menti Pulse to check in on what people need: 'What would make your work feel more meaningful right now?' — asking the question is itself a signal that their experience matters."
       ],
-      "useCases": ["training", "townhall", "team-meeting", "onboarding", "workshop"],
-      "tools": ["menti-live", "engagement-suite"]
+      "useCases": [
+        "training",
+        "townhall",
+        "team-meeting",
+        "onboarding",
+        "workshop"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-qa",
+        "menti-pulse"
+      ]
     },
     {
       "id": "use-social-norms",
@@ -807,12 +1138,22 @@
         "relatedOpinion": "Reinforce Performance Over Time"
       },
       "mentiApplication": [
-        "Share Menti Pulse results with the group: 'Here's what your peers reported doing.' — descriptive norms are more motivating than instruction.",
-        "Show that everyone else answered — visible participation normalises contribution and makes it the expected behavior.",
-        "Use Menti data to create shared rituals: 'This is our weekly check-in — everyone participates.' Name it, repeat it, make it ours."
+        "Share Menti Pulse results with the team in Teams/Slack: 'Here's what your peers reported doing.' Descriptive norms — 'most people are doing X' — are more motivating than instruction.",
+        "In Menti Live, make participation visible — show response counts in real time. When people see everyone else contributing, participation becomes the norm.",
+        "Use Menti Q&A in recurring all-hands sessions — making Q&A a consistent ritual signals that asking questions is expected and valued. Repeat until it is simply how things work here."
       ],
-      "useCases": ["training", "onboarding", "check-in", "team-meeting", "townhall"],
-      "tools": ["menti-pulse", "engagement-suite"]
+      "useCases": [
+        "training",
+        "onboarding",
+        "check-in",
+        "team-meeting",
+        "townhall"
+      ],
+      "tools": [
+        "menti-pulse",
+        "menti-live",
+        "menti-qa"
+      ]
     }
   ]
 }
