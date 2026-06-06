@@ -369,6 +369,300 @@
       },
       "useCases": ["training", "check-in", "onboarding", "team-meeting"],
       "tools": ["menti-pulse", "menti-live"]
+    },
+    {
+      "id": "slow-thinking-down",
+      "domain": "individual-cognition",
+      "headline": "Slow Thinking Down",
+      "problem": "Fast, intuitive thinking leads to biased judgments. People act on System 1 shortcuts without engaging deliberate reasoning.",
+      "solution": "Create structured reflection moments that slow thinking down and prompt deliberate, effortful processing before conclusions are drawn.",
+      "source": {
+        "text": "Kahneman (2011) — Thinking, Fast and Slow; Evans & Stanovich (2013)",
+        "url": "https://doi.org/10.1146/annurev-psych-113011-143754"
+      },
+      "back": {
+        "principle": "Dual-process theory distinguishes fast, automatic System 1 thinking from slow, deliberate System 2 reasoning. High-stakes contexts require System 2 — but it must be deliberately activated.",
+        "whatHappened": "When asked to pause and reflect before answering, your thinking shifted from reactive to considered.",
+        "whyItWorks": "Reflection interrupts automatic processing and creates space for more careful, less biased judgment.",
+        "scienceBehind": "Kahneman's dual-process theory shows that System 1 dominates by default. Evans & Stanovich demonstrate that deliberate processing requires explicit prompting — it doesn't happen automatically.",
+        "inPractice": "Use reflection prompts before any high-stakes question. Ask people to write a response before sharing. Avoid immediate verbal reactions — structure individual thinking time first.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "activate-personal-relevance",
+      "domain": "individual-cognition",
+      "headline": "Activate Personal Relevance",
+      "problem": "Low personal relevance reduces cognitive engagement. People don't invest mental effort in content that feels abstract or disconnected from their reality.",
+      "solution": "Connect content to personal goals, roles, and real situations to increase relevance and strengthen cognitive engagement.",
+      "source": {
+        "text": "Craik & Lockhart (1972) — Levels of Processing; Rogers et al. (1977); Hidi & Renninger (2006)",
+        "url": "https://doi.org/10.1016/S0022-5371(72)80001-X"
+      },
+      "back": {
+        "principle": "Levels-of-processing theory shows that material encoded in relation to the self is retained far more deeply than abstract information. Personal relevance triggers emotional salience and motivates effortful processing.",
+        "whatHappened": "When you connected the content to your own situation, you paid more attention and thought more carefully.",
+        "whyItWorks": "Self-referential encoding activates deeper memory pathways and increases willingness to invest cognitive effort.",
+        "scienceBehind": "Rogers et al. demonstrated the 'self-reference effect' — material linked to self is better remembered. Hidi & Renninger show interest and relevance as the strongest drivers of sustained cognitive engagement.",
+        "inPractice": "Open every session with a question that links the topic to participants' own work or goals. 'Why does this matter to you?' is one of the most powerful questions a leader can ask.",
+        "relatedOpinion": "Make People Understand Deeply"
+      },
+      "useCases": ["training", "onboarding", "presentation", "townhall", "workshop"],
+      "tools": ["menti-live", "engagement-suite"]
+    },
+    {
+      "id": "strengthen-memory-with-emotion",
+      "domain": "learning-science",
+      "headline": "Strengthen Memory with Emotion",
+      "problem": "Emotionally neutral content is poorly encoded and quickly forgotten. Relevance and emotional engagement are not luxuries — they are memory prerequisites.",
+      "solution": "Increase emotional salience and personal meaning to strengthen memory encoding and long-term retention.",
+      "source": {
+        "text": "McGaugh (2000) — Memory consolidation and emotion; Immordino-Yang & Damasio (2007)",
+        "url": "https://doi.org/10.1126/science.1062427"
+      },
+      "back": {
+        "principle": "The amygdala modulates memory consolidation based on emotional arousal. Experiences with emotional or personal significance are encoded more deeply and retained longer.",
+        "whatHappened": "When content was connected to something that mattered to you emotionally, it became easier to remember.",
+        "whyItWorks": "Emotional arousal triggers the release of stress hormones that signal the brain: 'this matters — encode it.' Personal meaning amplifies this effect.",
+        "scienceBehind": "McGaugh showed that emotional arousal consolidates memory via amygdala-hippocampal interaction. Immordino-Yang and Damasio demonstrated that emotion is not a distraction from learning — it is fundamental to it.",
+        "inPractice": "Use real stories, concrete examples, and personal questions to create emotional connection before presenting key content. Don't aim for neutrality — aim for relevance.",
+        "relatedOpinion": "Make People Understand Deeply"
+      },
+      "useCases": ["training", "presentation", "onboarding", "townhall"],
+      "tools": ["menti-live"]
+    },
+    {
+      "id": "apply-learning-in-context",
+      "domain": "learning-science",
+      "headline": "Apply Learning in Context",
+      "problem": "Knowledge does not transfer without application. People can recall information in the same format they learned it, but fail to use it in practice.",
+      "solution": "Use application, practice, and varied contexts to build transferable, usable knowledge.",
+      "source": {
+        "text": "Schmidt & Bjork (1992) — New conceptualizations of practice; Rohrer & Taylor (2007)",
+        "url": "https://doi.org/10.1111/j.1467-9280.1992.tb00029.x"
+      },
+      "back": {
+        "principle": "Transfer-appropriate processing: knowledge transfers to new situations only when learned through conditions similar to application. Practice in varied contexts builds flexible, robust understanding.",
+        "whatHappened": "When asked to apply the concept to your own situation rather than just recall it, the learning became more useful.",
+        "whyItWorks": "Application creates links between abstract knowledge and real-world action, which is the basis for transfer.",
+        "scienceBehind": "Schmidt & Bjork showed that 'desirable difficulties' — including application and varied practice — improve long-term transfer despite reducing performance in the moment. Rohrer & Taylor confirmed interleaved practice outperforms blocked practice for retention.",
+        "inPractice": "Don't just teach — practice. Ask people to apply concepts to their own cases before the session ends. Use 'where would you use this?' as a standard closing question.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "workshop", "onboarding", "advisory"],
+      "tools": ["menti-live", "menti-pulse", "menti-form"]
+    },
+    {
+      "id": "separate-generation-from-evaluation",
+      "domain": "social-psychology",
+      "headline": "Separate Idea Generation from Evaluation",
+      "problem": "When evaluation happens too early, people self-censor and idea diversity collapses. Groups converge before they have fully explored the possibility space.",
+      "solution": "Explicitly separate the divergent phase (idea generation) from the convergent phase (evaluation and prioritisation).",
+      "source": {
+        "text": "Osborn (1953) — Applied Imagination; Diehl & Stroebe (1987); Nijstad & Stroebe (2006)",
+        "url": "https://doi.org/10.1037/0033-2909.117.3.403"
+      },
+      "back": {
+        "principle": "Premature evaluation blocks ideation. People generate fewer and less creative ideas when evaluation is simultaneous. Structured separation of phases dramatically increases idea quality and quantity.",
+        "whatHappened": "When you were asked to generate before being asked to judge, more ideas emerged — including better ones.",
+        "whyItWorks": "Evaluation triggers self-censorship and social conformity. Removing evaluation during generation removes the brake on creative thinking.",
+        "scienceBehind": "Diehl & Stroebe showed that production blocking and evaluation apprehension reduce group ideation. Nijstad & Stroebe confirmed that structural separation of phases improves both quantity and quality of ideas.",
+        "inPractice": "Run two separate phases in any ideation session: first generate (no judgment), then evaluate. Use anonymous contribution tools to protect the generation phase from social influence.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "townhall"],
+      "tools": ["menti-live", "menti-workshop", "engagement-suite"]
+    },
+    {
+      "id": "ask-single-focus-questions",
+      "domain": "decision-science",
+      "headline": "Ask Precise, Single-Focus Questions",
+      "problem": "Weak or compound questions produce ambiguous, unreliable input. When a question asks multiple things at once, answers become impossible to interpret.",
+      "solution": "Ask one precise, single-focus question at a time to improve input quality and interpretability.",
+      "source": {
+        "text": "Tourangeau, Rips & Rasinski (2000) — The Psychology of Survey Response; Krosnick (1999)",
+        "url": "https://doi.org/10.1017/CBO9780511819322"
+      },
+      "back": {
+        "principle": "Cognitive interviewing research shows that respondents answer the question they think is being asked, not necessarily the one intended. Precision in question design is the foundation of reliable input.",
+        "whatHappened": "A clear, single question was easier to answer — and easier to act on.",
+        "whyItWorks": "When a question has one focus, people can direct their attention fully and produce interpretable responses.",
+        "scienceBehind": "Tourangeau et al. showed that question comprehension is a major source of variance in survey data. Krosnick demonstrated that question clarity is the single strongest predictor of response quality.",
+        "inPractice": "Before sending any question, ask: 'What exactly am I trying to know?' Split compound questions. Remove double negatives. Test one idea at a time.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "check-in", "training", "townhall"],
+      "tools": ["menti-live", "menti-pulse", "menti-form", "menti-workshop"]
+    },
+    {
+      "id": "use-neutral-wording",
+      "domain": "decision-science",
+      "headline": "Use Neutral Question Wording",
+      "problem": "Wording unintentionally introduces bias. Leading phrasing, loaded language, and asymmetrical response options push people toward predetermined answers.",
+      "solution": "Use neutral, balanced wording and symmetrical response options to collect honest, unbiased input.",
+      "source": {
+        "text": "Tversky & Kahneman (1981) — Framing Effects; Schwarz (1999) — Survey methodology",
+        "url": "https://doi.org/10.1126/science.7455683"
+      },
+      "back": {
+        "principle": "Framing effects demonstrate that the same question, worded differently, produces systematically different responses. Neutral wording is not just good practice — it is what makes input trustworthy.",
+        "whatHappened": "A neutrally worded question surfaced what people actually thought, rather than confirming what the leader expected.",
+        "whyItWorks": "Neutral wording removes cognitive anchors that push responses in a direction before the respondent has considered their own view.",
+        "scienceBehind": "Tversky & Kahneman showed that equivalent decisions are made differently depending on how options are framed. Schwarz demonstrated that small wording changes in survey questions produce large, systematic shifts in response distributions.",
+        "inPractice": "Avoid 'don't you think…', 'how much do you agree that…', and loaded descriptors. Balance positive and negative response options symmetrically. Have someone else review your questions before asking them.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "useCases": ["team-meeting", "advisory", "check-in", "workshop", "training"],
+      "tools": ["menti-live", "menti-pulse", "menti-form"]
+    },
+    {
+      "id": "match-format-to-decision",
+      "domain": "decision-science",
+      "headline": "Match Format to Decision Type",
+      "problem": "Input format doesn't match the judgment needed. Asking people to rate when they should rank, or vote when they should evaluate, produces unreliable and misleading data.",
+      "solution": "Match the question format to the cognitive task — ranking, rating, open text, or binary choice each serve different decision types.",
+      "source": {
+        "text": "Payne, Bettman & Johnson (1993) — The Adaptive Decision Maker; Hsee & Rottenstreich (2004)",
+        "url": "https://doi.org/10.1017/CBO9781139173933"
+      },
+      "back": {
+        "principle": "People use different cognitive strategies depending on the format of the task. The format of a question shapes the cognitive process used to answer it — and therefore shapes the quality and nature of the output.",
+        "whatHappened": "When the question format matched what you were being asked to think about, the task felt clear and the answer felt meaningful.",
+        "whyItWorks": "Appropriate format reduces cognitive friction and ensures the response reflects genuine judgment rather than format-imposed artifacts.",
+        "scienceBehind": "Payne et al. showed that people adaptively switch decision strategies based on task format. Research on preference reversals demonstrates that the same underlying preference can produce opposite choices depending on how it is elicited.",
+        "inPractice": "Prioritisation → ranking. Satisfaction → rating scale. Exploration → open text. Yes/no → binary. Don't default to the same format for every question. Choose based on the decision you need to make.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "useCases": ["team-meeting", "workshop", "advisory", "check-in"],
+      "tools": ["menti-live", "menti-workshop", "menti-form"]
+    },
+    {
+      "id": "reduce-noise-in-evaluation",
+      "domain": "decision-science",
+      "headline": "Reduce Noise in Evaluation",
+      "problem": "Evaluation is inconsistent. Different people apply different standards to the same information — and the same person applies different standards on different days. This 'noise' is as damaging as bias.",
+      "solution": "Use predefined criteria and standardised scoring to increase fairness, consistency, and decision quality.",
+      "source": {
+        "text": "Kahneman, Sibony & Sunstein (2021) — Noise: A Flaw in Human Judgment",
+        "url": "https://doi.org/10.1002/ejsp.2862"
+      },
+      "back": {
+        "principle": "Noise — unwanted variability in judgment — is pervasive and largely invisible. Unlike bias, which is directional, noise is random — but equally corrosive to decision quality. Structured evaluation reduces it.",
+        "whatHappened": "When the same evaluation criteria were shared with everyone before rating, the spread of responses narrowed and the results became more useful.",
+        "whyItWorks": "Shared criteria align the cognitive frameworks people use, reducing the variance that comes from each person applying their own implicit standards.",
+        "scienceBehind": "Kahneman et al. demonstrated through extensive research that noise in professional judgment is far greater than experts believe. Structured protocols — predefined criteria, anchored scales, independent evaluation — significantly reduce noise.",
+        "inPractice": "Before any evaluation: define what 'good' looks like. Use anchored rating scales with descriptions at each point. Ask people to evaluate independently before discussing. Share criteria before, not after.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "useCases": ["team-meeting", "advisory", "workshop"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "calibrate-rigor-to-stakes",
+      "domain": "decision-science",
+      "headline": "Calibrate Rigor to Stakes",
+      "problem": "High-stakes decisions are often made with the same low-rigor process as everyday choices. The cost of that mismatch is disproportionate.",
+      "solution": "Apply structured analytic techniques and escalate process depth in proportion to the impact of the decision.",
+      "source": {
+        "text": "Clemen & Reilly (2014) — Making Hard Decisions; Hammond, Keeney & Raiffa (1999) — Smart Choices",
+        "url": "https://doi.org/10.1287/mnsc.40.1.5"
+      },
+      "back": {
+        "principle": "Decision quality is a function of process quality. The rigor invested in a decision should be proportional to its reversibility, scope, and impact.",
+        "whatHappened": "When the decision was high-stakes, adding structure — explicit criteria, broader input, documented reasoning — improved both the quality and the legitimacy of the outcome.",
+        "whyItWorks": "Structure reduces reliance on intuition for decisions where intuition is insufficient, and creates a defensible record of reasoning.",
+        "scienceBehind": "Decision analysis research consistently shows that structured approaches outperform intuitive judgment for complex, high-stakes decisions. Hammond et al. show that systematic criteria-based choice dramatically reduces errors of omission and bias.",
+        "inPractice": "For low-stakes, reversible decisions: quick vote is fine. For high-stakes, irreversible decisions: define criteria, gather broad input, evaluate systematically, document rationale. Match the investment to the consequence.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "useCases": ["advisory", "team-meeting", "workshop"],
+      "tools": ["menti-live", "menti-workshop"]
+    },
+    {
+      "id": "design-for-habit",
+      "domain": "behavioral-science",
+      "headline": "Design for Habit, Not Willpower",
+      "problem": "Behavior decays when it relies on motivation and willpower. These are finite resources that erode under stress, busyness, and competing demands.",
+      "solution": "Repeat behaviors in stable contexts until situational cues trigger them automatically — making the desired action the path of least effort.",
+      "source": {
+        "text": "Wood & Neal (2007) — A new look at habits; Lally et al. (2010) — How habits are formed",
+        "url": "https://doi.org/10.1037/0033-295X.114.4.843"
+      },
+      "back": {
+        "principle": "Habit formation transfers control from conscious intention to environmental cues. Once a behavior is habitual, it no longer requires motivation to execute — context triggers it automatically.",
+        "whatHappened": "When a behavior was tied to a consistent cue (same time, same place, same trigger), it became easier to sustain without effort.",
+        "whyItWorks": "Repetition in stable contexts builds stimulus-response associations. Over time, the context itself initiates the behavior, bypassing the need for deliberate decision-making.",
+        "scienceBehind": "Wood & Neal demonstrated that habits are context-bound automatic responses, not internally motivated choices. Lally et al. found habit formation takes 18–254 days depending on complexity — and that consistency of context is the key driver.",
+        "inPractice": "Don't rely on motivation alone. Attach desired behaviors to existing routines. Use check-ins at the same time each week. Create environmental cues that prompt the behavior without requiring a decision.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "onboarding", "check-in"],
+      "tools": ["menti-pulse", "menti-form"]
+    },
+    {
+      "id": "reduce-friction",
+      "domain": "behavioral-science",
+      "headline": "Reduce Friction — Design the Default",
+      "problem": "Undesired behaviors are often easier than desired ones. People take the path of least resistance — and if that path leads somewhere you don't want, effort won't fix it.",
+      "solution": "Redesign defaults and reduce friction so the target behavior becomes the path of least resistance.",
+      "source": {
+        "text": "Thaler & Sunstein (2008) — Nudge; Johnson & Goldstein (2003) — Do defaults save lives?",
+        "url": "https://doi.org/10.1126/science.1091721"
+      },
+      "back": {
+        "principle": "Defaults are powerful because they require no action — and most people follow them. Reducing friction for desired behaviors and increasing it for undesired ones is more effective than motivation or instruction.",
+        "whatHappened": "When the desired action was the default — already set up, already easy — you were far more likely to take it.",
+        "whyItWorks": "Behavioral inertia favors whatever requires the least effort. Default design redirects that inertia toward the desired outcome.",
+        "scienceBehind": "Johnson & Goldstein showed that opt-out defaults for organ donation dramatically increase participation compared to opt-in. Thaler & Sunstein formalized this as 'nudge architecture' — choice design that steers behavior without restricting freedom.",
+        "inPractice": "Make the right behavior the easy behavior. Pre-schedule the check-in. Pre-fill the reflection template. Send the pulse survey at the moment it's most natural to respond. Remove every unnecessary step from the path to the desired action.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "onboarding", "team-meeting", "check-in"],
+      "tools": ["menti-pulse", "menti-form", "engagement-suite"]
+    },
+    {
+      "id": "foster-intrinsic-motivation",
+      "domain": "behavioral-science",
+      "headline": "Foster Intrinsic Motivation",
+      "problem": "New behaviors don't last when people feel controlled or lack personal ownership. External pressure creates compliance — not commitment.",
+      "solution": "Foster autonomy, competence, and relatedness to increase intrinsic motivation and lasting behavior internalization.",
+      "source": {
+        "text": "Deci & Ryan (1985, 2000) — Self-Determination Theory; Ryan & Deci (2017)",
+        "url": "https://doi.org/10.1037/0003-066X.55.1.68"
+      },
+      "back": {
+        "principle": "Self-Determination Theory identifies three universal psychological needs: autonomy (I have choice), competence (I can succeed), and relatedness (I belong). When these are met, behavior becomes intrinsically motivated and self-sustaining.",
+        "whatHappened": "When you felt that your contribution mattered and that you had genuine choice in the process, engagement came naturally.",
+        "whyItWorks": "Intrinsic motivation drives deeper engagement, more creative thinking, and more durable behavior change than external incentives.",
+        "scienceBehind": "Deci & Ryan demonstrated through decades of research that autonomy support predicts engagement, persistence, and well-being across domains. Externally controlled behavior is fragile — it ends when the pressure does.",
+        "inPractice": "Give people genuine choice in how they contribute. Acknowledge their input and show how it shaped outcomes. Design for participation, not compliance. Make it clear that their voice matters — and prove it by acting on what you hear.",
+        "relatedOpinion": "Create Ownership & Commitment"
+      },
+      "useCases": ["training", "townhall", "team-meeting", "onboarding", "workshop"],
+      "tools": ["menti-live", "engagement-suite"]
+    },
+    {
+      "id": "use-social-norms",
+      "domain": "behavioral-science",
+      "headline": "Use Social Norms to Reinforce Behavior",
+      "problem": "New behaviors fade when they are not socially reinforced. Individual commitment weakens when the surrounding culture doesn't reflect or reward the behavior.",
+      "solution": "Reinforce behaviors through shared norms, role identity, and visible social proof — until the behavior aligns with who people see themselves as.",
+      "source": {
+        "text": "Cialdini (2001) — Influence; Pierce, Kostova & Dirks (2001) — Psychological ownership; Nolan et al. (2008)",
+        "url": "https://doi.org/10.1037/0022-3514.91.6.1015"
+      },
+      "back": {
+        "principle": "Social norms are among the most powerful drivers of human behavior. People look to others to determine what is normal, appropriate, and expected. When the norm supports the desired behavior, it becomes self-reinforcing.",
+        "whatHappened": "When you saw that others in your group were doing the same thing — and that it was expected — it felt more natural to follow through.",
+        "whyItWorks": "Norm alignment reduces the psychological cost of a behavior. When something is 'what we do here,' it no longer requires a decision.",
+        "scienceBehind": "Cialdini established social proof as a foundational driver of behavior. Nolan et al. demonstrated that descriptive norms ('most people do X') are more powerful than injunctive norms ('you should do X'). Pierce et al. showed that psychological ownership — 'this is mine' — dramatically increases commitment.",
+        "inPractice": "Make the desired behavior visible: share who is doing it and how. Create team rituals around it. Name it, celebrate it, and connect it to identity: 'This is how we lead at Mentimeter.'",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "useCases": ["training", "onboarding", "check-in", "team-meeting", "townhall"],
+      "tools": ["menti-pulse", "engagement-suite"]
     }
   ]
 }
