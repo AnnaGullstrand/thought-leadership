@@ -139,7 +139,16 @@
         "menti-qa"
       ],
       "whyItMatters": "Attention is the gateway to thinking, learning, and engagement. Leaders who know how to reset attention don't just hold people's focus — they create the conditions where thinking actually happens. Without active attention resets, even the most important content disappears.",
-      "atScale": "In an organization where thousands of meetings, trainings, and all-hands happen each week, systematic attention resets translate directly into faster decision-making, stronger message retention, and more engaged workforces — compounding across every interaction."
+      "atScale": "In an organization where thousands of meetings, trainings, and all-hands happen each week, systematic attention resets translate directly into faster decision-making, stronger message retention, and more engaged workforces — compounding across every interaction.",
+      "higherEd": {
+        "whyItMatters": "Student attention drops significantly within the first 10–15 minutes of a lecture. Teachers who build in regular interaction moments don't just recapture focus — they fundamentally change the learning experience from passive consumption to active participation, directly improving comprehension, retention, and student satisfaction scores.",
+        "atScale": "Across a university with thousands of lectures, seminars, and workshops each week, systematic attention resets translate into measurably higher student engagement scores, better learning outcomes, and stronger teaching effectiveness ratings — compounding across every class and cohort.",
+        "mentiApplication": [
+          "Use Menti Live to insert a poll or word cloud mid-lecture to re-activate attention — even in lecture halls of 200+ students, instant interaction resets focus without disrupting the flow of teaching.",
+          "Use Menti Quiz as an energising mid-class knowledge check — students see their own scores in real time, which refocuses attention and creates a positive moment of engagement.",
+          "Enable Menti Q&A during lectures so students can submit questions throughout — this keeps students cognitively active even in long, content-heavy sessions."
+        ]
+      }
     },
     {
       "id": "reduce-cognitive-overload",
@@ -176,7 +185,16 @@
         "menti-workshop"
       ],
       "whyItMatters": "Dense, information-heavy communication is one of the biggest destroyers of understanding. Leaders who design for cognitive capacity instead of content volume are consistently better understood — and better followed. Less content, processed deeply, beats more content, retained poorly.",
-      "atScale": "Across an organization, cognitive overload compounds silently: meetings run long without clarity, decisions stall, and people leave without knowing what to do. Reducing it systematically improves execution speed and comprehension quality at every level."
+      "atScale": "Across an organization, cognitive overload compounds silently: meetings run long without clarity, decisions stall, and people leave without knowing what to do. Reducing it systematically improves execution speed and comprehension quality at every level.",
+      "higherEd": {
+        "whyItMatters": "Content-heavy lectures are one of the most common barriers to student understanding. Teachers who chunk information and present one idea at a time dramatically improve comprehension and reduce the confusion that leads to student disengagement and poor assessment performance.",
+        "atScale": "When cognitive load reduction is embedded into teaching practice across a faculty or institution, student pass rates improve, fewer students disengage mid-semester, and the teaching quality scores that institutions track rise consistently across programs.",
+        "mentiApplication": [
+          "In Menti Live, use one question per topic — never combine multiple concepts in a single poll. Build a sequence of simple questions to scaffold student understanding incrementally.",
+          "Use word cloud or scale questions in Menti Live to check understanding between content segments — lightweight formats add interaction without adding cognitive load.",
+          "In Menti Workshop, structure class activities into single-purpose phases so students always know exactly what they are doing and why, reducing disorientation in complex tasks."
+        ]
+      }
     },
     {
       "id": "protect-individual-thinking",
@@ -214,7 +232,16 @@
         "menti-form"
       ],
       "whyItMatters": "The leader who speaks first — or the most senior person in the room — often shapes everyone else's thinking unintentionally. Protecting individual thinking before discussion surfaces more honest, diverse, and higher-quality input, and leads to better decisions.",
-      "atScale": "In organizations where group conformity is the norm, decisions become echo chambers. Structural independence at scale unlocks hidden expertise, reduces groupthink, and improves decision quality across every team and forum."
+      "atScale": "In organizations where group conformity is the norm, decisions become echo chambers. Structural independence at scale unlocks hidden expertise, reduces groupthink, and improves decision quality across every team and forum.",
+      "higherEd": {
+        "whyItMatters": "In classroom discussions, confident students or early responders often anchor the thinking of everyone else before quieter students have formed their own view. Teachers who capture individual thinking first create more honest, diverse, and higher-quality class participation — and more equitable learning environments.",
+        "atScale": "When independent thinking is structurally protected across an institution, classroom equity improves, more students develop critical thinking skills, and learning assessments better reflect what students actually understand rather than what the most vocal voices in the room said.",
+        "mentiApplication": [
+          "Enable anonymous mode in Menti Live so all students can respond simultaneously — this captures the genuine range of student thinking before any discussion shapes it.",
+          "Use Menti Form for pre-class questions — collecting student views asynchronously before the session ensures discussion starts from distributed thinking, not whoever arrives most confident.",
+          "In Menti Workshop, structure group activities so individual input is captured before peer discussion begins — protecting independent thinking across the full student cohort."
+        ]
+      }
     },
     {
       "id": "make-thinking-visible",
@@ -253,7 +280,16 @@
         "menti-qa"
       ],
       "whyItMatters": "What isn't surfaced can't be used. Leaders who make thinking visible unlock the distributed intelligence in any room — turning individual insight into shared knowledge that the whole group can build on and decide from.",
-      "atScale": "Most valuable organizational knowledge stays invisible — in people's heads, never shared. Making thinking visible systematically is the foundation of organizational learning, smarter decisions, and genuine collective intelligence."
+      "atScale": "Most valuable organizational knowledge stays invisible — in people's heads, never shared. Making thinking visible systematically is the foundation of organizational learning, smarter decisions, and genuine collective intelligence.",
+      "higherEd": {
+        "whyItMatters": "Students' misconceptions, gaps in understanding, and unexpressed questions stay hidden until they cause problems at assessment time. Teachers who make thinking visible in real time can identify and address misunderstanding in the moment — long before it shows up in exam results.",
+        "atScale": "Across a department or institution, making student thinking visible at scale transforms formative assessment from a periodic event into a continuous process — giving educators the data they need to adapt teaching and improve learning outcomes systematically.",
+        "mentiApplication": [
+          "Use word clouds and open-text questions in Menti Live to display student understanding across the full cohort — misconceptions become visible immediately and can be addressed in the moment rather than at exam time.",
+          "Show rating distributions in Menti Live so students see where understanding is strong and where it is fragile — creating a shared picture of the class's learning state.",
+          "Use Menti Q&A so student questions are visible to the whole group — often the question one student asks is the question many others were afraid to raise."
+        ]
+      }
     },
     {
       "id": "use-retrieval",
@@ -289,7 +325,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "Re-teaching what people already heard is one of the most common — and least effective — approaches to learning. Retrieval practice doesn't just test what people know; it actively strengthens the memory that makes knowledge usable in practice.",
-      "atScale": "Training programs that use retrieval instead of repetition produce measurably stronger retention. At scale, this means higher capability per training investment, faster skill development, and less time re-covering ground that should already be understood."
+      "atScale": "Training programs that use retrieval instead of repetition produce measurably stronger retention. At scale, this means higher capability per training investment, faster skill development, and less time re-covering ground that should already be understood.",
+      "higherEd": {
+        "whyItMatters": "Students who only review content never practice the act of remembering it — and reviewing is far less effective for learning than retrieving. Teachers who use retrieval practice produce measurably stronger exam performance, not just in-session understanding. This is one of the most evidence-based practices available to educators.",
+        "atScale": "Across a faculty, replacing passive review with retrieval practice produces higher and more consistent student performance on assessments. This is one of the highest-impact changes in teaching practice — and it costs nothing but intentional design.",
+        "mentiApplication": [
+          "Open every class with a Menti Quiz — a short knowledge check on content from the previous session. Students practice retrieval before instruction, and teachers immediately see where gaps remain.",
+          "Use Menti Pulse to send spaced retrieval questions 3, 7, and 14 days after a lecture — the most evidence-based tool for improving long-term student retention available to educators.",
+          "Use Menti Quiz for regular low-stakes knowledge checks throughout the semester — frequent retrieval practice improves exam performance more reliably than additional study time."
+        ]
+      }
     },
     {
       "id": "generate-own-answers",
@@ -326,7 +371,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "When people generate their own answers before receiving yours, they learn more deeply and remember longer. Leaders who ask before they tell don't just inform — they create the kind of durable understanding that shapes behavior.",
-      "atScale": "When generating is the cultural standard rather than passive receiving, organizations build a workforce that thinks rather than waits to be told — developing judgment, initiative, and capability that compounds over time."
+      "atScale": "When generating is the cultural standard rather than passive receiving, organizations build a workforce that thinks rather than waits to be told — developing judgment, initiative, and capability that compounds over time.",
+      "higherEd": {
+        "whyItMatters": "Students who generate their own answers before receiving the correct one remember the content significantly longer and understand it more deeply. Teachers who ask before telling build the kind of durable understanding that transfers to exams, professional practice, and real-world application.",
+        "atScale": "When generating is the norm across courses and cohorts, students develop stronger independent thinking skills, perform better on application-based assessments, and are better prepared for the complexity of post-graduation academic and professional life.",
+        "mentiApplication": [
+          "In Menti Live, ask students to generate a hypothesis or answer before revealing any content — 'What do you think the answer is?' Students who generate first remember the correct answer significantly longer.",
+          "Use Menti Workshop for hypothesis generation activities — students produce their own explanations or solutions independently before the class explores the topic together.",
+          "Design Menti Quiz questions that require students to produce an answer from memory rather than recognise a correct option — open-text quiz questions activate deeper encoding than multiple choice."
+        ]
+      }
     },
     {
       "id": "activate-prior-knowledge",
@@ -361,7 +415,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "New information doesn't stick in a vacuum. Leaders who activate what people already know before adding new content create dramatically better understanding — and waste far less time teaching material that doesn't land because it has nothing to connect to.",
-      "atScale": "Learning and communication programs that activate prior knowledge produce faster onboarding, stronger capability transfer, and better integration of new frameworks into existing ways of working — reducing the time-to-proficiency gap significantly."
+      "atScale": "Learning and communication programs that activate prior knowledge produce faster onboarding, stronger capability transfer, and better integration of new frameworks into existing ways of working — reducing the time-to-proficiency gap significantly.",
+      "higherEd": {
+        "whyItMatters": "New academic content doesn't integrate without something to connect it to. Teachers who activate what students already know before introducing new concepts dramatically improve comprehension speed, reduce confusion, and create more meaningful learning experiences across the full cohort.",
+        "atScale": "Programs that build prior knowledge activation into their teaching practice consistently see stronger student onboarding, better integration of new concepts into existing understanding, and higher performance on assessments that require synthesis and application — not just recall.",
+        "mentiApplication": [
+          "Start every new topic with a Menti Quiz or word cloud: 'What do you already know about this?' — activate existing student knowledge structures before building on them.",
+          "Use a Menti Live confidence scale: 'How familiar are you with this topic?' — calibrate the depth and pace of teaching to where the cohort actually is, not where you assume them to be.",
+          "Use Menti Form for diagnostic pre-topic assessments — identify gaps in prior knowledge before the class so you can design teaching that builds effectively on existing foundations."
+        ]
+      }
     },
     {
       "id": "reinforce-over-time",
@@ -397,7 +460,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "A single session — however brilliant — changes almost nothing long-term. Leaders who build reinforcement into their programs create the only conditions under which learning actually becomes lasting capability and changed behavior.",
-      "atScale": "At scale, the difference between one-off training and systematically reinforced learning compounds enormously. Organizations that reinforce over time develop capability faster, retain knowledge longer, and dramatically reduce the cost of re-covering the same material."
+      "atScale": "At scale, the difference between one-off training and systematically reinforced learning compounds enormously. Organizations that reinforce over time develop capability faster, retain knowledge longer, and dramatically reduce the cost of re-covering the same material.",
+      "higherEd": {
+        "whyItMatters": "Students who encounter material only once — even in an excellent lecture — forget most of it within days. Teachers who design spaced reinforcement into their courses create the long-term retention that is the actual goal of education, not just performance on the next test.",
+        "atScale": "At the institutional level, courses designed with spaced reinforcement produce measurably better long-term student outcomes. Students retain more, perform better on cumulative assessments, and develop more durable expertise — which is what a degree is supposed to certify.",
+        "mentiApplication": [
+          "Schedule a Menti Pulse series after key course modules — send spaced retrieval questions at 3, 7, and 21 days after teaching to move knowledge from short-term to long-term student memory.",
+          "Use Menti Quiz for weekly or bi-weekly knowledge checks throughout the semester — the frequency and spacing of retrieval practice is what turns lectures into lasting learning.",
+          "Use Menti Form at the midpoint and end of the course for structured student reflection: 'What key ideas have you retained? What remains unclear?' — use responses to guide revision and reinforcement."
+        ]
+      }
     },
     {
       "id": "learn-socially",
@@ -433,7 +505,16 @@
         "menti-workshop"
       ],
       "whyItMatters": "People understand more deeply and remember longer when they process ideas with others. Leaders who build in social learning moments don't just teach — they build collective understanding and shared mental models that make teams more coherent and effective.",
-      "atScale": "When social learning is embedded into organizational culture, knowledge spreads faster, teams develop shared language and frameworks, and individual insights become organizational capability rather than staying locked in one person's head."
+      "atScale": "When social learning is embedded into organizational culture, knowledge spreads faster, teams develop shared language and frameworks, and individual insights become organizational capability rather than staying locked in one person's head.",
+      "higherEd": {
+        "whyItMatters": "Students who process ideas with peers understand them more deeply and remember longer than those who encounter them alone. Teachers who create structured peer learning moments build collective understanding and the collaborative skills that are central to both academic success and professional life.",
+        "atScale": "When social learning is embedded into course design across a program, cohort cohesion strengthens, knowledge spreads more effectively between students, and the institution develops graduates with stronger collaboration and communication capabilities — consistently rated among the top graduate attributes employers seek.",
+        "mentiApplication": [
+          "Show Menti Live results after individual responses and use the class distribution as the discussion starter — 'I can see many of you said X and some said Y. Let's explore the difference.'",
+          "Use Menti Workshop for structured peer explanation tasks — student responds individually, then explains their reasoning to a partner. Social processing deepens what individual reflection starts.",
+          "Use word clouds to surface collective student language — then use it as the basis for whole-class sense-making: what patterns do students notice? What surprised them?"
+        ]
+      }
     },
     {
       "id": "distribute-participation",
@@ -471,7 +552,16 @@
         "menti-qa"
       ],
       "whyItMatters": "Groups consistently underperform when only a few voices dominate. Leaders who ensure broad participation unlock the full cognitive diversity of any group — and consistently make better decisions, generate better ideas, and build stronger commitment.",
-      "atScale": "Across organizations, uneven participation is the costly norm. Changing it at scale surfaces hidden expertise, increases ownership of outcomes, and significantly improves the quality of strategic input — producing better organizational decisions."
+      "atScale": "Across organizations, uneven participation is the costly norm. Changing it at scale surfaces hidden expertise, increases ownership of outcomes, and significantly improves the quality of strategic input — producing better organizational decisions.",
+      "higherEd": {
+        "whyItMatters": "In most classrooms, a small number of students answer most questions. Teachers who design for distributed participation ensure that every student — regardless of confidence, language background, or learning style — has a genuine opportunity to think, contribute, and feel they belong in the class.",
+        "atScale": "Distributed participation is a cornerstone of inclusive teaching practice. At scale, it measurably improves equity outcomes, increases the sense of belonging among underrepresented students, and creates learning environments where every student's thinking is developed — not just the most vocal.",
+        "mentiApplication": [
+          "Use anonymous Menti Live polls so every student responds simultaneously — no hands up, no cold-calling, no social pressure. A lecture of 200 becomes as participatory as a seminar of 20.",
+          "Use Menti Q&A so every student can submit questions regardless of confidence, language, or background — upvoting surfaces what the cohort actually needs addressed.",
+          "Use Menti Workshop for structured group activities where every student's input is captured — ensuring that group work surfaces more than the most confident student's view."
+        ]
+      }
     },
     {
       "id": "surface-disagreement",
@@ -508,7 +598,16 @@
         "menti-qa"
       ],
       "whyItMatters": "Groups that appear to agree are often just avoiding conflict. Leaders who deliberately surface dissent and diverse perspectives before converging make better decisions — and build more resilient strategies that have actually been stress-tested.",
-      "atScale": "Organizations where disagreement is structurally surfaced catch blind spots earlier, generate more innovative solutions, and avoid the costly consequences of unchallenged groupthink — which is responsible for many of the most expensive organizational failures."
+      "atScale": "Organizations where disagreement is structurally surfaced catch blind spots earlier, generate more innovative solutions, and avoid the costly consequences of unchallenged groupthink — which is responsible for many of the most expensive organizational failures.",
+      "higherEd": {
+        "whyItMatters": "Students who appear to agree are often just avoiding the discomfort of speaking up in class. Teachers who deliberately surface disagreement and diverse interpretations develop critical thinking, deepen understanding, and create the intellectually challenging environment that distinguishes excellent higher education.",
+        "atScale": "Institutions that cultivate constructive disagreement as a teaching norm produce graduates who think more critically, reason more independently, and are better equipped for the ambiguity of post-graduation work — directly improving the graduate attribute outcomes that institutions are measured on.",
+        "mentiApplication": [
+          "Use a Menti Live rating distribution to make academic disagreement visible — when students are split on an interpretation, that's where the richest class discussion lives.",
+          "Use Menti Q&A to invite challenging questions about course content or teaching assumptions — anonymity removes the social cost of intellectual challenge in the classroom.",
+          "In Menti Workshop, build in a structured critical evaluation phase: 'What is the strongest objection to this argument?' before convergence on any conclusion."
+        ]
+      }
     },
     {
       "id": "clarify-decision",
@@ -544,7 +643,16 @@
         "menti-form"
       ],
       "whyItMatters": "Most meetings that end without a clear decision suffer from an unclear decision question to begin with. Leaders who clarify what they are deciding — before evaluating any options — cut through confusion, align effort, and consistently drive faster, cleaner action.",
-      "atScale": "At scale, unclear decision-making is one of the biggest destroyers of organizational velocity. Decisions that are crisply defined move faster, generate stronger alignment, and produce outcomes that are far easier to execute and hold people accountable to."
+      "atScale": "At scale, unclear decision-making is one of the biggest destroyers of organizational velocity. Decisions that are crisply defined move faster, generate stronger alignment, and produce outcomes that are far easier to execute and hold people accountable to.",
+      "higherEd": {
+        "whyItMatters": "Students who don't understand what a task is asking cannot perform it well — not because they lack knowledge, but because the question is unclear. Teachers who define the task, the criteria, and what success looks like upfront dramatically improve both student performance and the quality of work submitted.",
+        "atScale": "Across an institution, assessment and task clarity reduces student confusion, grade appeal rates, and teaching staff support burden. Clear success criteria correlate strongly with student satisfaction scores and more consistent, fairer assessment outcomes across cohorts.",
+        "mentiApplication": [
+          "At the start of any class activity in Menti Live, ask: 'What do you understand this task to be asking?' — displaying student responses surfaces misunderstanding before work begins.",
+          "Use Menti Workshop to collaboratively define assessment criteria with students — shared criteria improve both the quality of student work and the fairness of the assessment process.",
+          "Use Menti Form for pre-assignment intake: 'What do you understand the task to be asking?' — identifying task misunderstanding before submission reduces wasted student effort and teaching time."
+        ]
+      }
     },
     {
       "id": "goal-clarity",
@@ -583,7 +691,16 @@
         "menti-form"
       ],
       "whyItMatters": "Unclear goals produce unclear effort. Leaders who define specific, measurable success criteria create the focus that drives performance — and make it possible for people to know whether they are making progress toward what actually matters.",
-      "atScale": "Goal clarity at scale is the foundation of organizational alignment. When everyone knows what success looks like and how it is measured, execution becomes faster and more coordinated — reducing wasted effort, misalignment, and the cost of course-correction."
+      "atScale": "Goal clarity at scale is the foundation of organizational alignment. When everyone knows what success looks like and how it is measured, execution becomes faster and more coordinated — reducing wasted effort, misalignment, and the cost of course-correction.",
+      "higherEd": {
+        "whyItMatters": "Students who don't understand what they are supposed to achieve from a learning activity cannot fully engage with it. Teachers who make learning objectives explicit — and connect them to student goals — create the clarity that drives effort, focus, and better academic performance across the cohort.",
+        "atScale": "Goal clarity in course design is one of the strongest predictors of student satisfaction and perceived teaching effectiveness. At scale, clear learning objectives reduce student anxiety, improve course completion rates, and create more coherent program experiences that students and accreditation bodies both value.",
+        "mentiApplication": [
+          "Start each class with a Menti Live question: 'By the end of today, what do you think you should be able to do?' — display responses to identify gaps in goal comprehension before teaching begins.",
+          "Use Menti Form at the start of the semester to capture student learning goals: 'What do you most want to get from this course?' — use responses to personalise framing and increase perceived relevance.",
+          "Use Menti Pulse regularly: 'How clear are you on what you need to do for the next assessment?' — a persistent clarity check that identifies student confusion before it becomes a problem."
+        ]
+      }
     },
     {
       "id": "implementation-intentions",
@@ -620,7 +737,16 @@
         "menti-form"
       ],
       "whyItMatters": "Good intentions are common. Follow-through is not. Leaders who help people translate commitments into specific if-then plans — 'If this happens, I will do this' — dramatically increase the likelihood that decisions and learning actually produce changed behavior.",
-      "atScale": "The intention-action gap is one of the most expensive gaps in organizational performance. Closing it at scale through structured if-then planning produces measurably higher follow-through on strategic priorities — turning plans into execution rather than documents."
+      "atScale": "The intention-action gap is one of the most expensive gaps in organizational performance. Closing it at scale through structured if-then planning produces measurably higher follow-through on strategic priorities — turning plans into execution rather than documents.",
+      "higherEd": {
+        "whyItMatters": "Students regularly intend to study, complete tasks, and apply feedback — and then don't. Teachers who help students create specific if-then action plans dramatically improve academic follow-through, time management, and the translation of learning intentions into actual study behavior.",
+        "atScale": "At scale, implementation intention practices embedded into course design reduce assessment submission gaps, improve student completion rates, and help institutions support academic success — particularly for students managing multiple commitments alongside their studies.",
+        "mentiApplication": [
+          "Close every class with a Menti Live open question: 'What will you do to consolidate today's learning, and when specifically?' — written commitment is significantly more likely to be acted on than verbal intention.",
+          "Use Menti Form for structured study planning: 'If I have free time between now and the deadline, I will [specific action].' The if-then structure makes study intentions concrete and more durable.",
+          "Schedule a Menti Pulse at the moment of intended action — the night before an assignment deadline or the start of a study week — to activate commitment and prompt follow-through."
+        ]
+      }
     },
     {
       "id": "psychological-safety",
@@ -658,7 +784,16 @@
         "menti-form"
       ],
       "whyItMatters": "People perform far below their capability when they fear judgment. Leaders who create psychological safety don't just make people feel better — they unlock the full cognitive and creative potential of every person in the room, including the ones who never would have spoken otherwise.",
-      "atScale": "Organizations with high psychological safety systematically outperform those without it — across measures of innovation, learning speed, decision quality, and talent retention. At scale, it may be the single most powerful structural lever for organizational performance."
+      "atScale": "Organizations with high psychological safety systematically outperform those without it — across measures of innovation, learning speed, decision quality, and talent retention. At scale, it may be the single most powerful structural lever for organizational performance.",
+      "higherEd": {
+        "whyItMatters": "Students who fear judgment from peers or teaching staff do not participate, do not ask for help when they need it, and do not surface their misconceptions until assessment reveals them. Teachers who create psychologically safe classrooms unlock the full participation and honest disclosure that makes both teaching and learning effective.",
+        "atScale": "Psychological safety in the classroom is foundational to inclusive teaching and student belonging — two of the most important drivers of equity outcomes in higher education. At scale, it improves retention particularly for first-generation and underrepresented students, and increases the honesty of student feedback on teaching quality.",
+        "mentiApplication": [
+          "Enable anonymous mode in Menti Live as the structural default for any class activity involving personal views, sensitive topics, or answers students might fear getting wrong — safety by design, not just by intention.",
+          "Use Menti Q&A in large lectures so every student — not just the most confident — can ask the questions they need answered. Anonymity is especially important in large cohorts where hand-raising feels high-risk.",
+          "Use Menti Form for anonymous mid-course feedback surveys — students share far more honestly about their learning experience when there is no social exposure to their individual responses."
+        ]
+      }
     },
     {
       "id": "feedback-loops",
@@ -695,7 +830,16 @@
         "menti-form"
       ],
       "whyItMatters": "Without feedback, people can't improve — and they don't know whether what they're doing is working. Leaders who build timely, specific feedback loops create the conditions for continuous learning, course-correction, and sustained performance improvement.",
-      "atScale": "Feedback loops at scale are the nervous system of organizational learning. When timely, specific feedback is embedded across teams and functions, capability development accelerates and performance problems surface while there is still time to address them."
+      "atScale": "Feedback loops at scale are the nervous system of organizational learning. When timely, specific feedback is embedded across teams and functions, capability development accelerates and performance problems surface while there is still time to address them.",
+      "higherEd": {
+        "whyItMatters": "Students who receive only summative grades cannot improve their approach — they only know they were wrong, not how to do better. Teachers who build regular, specific formative feedback into their teaching create the conditions for continuous student improvement and genuine learning growth across the course.",
+        "atScale": "Formative feedback loops at scale are the most evidence-backed lever for improving student outcomes available to institutions. When regular, actionable feedback is embedded in courses across a program, student performance, satisfaction, and progression rates all improve measurably.",
+        "mentiApplication": [
+          "Display Menti Live results immediately after every class question — instant visibility of where understanding is strong and where it is fragile closes the formative feedback loop in real time.",
+          "Use Menti Pulse after each teaching week: 'What was clearest? What was most confusing?' — timely, specific, low-friction feedback that improves your teaching in the very next session.",
+          "Use Menti Form for structured mid-course and end-course evaluations — longer student reflections that capture qualitative insight and feed directly into course improvement decisions."
+        ]
+      }
     },
     {
       "id": "slow-thinking-down",
@@ -732,7 +876,16 @@
         "menti-form"
       ],
       "whyItMatters": "The decisions that matter most are often the ones people make too fast. Leaders who create structured reflection moments — before high-stakes questions are answered — produce better-quality judgments and fewer costly mistakes.",
-      "atScale": "When organizations build deliberate thinking into high-stakes processes, they reduce bias-driven errors, improve strategic decision quality, and make fewer decisions they later need to reverse — reducing both cost and organizational disruption."
+      "atScale": "When organizations build deliberate thinking into high-stakes processes, they reduce bias-driven errors, improve strategic decision quality, and make fewer decisions they later need to reverse — reducing both cost and organizational disruption.",
+      "higherEd": {
+        "whyItMatters": "Students often answer questions impulsively or to satisfy social expectations rather than engaging in genuine reflection. Teachers who build in structured thinking time before student responses improve the quality of class discussion and develop the deliberate reasoning skills that higher education is designed to cultivate.",
+        "atScale": "When deliberate thinking is embedded as a teaching norm across a faculty, students develop stronger critical thinking and analytical habits — the exact graduate attributes that universities are assessed on and that employers consistently report they need most.",
+        "mentiApplication": [
+          "In Menti Live, add a written reflection question before class discussion — 'Take one minute to write your response before we discuss.' Writing forces more deliberate thinking than immediate verbal response.",
+          "Use Menti Workshop to run structured academic exercises: hypotheses, predictions, and pre-task reflections that slow students down before they engage with complex content.",
+          "Use Menti Form for pre-class reflections where students think through a question before the lecture — arriving with considered views rather than starting cold."
+        ]
+      }
     },
     {
       "id": "activate-personal-relevance",
@@ -769,7 +922,16 @@
         "menti-pulse"
       ],
       "whyItMatters": "People invest mental effort in what feels relevant to them. Leaders who connect content to their audience's actual reality don't just get more attention — they get deeper thinking, stronger retention, and more willingness to act on what they've learned.",
-      "atScale": "When relevance is built into every communication and training program, engagement rates rise, knowledge retention improves, and fewer resources are wasted on content that doesn't connect. Relevance at scale is one of the highest-return investments in learning and communication."
+      "atScale": "When relevance is built into every communication and training program, engagement rates rise, knowledge retention improves, and fewer resources are wasted on content that doesn't connect. Relevance at scale is one of the highest-return investments in learning and communication.",
+      "higherEd": {
+        "whyItMatters": "Students learn more deeply when course content connects to their own life, goals, or experience. Teachers who activate personal relevance don't just get more attentive students — they get more engaged thinkers who are motivated to apply what they learn beyond the classroom.",
+        "atScale": "When relevance is embedded into course design across a program, student engagement scores rise, dropout rates fall, and learning satisfaction improves — particularly for students from non-traditional backgrounds for whom academic content can feel most disconnected from their lived experience.",
+        "mentiApplication": [
+          "Start every class with a Menti Live question: 'How does this topic connect to your career goals or personal experience?' A word cloud of responses makes personal relevance visible and shared across the cohort.",
+          "Use a Menti Live scale: 'How relevant is today's topic to your studies or future work?' — calibrate teaching to the cohort's starting point and address perceived relevance gaps directly.",
+          "Use Menti Form for pre-course intake to capture student goals and interests — use the data to design a more relevant and personalised learning experience."
+        ]
+      }
     },
     {
       "id": "strengthen-memory-with-emotion",
@@ -805,7 +967,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "Emotionally neutral content is forgotten fast. Leaders who connect what they teach or communicate to something that genuinely matters to their audience don't just get more attention — they create memories that last and behavior that actually changes.",
-      "atScale": "When emotion is intentionally designed into organizational communication and learning, message retention improves, cultural values take root more deeply, and change efforts land more effectively — especially the ones that depend on people genuinely caring."
+      "atScale": "When emotion is intentionally designed into organizational communication and learning, message retention improves, cultural values take root more deeply, and change efforts land more effectively — especially the ones that depend on people genuinely caring.",
+      "higherEd": {
+        "whyItMatters": "Dry, emotionally neutral content is forgotten quickly regardless of how clearly it is explained. Teachers who connect academic content to real cases, personal stories, or genuine curiosity create memories that last — and motivation that extends beyond the classroom and into lifelong learning.",
+        "atScale": "When emotional engagement is designed into courses at scale, student satisfaction with teaching improves, content is retained longer, and students are more likely to connect their studies to meaningful career and life directions — improving institutional outcomes on graduate success metrics.",
+        "mentiApplication": [
+          "Ask for gut reactions in Menti Live before analysis: 'What's your first response to this finding?' — starting with emotional reaction before cognitive processing strengthens memory encoding.",
+          "Use Menti Quiz as an emotionally engaging energiser — the competitive, playful format creates positive arousal that strengthens what students retain from the session.",
+          "Use open-text questions in Menti Live that invite personal connection: 'When have you encountered something related to this in your own experience?' — personal narrative activates emotional memory pathways."
+        ]
+      }
     },
     {
       "id": "apply-learning-in-context",
@@ -843,7 +1014,16 @@
         "menti-quiz"
       ],
       "whyItMatters": "Knowledge that can't be applied is not yet useful. Leaders who build application into their learning design create the transfer that turns understanding into performance — the only outcome that actually justifies the investment in learning.",
-      "atScale": "The gap between what people learn and what they do is the most expensive gap in most organizations. Closing it at scale through contextual practice directly improves execution quality, speed of capability development, and return on training investment."
+      "atScale": "The gap between what people learn and what they do is the most expensive gap in most organizations. Closing it at scale through contextual practice directly improves execution quality, speed of capability development, and return on training investment.",
+      "higherEd": {
+        "whyItMatters": "Students can recall concepts without being able to use them. Teachers who build application into their teaching — through scenarios, case studies, and practice tasks — develop the transferable, usable knowledge that graduates actually need in professional and academic contexts.",
+        "atScale": "Graduate employability is one of the most scrutinised metrics for universities and colleges. Programs that systematically build contextual application into learning design produce graduates who can use their knowledge in real situations — improving both graduate outcomes and institutional rankings.",
+        "mentiApplication": [
+          "Close every class with a Menti Live scenario question: 'In this real-world situation, what would you recommend?' — practice application in context before students leave the room.",
+          "Use Menti Quiz with scenario-based questions that mirror professional or academic contexts — not just recall, but application in a realistic setting that tests genuine understanding.",
+          "Use Menti Pulse after the semester: 'Where have you applied this learning since the course ended?' — tracks real-world transfer and gives students a reason to revisit and consolidate."
+        ]
+      }
     },
     {
       "id": "separate-generation-from-evaluation",
@@ -879,7 +1059,16 @@
         "menti-workshop"
       ],
       "whyItMatters": "Mixing idea generation and evaluation kills both. Leaders who structure clear divergent and convergent phases consistently unlock more — and better — ideas, while making evaluation more rigorous and less influenced by social pressure.",
-      "atScale": "When organizations systematically separate these phases across their decision and innovation processes, idea quality rises, creative output increases, and evaluation becomes more consistent and less politically distorted — improving both innovation and decision speed."
+      "atScale": "When organizations systematically separate these phases across their decision and innovation processes, idea quality rises, creative output increases, and evaluation becomes more consistent and less politically distorted — improving both innovation and decision speed.",
+      "higherEd": {
+        "whyItMatters": "When students evaluate ideas at the same time they generate them, creative thinking collapses and intellectual risk-taking disappears. Teachers who explicitly separate these phases in class activities create more intellectually generous and rigorous learning — producing better student thinking and richer academic work.",
+        "atScale": "When diverge-then-converge is embedded as a teaching norm across a program, student work quality improves, class discussions become richer, and students develop the cognitive flexibility that underpins innovation, creativity, and higher-order thinking — the exact capacities higher education exists to build.",
+        "mentiApplication": [
+          "In Menti Workshop, structure class activities with an explicit generation phase (open input, no judgment) followed by a separate evaluation phase (voting, ranking). Never mix the two.",
+          "In Menti Live, use word cloud or open text for idea generation — then switch to ranking or rating only after all student contributions are visible.",
+          "Use anonymous contribution during the generation phase so student ideas are evaluated on their merits, not on the social status or confidence of who submitted them."
+        ]
+      }
     },
     {
       "id": "ask-single-focus-questions",
@@ -919,7 +1108,16 @@
         "menti-workshop"
       ],
       "whyItMatters": "Vague or compound questions produce vague, unreliable input — and leaders who act on poor-quality data make poor-quality decisions. Precise, single-focus questions are the foundation of reliable input and trustworthy insights.",
-      "atScale": "Question quality determines input quality determines decision quality. At scale, systematically better questions — in meetings, surveys, and strategic forums — produce systematically better data and significantly improve organizational decision-making quality."
+      "atScale": "Question quality determines input quality determines decision quality. At scale, systematically better questions — in meetings, surveys, and strategic forums — produce systematically better data and significantly improve organizational decision-making quality.",
+      "higherEd": {
+        "whyItMatters": "Compound or vague questions produce confused, low-quality student responses — not because students don't understand the topic, but because the question design failed. Teachers who ask one precise, focused question at a time get more thoughtful answers, richer class discussion, and more reliable data about what students actually understand.",
+        "atScale": "Question quality is the foundation of formative assessment quality. At scale, systematically better questions in lectures, seminars, and online courses give educators more accurate insight into student understanding — enabling more targeted, effective teaching across programs.",
+        "mentiApplication": [
+          "In Menti Live, one question per concept — never combine multiple learning objectives in a single poll. Sequence questions to build student understanding incrementally.",
+          "In Menti Form assessments and surveys, use one question per page so students give full cognitive attention to each item without conflating multiple issues.",
+          "Use Menti Pulse for regular, single-question learning checks: 'What was the most important thing you learned this week?' — focused, low-friction, and genuinely informative for teaching."
+        ]
+      }
     },
     {
       "id": "use-neutral-wording",
@@ -957,7 +1155,16 @@
         "menti-form"
       ],
       "whyItMatters": "The way a question is phrased changes how people answer it — often dramatically. Leaders who use neutral wording get honest input that reflects what people actually think, rather than a reflection of the leader's own assumptions.",
-      "atScale": "Biased questions produce biased data that drives biased decisions. At scale, neutral wording is the foundation of organizational data integrity — ensuring that the insights used to guide strategy actually represent reality."
+      "atScale": "Biased questions produce biased data that drives biased decisions. At scale, neutral wording is the foundation of organizational data integrity — ensuring that the insights used to guide strategy actually represent reality.",
+      "higherEd": {
+        "whyItMatters": "Leading or biased questions in class can inadvertently confirm what students think the teacher wants to hear rather than what they actually believe or understand. Neutral wording in formative assessment gives teachers accurate data about student understanding and honest feedback on their own teaching.",
+        "atScale": "At scale, neutral question wording in surveys, formative assessments, and course evaluations produces more accurate institutional data — enabling better decisions about curriculum design, teaching effectiveness, and student support that actually improve outcomes.",
+        "mentiApplication": [
+          "Before using any Menti question in class, review it for leading language — 'What makes this theory useful?' implies it is useful. 'What do you think of this theory?' does not.",
+          "In Menti Form course evaluations and student feedback surveys, use symmetrical, neutral scale labels to get honest, unbiased feedback on teaching quality.",
+          "Use Menti Pulse for regular teaching feedback with neutral phrasing: 'How was today's class?' rather than 'How helpful was today's class?' — neutral wording produces more honest and useful responses."
+        ]
+      }
     },
     {
       "id": "match-format-to-decision",
@@ -994,7 +1201,16 @@
         "menti-form"
       ],
       "whyItMatters": "The format of a question shapes the cognitive process people use to answer it — and therefore shapes the quality and type of output. Leaders who match format to decision type get input they can actually use, rather than data that looks precise but isn't.",
-      "atScale": "Across organizations, mismatched question formats produce decisions based on structurally flawed data. Building format discipline into decision processes at scale dramatically improves data reliability and the quality of organizational choices."
+      "atScale": "Across organizations, mismatched question formats produce decisions based on structurally flawed data. Building format discipline into decision processes at scale dramatically improves data reliability and the quality of organizational choices.",
+      "higherEd": {
+        "whyItMatters": "The format of a question shapes what kind of thinking it requires from students. Teachers who match assessment format to learning objective get responses that actually reflect the capability they are trying to develop and measure — rather than artifacts of the task design itself.",
+        "atScale": "When format-learning objective alignment is embedded across a program, assessment validity improves — meaning grades more accurately reflect what students know and can do. This directly improves the reliability of the degree as a signal of graduate capability and learning quality.",
+        "mentiApplication": [
+          "Comprehension check → multiple choice or scale in Menti Live. Idea exploration → word cloud or open text. Prioritisation → ranking. Match the format to the learning objective, not to habit.",
+          "In Menti Workshop, use format selection as a design principle for class activities — ranking for prioritisation tasks, rating for evaluation, open text for analysis and synthesis.",
+          "In Menti Form, use a mix of question types matched to what you need to understand: scales for student perception, multiple choice for knowledge, open text for reasoning and reflection."
+        ]
+      }
     },
     {
       "id": "reduce-noise-in-evaluation",
@@ -1030,7 +1246,16 @@
         "menti-form"
       ],
       "whyItMatters": "Inconsistency in judgment — noise — is as damaging as bias, but far less visible and even less discussed. Leaders who structure their evaluation processes reduce the random variance that undermines fairness, accuracy, and trust in decisions.",
-      "atScale": "In large organizations, noisy evaluation drives inconsistent talent decisions, flawed prioritization, and eroded trust across teams and functions. Systematic noise reduction improves fairness and decision quality at scale — especially where the stakes are highest."
+      "atScale": "In large organizations, noisy evaluation drives inconsistent talent decisions, flawed prioritization, and eroded trust across teams and functions. Systematic noise reduction improves fairness and decision quality at scale — especially where the stakes are highest.",
+      "higherEd": {
+        "whyItMatters": "When different assessors apply different standards to the same student work, grades become inconsistent and unfair — damaging student trust and compromising the integrity of the academic record. Teachers who use shared criteria and structured evaluation ensure that grades reflect actual performance.",
+        "atScale": "Assessment reliability is a core accreditation and quality assurance concern for institutions. At scale, systematic noise reduction in grading produces more consistent, defensible, and fair student outcomes — protecting both institutional reputation and student confidence in the fairness of their assessment.",
+        "mentiApplication": [
+          "Before any peer evaluation or student rating activity in Menti Live, share and display the evaluation criteria — aligned criteria produce more consistent and fairer student assessments.",
+          "Use Menti Workshop for structured peer review — defined rubrics, independent rating, visible distribution. Brings rigor to collaborative evaluation without social bias.",
+          "Use Menti Form for anonymous marking calibration exercises — all assessors work through the same criteria independently before any discussion, reducing marking inconsistency."
+        ]
+      }
     },
     {
       "id": "calibrate-rigor-to-stakes",
@@ -1066,7 +1291,16 @@
         "menti-form"
       ],
       "whyItMatters": "Applying the same lightweight process to every decision — regardless of impact — is a systematic source of poor outcomes. Leaders who calibrate rigor to stakes protect high-stakes decisions from the same casualness that serves low-stakes ones well.",
-      "atScale": "Organizations that treat all decisions the same waste rigor on the trivial and critically underinvest it on the consequential. Calibrated process discipline at scale reduces strategic errors and reallocates decision-making energy to where it creates the most value."
+      "atScale": "Organizations that treat all decisions the same waste rigor on the trivial and critically underinvest it on the consequential. Calibrated process discipline at scale reduces strategic errors and reallocates decision-making energy to where it creates the most value.",
+      "higherEd": {
+        "whyItMatters": "Not all academic tasks warrant the same level of scaffolding and structure. Teachers who calibrate the rigor of their assessment design to the stakes of the task optimise both learning and assessment quality — investing design effort where it creates the most value for students.",
+        "atScale": "Across a department or faculty, calibrated assessment design reduces student anxiety on low-stakes tasks, improves the quality of high-stakes assessment, and creates a more coherent and intentional approach to program assessment that students find fair and educators find manageable.",
+        "mentiApplication": [
+          "For low-stakes in-class comprehension checks: a quick Menti Live poll takes under two minutes and gives instant feedback on student understanding.",
+          "For high-stakes formative assessments: use the full Menti Workshop structure — clear task, defined criteria, independent student response, visible distribution, structured class discussion.",
+          "Use Menti Form for more formal formative assessments — the structured, asynchronous format gives students time to think carefully and produces richer data on understanding than in-class polling."
+        ]
+      }
     },
     {
       "id": "design-for-habit",
@@ -1101,7 +1335,16 @@
         "menti-form"
       ],
       "whyItMatters": "Behaviors that require ongoing willpower are inherently fragile — they work when energy is high and fail when it isn't. Leaders who design for habit rather than motivation create lasting behavioral change that persists even when enthusiasm fades.",
-      "atScale": "At scale, habit design is the difference between culture change that sticks and change initiatives that fade after the launch event. Organizations that build desired behaviors into contextual routines create self-reinforcing performance cultures that don't require constant management."
+      "atScale": "At scale, habit design is the difference between culture change that sticks and change initiatives that fade after the launch event. Organizations that build desired behaviors into contextual routines create self-reinforcing performance cultures that don't require constant management.",
+      "higherEd": {
+        "whyItMatters": "Student academic behaviors — studying, reviewing, practicing — are most durable when they become habitual rather than dependent on fluctuating motivation. Teachers who help students build consistent routines and contextual triggers for academic behaviors create more resilient, self-managing learners.",
+        "atScale": "At scale, habit-oriented course design reduces the peaks and troughs of student effort that characterise assessment-driven learning. Programs that build consistent academic habits produce more even performance, lower student stress, and better learning outcomes across cohorts — improving both student wellbeing and institutional metrics.",
+        "mentiApplication": [
+          "Use Menti Pulse to send weekly study habit check-ins at the same time each week — consistent timing and context builds the habit of academic reflection across the semester.",
+          "Create a Menti Form weekly learning journal — same structure, same time, same prompts — so completing it becomes a habitual part of the student academic week rather than a deliberate decision.",
+          "Track one specific student behavior over time with Menti Pulse: 'Did you review your notes this week?' — making the behavior visible and recurring embeds it into student routine."
+        ]
+      }
     },
     {
       "id": "reduce-friction",
@@ -1137,7 +1380,16 @@
         "menti-form"
       ],
       "whyItMatters": "The biggest barrier to desired behavior is often not motivation — it's friction. Leaders who make it easier to do the right thing than the wrong thing create behavioral change without needing to rely on willpower, reminders, or enforcement.",
-      "atScale": "Across organizations, friction accumulates invisibly in processes, systems, and workflows — making desired actions harder than they need to be. Reducing it at scale produces large-scale behavioral change at remarkably low cost, often by simply removing unnecessary steps."
+      "atScale": "Across organizations, friction accumulates invisibly in processes, systems, and workflows — making desired actions harder than they need to be. Reducing it at scale produces large-scale behavioral change at remarkably low cost, often by simply removing unnecessary steps.",
+      "higherEd": {
+        "whyItMatters": "Students frequently disengage not because they don't want to participate but because the participation pathway is too effortful or unclear. Teachers who reduce friction between desired academic behaviors and the action itself create the conditions for higher and more consistent student participation.",
+        "atScale": "At scale, reducing friction in course design lowers dropout rates, improves assignment submission rates, and increases student engagement with formative activities — some of the highest-impact improvements institutions can make to student success metrics at relatively low cost.",
+        "mentiApplication": [
+          "Schedule Menti Pulse check-ins to arrive at the moments of highest student availability — Sunday evening before the week, or immediately after a class — to minimise the gap between intention and response.",
+          "Use Menti Form with a pre-built template for recurring academic tasks — reflections, weekly check-ins, peer feedback — so students only need to think, not set up.",
+          "Set up recurring Menti Pulse learning check-ins that run automatically across the semester — make regular engagement the default rather than something students need to remember to opt into."
+        ]
+      }
     },
     {
       "id": "foster-intrinsic-motivation",
@@ -1175,7 +1427,16 @@
         "menti-pulse"
       ],
       "whyItMatters": "External pressure produces compliance. Intrinsic motivation produces commitment, creativity, and the kind of persistence that survives adversity. Leaders who meet people's needs for autonomy, competence, and belonging unlock a fundamentally different quality of engagement.",
-      "atScale": "Organizations that systematically foster intrinsic motivation outperform those that rely on external incentives — with measurably stronger retention, higher innovation, more discretionary effort, and more sustainable performance over time."
+      "atScale": "Organizations that systematically foster intrinsic motivation outperform those that rely on external incentives — with measurably stronger retention, higher innovation, more discretionary effort, and more sustainable performance over time.",
+      "higherEd": {
+        "whyItMatters": "Students who are extrinsically motivated — studying for grades alone — learn less deeply, retain less, and are less likely to develop lifelong curiosity or professional passion. Teachers who foster genuine interest, competence, and belonging create students who learn more, persist longer, and benefit more from their education.",
+        "atScale": "Institutions that design systematically for intrinsic motivation see stronger student retention, higher academic engagement, better mental health outcomes, and more positive graduate career trajectories — all of which improve the institutional metrics that matter most to universities and colleges.",
+        "mentiApplication": [
+          "Use anonymous Menti Live questions to give every student a genuine voice — then explicitly connect what students said to how the class will be taught. Visible impact on teaching builds intrinsic motivation.",
+          "Use Menti Q&A in lectures so students can ask what they genuinely care about — upvoted questions signal to teachers what actually matters to the cohort, enabling more responsive teaching.",
+          "Use Menti Pulse to ask: 'What aspect of this topic do you most want to understand better?' — inviting students to shape their own learning direction builds autonomy and intrinsic motivation."
+        ]
+      }
     },
     {
       "id": "use-social-norms",
@@ -1213,7 +1474,16 @@
         "menti-qa"
       ],
       "whyItMatters": "What people believe others are doing shapes what they do themselves — often more powerfully than instruction or incentive. Leaders who use social norms deliberately create change that is self-sustaining, because the norm itself becomes the driver.",
-      "atScale": "Social norm design at scale is one of the most cost-effective behavior change levers available. When organizations make desired behaviors visibly normal, the norm itself drives adoption — reducing the need for individual motivation, enforcement, or ongoing management."
+      "atScale": "Social norm design at scale is one of the most cost-effective behavior change levers available. When organizations make desired behaviors visibly normal, the norm itself drives adoption — reducing the need for individual motivation, enforcement, or ongoing management.",
+      "higherEd": {
+        "whyItMatters": "Students are strongly influenced by what they believe their peers are doing. Teachers who use social norms deliberately — making positive academic behaviors visible and normal — create cultures of engagement that are self-sustaining and don't require constant enforcement or individual persuasion.",
+        "atScale": "Norm-based approaches to student behavior change at scale are among the most cost-effective levers available to institutions. When desired academic behaviors — preparation, participation, reflection — become visibly normal within a cohort, the culture itself drives adoption without requiring ongoing intervention.",
+        "mentiApplication": [
+          "Share Menti Pulse results with the cohort: 'Here's how your peers are approaching this.' Descriptive norms — 'most students are doing X' — are more motivating than instruction or exhortation.",
+          "In Menti Live, make class participation visible — show response counts and word clouds in real time. When students see their peers contributing, participation becomes the expected norm.",
+          "Use Menti Q&A in every lecture as a consistent ritual — over time, asking questions and engaging becomes the cultural norm for the cohort, not an exception for the most confident students."
+        ]
+      }
     }
   ]
 }
