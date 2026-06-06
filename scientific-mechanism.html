@@ -843,6 +843,11 @@
       document.querySelectorAll('.toggle-btn').forEach(b => {
         b.classList.toggle('active', b.dataset.mode === mode);
       });
+      // Clear use case filters (they change between modes) and rebuild chips
+      activeFilters.useCases = new Set();
+      rebuildUseCaseChips();
+      updateResetBtn();
+      renderCards();
       // Re-render open modal if any
       const panel = document.getElementById('modal-panel');
       if (panel.classList.contains('open')) {
@@ -852,6 +857,23 @@
           if (skill) openModal(skill);
         }
       }
+    }
+
+    function rebuildUseCaseChips() {
+      const container = document.getElementById('filter-usecases');
+      container.innerHTML = '';
+      const items = audience === 'higher-ed'
+        ? data.filters.higherEdUseCases
+        : data.filters.useCases;
+      items.forEach(item => {
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.dataset.id = item.id;
+        chip.dataset.group = 'useCases';
+        chip.textContent = item.label;
+        chip.addEventListener('click', () => toggleFilter(chip, 'useCases', item.id));
+        container.appendChild(chip);
+      });
     }
 
     function checkPassword() {
@@ -886,7 +908,7 @@
     // ── Filters ───────────────────────────────────────────────
     function buildFilters() {
       renderChips('filter-domains', data.filters.domains, 'domains', true);
-      renderChips('filter-usecases', data.filters.useCases, 'useCases', false);
+      rebuildUseCaseChips(); // audience-aware
       renderChips('filter-tools', data.filters.tools, 'tools', false);
     }
 
@@ -932,8 +954,11 @@
 
     function skillMatches(skill) {
       const { domains, useCases, tools } = activeFilters;
+      const ucList = (audience === 'higher-ed' && skill.higherEd)
+        ? (skill.higherEd.useCases || [])
+        : (skill.useCases || []);
       if (domains.size && !domains.has(skill.domain)) return false;
-      if (useCases.size && !skill.useCases.some(u => useCases.has(u))) return false;
+      if (useCases.size && !ucList.some(u => useCases.has(u))) return false;
       if (tools.size && !skill.tools.some(t => tools.has(t))) return false;
       return true;
     }
@@ -1018,8 +1043,10 @@
       document.getElementById('modal-headline').textContent = skill.headline;
 
       // Build use case + tool labels
-      const useCaseLabels = skill.useCases.map(id => {
-        const found = data.filters.useCases.find(u => u.id === id);
+      const ucSource = isHigherEd ? (skill.higherEd.useCases || []) : skill.useCases;
+      const ucFilter = isHigherEd ? data.filters.higherEdUseCases : data.filters.useCases;
+      const useCaseLabels = ucSource.map(id => {
+        const found = ucFilter.find(u => u.id === id);
         return found ? `<span class="tag">${found.label}</span>` : '';
       }).join('');
 

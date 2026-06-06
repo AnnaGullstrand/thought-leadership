@@ -96,6 +96,32 @@
         "id": "menti-qa",
         "label": "Menti Q&A"
       }
+    ],
+    "higherEdUseCases": [
+      {
+        "id": "lectures",
+        "label": "Lectures"
+      },
+      {
+        "id": "seminars",
+        "label": "Seminars"
+      },
+      {
+        "id": "formative-assessment",
+        "label": "Formative Assessment"
+      },
+      {
+        "id": "student-voice",
+        "label": "Student Voice"
+      },
+      {
+        "id": "course-feedback",
+        "label": "Course Feedback"
+      },
+      {
+        "id": "evaluations",
+        "label": "Evaluations"
+      }
     ]
   },
   "scienceSkills": [
@@ -147,6 +173,10 @@
           "Use Menti Live to insert a poll or word cloud mid-lecture to re-activate attention — even in lecture halls of 200+ students, instant interaction resets focus without disrupting the flow of teaching.",
           "Use Menti Quiz as an energising mid-class knowledge check — students see their own scores in real time, which refocuses attention and creates a positive moment of engagement.",
           "Enable Menti Q&A during lectures so students can submit questions throughout — this keeps students cognitively active even in long, content-heavy sessions."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -193,6 +223,10 @@
           "In Menti Live, use one question per topic — never combine multiple concepts in a single poll. Build a sequence of simple questions to scaffold student understanding incrementally.",
           "Use word cloud or scale questions in Menti Live to check understanding between content segments — lightweight formats add interaction without adding cognitive load.",
           "In Menti Workshop, structure class activities into single-purpose phases so students always know exactly what they are doing and why, reducing disorientation in complex tasks."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -240,6 +274,12 @@
           "Enable anonymous mode in Menti Live so all students can respond simultaneously — this captures the genuine range of student thinking before any discussion shapes it.",
           "Use Menti Form for pre-class questions — collecting student views asynchronously before the session ensures discussion starts from distributed thinking, not whoever arrives most confident.",
           "In Menti Workshop, structure group activities so individual input is captured before peer discussion begins — protecting independent thinking across the full student cohort."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment",
+          "student-voice"
         ]
       }
     },
@@ -288,6 +328,13 @@
           "Use word clouds and open-text questions in Menti Live to display student understanding across the full cohort — misconceptions become visible immediately and can be addressed in the moment rather than at exam time.",
           "Show rating distributions in Menti Live so students see where understanding is strong and where it is fragile — creating a shared picture of the class's learning state.",
           "Use Menti Q&A so student questions are visible to the whole group — often the question one student asks is the question many others were afraid to raise."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment",
+          "student-voice",
+          "course-feedback"
         ]
       }
     },
@@ -333,6 +380,12 @@
           "Open every class with a Menti Quiz — a short knowledge check on content from the previous session. Students practice retrieval before instruction, and teachers immediately see where gaps remain.",
           "Use Menti Pulse to send spaced retrieval questions 3, 7, and 14 days after a lecture — the most evidence-based tool for improving long-term student retention available to educators.",
           "Use Menti Quiz for regular low-stakes knowledge checks throughout the semester — frequent retrieval practice improves exam performance more reliably than additional study time."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -379,6 +432,11 @@
           "In Menti Live, ask students to generate a hypothesis or answer before revealing any content — 'What do you think the answer is?' Students who generate first remember the correct answer significantly longer.",
           "Use Menti Workshop for hypothesis generation activities — students produce their own explanations or solutions independently before the class explores the topic together.",
           "Design Menti Quiz questions that require students to produce an answer from memory rather than recognise a correct option — open-text quiz questions activate deeper encoding than multiple choice."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment"
         ]
       }
     },
@@ -423,6 +481,10 @@
           "Start every new topic with a Menti Quiz or word cloud: 'What do you already know about this?' — activate existing student knowledge structures before building on them.",
           "Use a Menti Live confidence scale: 'How familiar are you with this topic?' — calibrate the depth and pace of teaching to where the cohort actually is, not where you assume them to be.",
           "Use Menti Form for diagnostic pre-topic assessments — identify gaps in prior knowledge before the class so you can design teaching that builds effectively on existing foundations."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -468,6 +530,10 @@
           "Schedule a Menti Pulse series after key course modules — send spaced retrieval questions at 3, 7, and 21 days after teaching to move knowledge from short-term to long-term student memory.",
           "Use Menti Quiz for weekly or bi-weekly knowledge checks throughout the semester — the frequency and spacing of retrieval practice is what turns lectures into lasting learning.",
           "Use Menti Form at the midpoint and end of the course for structured student reflection: 'What key ideas have you retained? What remains unclear?' — use responses to guide revision and reinforcement."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -513,6 +579,10 @@
           "Show Menti Live results after individual responses and use the class distribution as the discussion starter — 'I can see many of you said X and some said Y. Let's explore the difference.'",
           "Use Menti Workshop for structured peer explanation tasks — student responds individually, then explains their reasoning to a partner. Social processing deepens what individual reflection starts.",
           "Use word clouds to surface collective student language — then use it as the basis for whole-class sense-making: what patterns do students notice? What surprised them?"
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -560,6 +630,11 @@
           "Use anonymous Menti Live polls so every student responds simultaneously — no hands up, no cold-calling, no social pressure. A lecture of 200 becomes as participatory as a seminar of 20.",
           "Use Menti Q&A so every student can submit questions regardless of confidence, language, or background — upvoting surfaces what the cohort actually needs addressed.",
           "Use Menti Workshop for structured group activities where every student's input is captured — ensuring that group work surfaces more than the most confident student's view."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "student-voice"
         ]
       }
     },
@@ -606,6 +681,11 @@
           "Use a Menti Live rating distribution to make academic disagreement visible — when students are split on an interpretation, that's where the richest class discussion lives.",
           "Use Menti Q&A to invite challenging questions about course content or teaching assumptions — anonymity removes the social cost of intellectual challenge in the classroom.",
           "In Menti Workshop, build in a structured critical evaluation phase: 'What is the strongest objection to this argument?' before convergence on any conclusion."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "student-voice"
         ]
       }
     },
@@ -651,6 +731,11 @@
           "At the start of any class activity in Menti Live, ask: 'What do you understand this task to be asking?' — displaying student responses surfaces misunderstanding before work begins.",
           "Use Menti Workshop to collaboratively define assessment criteria with students — shared criteria improve both the quality of student work and the fairness of the assessment process.",
           "Use Menti Form for pre-assignment intake: 'What do you understand the task to be asking?' — identifying task misunderstanding before submission reduces wasted student effort and teaching time."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -699,6 +784,11 @@
           "Start each class with a Menti Live question: 'By the end of today, what do you think you should be able to do?' — display responses to identify gaps in goal comprehension before teaching begins.",
           "Use Menti Form at the start of the semester to capture student learning goals: 'What do you most want to get from this course?' — use responses to personalise framing and increase perceived relevance.",
           "Use Menti Pulse regularly: 'How clear are you on what you need to do for the next assessment?' — a persistent clarity check that identifies student confusion before it becomes a problem."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment"
         ]
       }
     },
@@ -745,6 +835,10 @@
           "Close every class with a Menti Live open question: 'What will you do to consolidate today's learning, and when specifically?' — written commitment is significantly more likely to be acted on than verbal intention.",
           "Use Menti Form for structured study planning: 'If I have free time between now and the deadline, I will [specific action].' The if-then structure makes study intentions concrete and more durable.",
           "Schedule a Menti Pulse at the moment of intended action — the night before an assignment deadline or the start of a study week — to activate commitment and prompt follow-through."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment"
         ]
       }
     },
@@ -792,6 +886,12 @@
           "Enable anonymous mode in Menti Live as the structural default for any class activity involving personal views, sensitive topics, or answers students might fear getting wrong — safety by design, not just by intention.",
           "Use Menti Q&A in large lectures so every student — not just the most confident — can ask the questions they need answered. Anonymity is especially important in large cohorts where hand-raising feels high-risk.",
           "Use Menti Form for anonymous mid-course feedback surveys — students share far more honestly about their learning experience when there is no social exposure to their individual responses."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "student-voice",
+          "course-feedback"
         ]
       }
     },
@@ -838,6 +938,11 @@
           "Display Menti Live results immediately after every class question — instant visibility of where understanding is strong and where it is fragile closes the formative feedback loop in real time.",
           "Use Menti Pulse after each teaching week: 'What was clearest? What was most confusing?' — timely, specific, low-friction feedback that improves your teaching in the very next session.",
           "Use Menti Form for structured mid-course and end-course evaluations — longer student reflections that capture qualitative insight and feed directly into course improvement decisions."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "course-feedback",
+          "evaluations"
         ]
       }
     },
@@ -884,6 +989,10 @@
           "In Menti Live, add a written reflection question before class discussion — 'Take one minute to write your response before we discuss.' Writing forces more deliberate thinking than immediate verbal response.",
           "Use Menti Workshop to run structured academic exercises: hypotheses, predictions, and pre-task reflections that slow students down before they engage with complex content.",
           "Use Menti Form for pre-class reflections where students think through a question before the lecture — arriving with considered views rather than starting cold."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment"
         ]
       }
     },
@@ -930,6 +1039,10 @@
           "Start every class with a Menti Live question: 'How does this topic connect to your career goals or personal experience?' A word cloud of responses makes personal relevance visible and shared across the cohort.",
           "Use a Menti Live scale: 'How relevant is today's topic to your studies or future work?' — calibrate teaching to the cohort's starting point and address perceived relevance gaps directly.",
           "Use Menti Form for pre-course intake to capture student goals and interests — use the data to design a more relevant and personalised learning experience."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -975,6 +1088,10 @@
           "Ask for gut reactions in Menti Live before analysis: 'What's your first response to this finding?' — starting with emotional reaction before cognitive processing strengthens memory encoding.",
           "Use Menti Quiz as an emotionally engaging energiser — the competitive, playful format creates positive arousal that strengthens what students retain from the session.",
           "Use open-text questions in Menti Live that invite personal connection: 'When have you encountered something related to this in your own experience?' — personal narrative activates emotional memory pathways."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
         ]
       }
     },
@@ -1022,6 +1139,11 @@
           "Close every class with a Menti Live scenario question: 'In this real-world situation, what would you recommend?' — practice application in context before students leave the room.",
           "Use Menti Quiz with scenario-based questions that mirror professional or academic contexts — not just recall, but application in a realistic setting that tests genuine understanding.",
           "Use Menti Pulse after the semester: 'Where have you applied this learning since the course ended?' — tracks real-world transfer and gives students a reason to revisit and consolidate."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -1067,6 +1189,10 @@
           "In Menti Workshop, structure class activities with an explicit generation phase (open input, no judgment) followed by a separate evaluation phase (voting, ranking). Never mix the two.",
           "In Menti Live, use word cloud or open text for idea generation — then switch to ranking or rating only after all student contributions are visible.",
           "Use anonymous contribution during the generation phase so student ideas are evaluated on their merits, not on the social status or confidence of who submitted them."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment"
         ]
       }
     },
@@ -1116,6 +1242,14 @@
           "In Menti Live, one question per concept — never combine multiple learning objectives in a single poll. Sequence questions to build student understanding incrementally.",
           "In Menti Form assessments and surveys, use one question per page so students give full cognitive attention to each item without conflating multiple issues.",
           "Use Menti Pulse for regular, single-question learning checks: 'What was the most important thing you learned this week?' — focused, low-friction, and genuinely informative for teaching."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment",
+          "evaluations",
+          "student-voice",
+          "course-feedback"
         ]
       }
     },
@@ -1163,6 +1297,12 @@
           "Before using any Menti question in class, review it for leading language — 'What makes this theory useful?' implies it is useful. 'What do you think of this theory?' does not.",
           "In Menti Form course evaluations and student feedback surveys, use symmetrical, neutral scale labels to get honest, unbiased feedback on teaching quality.",
           "Use Menti Pulse for regular teaching feedback with neutral phrasing: 'How was today's class?' rather than 'How helpful was today's class?' — neutral wording produces more honest and useful responses."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "student-voice",
+          "course-feedback",
+          "evaluations"
         ]
       }
     },
@@ -1209,6 +1349,10 @@
           "Comprehension check → multiple choice or scale in Menti Live. Idea exploration → word cloud or open text. Prioritisation → ranking. Match the format to the learning objective, not to habit.",
           "In Menti Workshop, use format selection as a design principle for class activities — ranking for prioritisation tasks, rating for evaluation, open text for analysis and synthesis.",
           "In Menti Form, use a mix of question types matched to what you need to understand: scales for student perception, multiple choice for knowledge, open text for reasoning and reflection."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -1254,6 +1398,10 @@
           "Before any peer evaluation or student rating activity in Menti Live, share and display the evaluation criteria — aligned criteria produce more consistent and fairer student assessments.",
           "Use Menti Workshop for structured peer review — defined rubrics, independent rating, visible distribution. Brings rigor to collaborative evaluation without social bias.",
           "Use Menti Form for anonymous marking calibration exercises — all assessors work through the same criteria independently before any discussion, reducing marking inconsistency."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -1299,6 +1447,11 @@
           "For low-stakes in-class comprehension checks: a quick Menti Live poll takes under two minutes and gives instant feedback on student understanding.",
           "For high-stakes formative assessments: use the full Menti Workshop structure — clear task, defined criteria, independent student response, visible distribution, structured class discussion.",
           "Use Menti Form for more formal formative assessments — the structured, asynchronous format gives students time to think carefully and produces richer data on understanding than in-class polling."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -1343,6 +1496,10 @@
           "Use Menti Pulse to send weekly study habit check-ins at the same time each week — consistent timing and context builds the habit of academic reflection across the semester.",
           "Create a Menti Form weekly learning journal — same structure, same time, same prompts — so completing it becomes a habitual part of the student academic week rather than a deliberate decision.",
           "Track one specific student behavior over time with Menti Pulse: 'Did you review your notes this week?' — making the behavior visible and recurring embeds it into student routine."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "evaluations"
         ]
       }
     },
@@ -1388,6 +1545,11 @@
           "Schedule Menti Pulse check-ins to arrive at the moments of highest student availability — Sunday evening before the week, or immediately after a class — to minimise the gap between intention and response.",
           "Use Menti Form with a pre-built template for recurring academic tasks — reflections, weekly check-ins, peer feedback — so students only need to think, not set up.",
           "Set up recurring Menti Pulse learning check-ins that run automatically across the semester — make regular engagement the default rather than something students need to remember to opt into."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "course-feedback",
+          "evaluations"
         ]
       }
     },
@@ -1435,6 +1597,11 @@
           "Use anonymous Menti Live questions to give every student a genuine voice — then explicitly connect what students said to how the class will be taught. Visible impact on teaching builds intrinsic motivation.",
           "Use Menti Q&A in lectures so students can ask what they genuinely care about — upvoted questions signal to teachers what actually matters to the cohort, enabling more responsive teaching.",
           "Use Menti Pulse to ask: 'What aspect of this topic do you most want to understand better?' — inviting students to shape their own learning direction builds autonomy and intrinsic motivation."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "student-voice"
         ]
       }
     },
@@ -1482,6 +1649,11 @@
           "Share Menti Pulse results with the cohort: 'Here's how your peers are approaching this.' Descriptive norms — 'most students are doing X' — are more motivating than instruction or exhortation.",
           "In Menti Live, make class participation visible — show response counts and word clouds in real time. When students see their peers contributing, participation becomes the expected norm.",
           "Use Menti Q&A in every lecture as a consistent ritual — over time, asking questions and engaging becomes the cultural norm for the cohort, not an exception for the most confident students."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars",
+          "formative-assessment"
         ]
       }
     }
