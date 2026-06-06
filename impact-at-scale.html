@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      if (sessionStorage.getItem('menti-auth') !== '1') {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('gate').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+      }
+    })();
+  </script>
+  <title>Impact at Scale — Mentimeter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-800:  #323C7C;
+      --blue-500:  #5769E7;
+      --blue-100:  #D5DAF7;
+      --coral-800: #802E2D;
+      --coral-500: #FF7471;
+      --coral-100: #FFDEDD;
+      --sand-800:  #615B55;
+      --sand-500:  #A59D94;
+      --sand-100:  #F3EDE7;
+      --white:     #FFFFFF;
+      --black:     #111111;
+
+      --font-display: 'MentiCompressed', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --radius-card:  12px;
+      --transition:   all 200ms ease;
+    }
+
+    @font-face {
+      font-family: 'MentiCompressed';
+      src: url('assets/fonts/MentiCompressed-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Navigation ───────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      padding: 0 40px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: box-shadow 200ms ease;
+    }
+    .nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--blue-800);
+      letter-spacing: -0.5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--sand-800);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue-500);
+      background: var(--blue-100);
+    }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      background: var(--blue-500);
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .nav-cta:hover { background: var(--blue-800); }
+
+    /* ─── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--blue-800);
+      color: rgba(255,255,255,0.6);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    footer .footer-logo {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    footer p { font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+
+    /* ─── Shared section hero ───────────────────────────────── */
+    .sec-hero {
+      position: relative;
+      height: 28vh;
+      min-height: 220px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .sec-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+    .sec-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(50,60,124,0.62);
+    }
+    .sec-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 40px;
+    }
+    .sec-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .sec-hero-sub {
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: rgba(255,255,255,0.78);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    /* ─── Section wrapper ───────────────────────────────────── */
+    .sec-body { background: var(--white); }
+    .sec-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 64px 40px;
+    }
+
+    /* ─── Opinions headline style ───────────────────────────── */
+    .opinions-headline {
+      font-family: var(--font-display);
+      font-size: clamp(56px, 7vw, 96px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.5px;
+      margin-bottom: 56px;
+    }
+
+    /* ─── Impact at Scale ───────────────────────────────────── */
+    .impact-intro-text {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--sand-800);
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+    .impact-intro-text strong { color: var(--black); }
+    .impact-definition {
+      background: var(--sand-100);
+      border-left: 4px solid var(--blue-500);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--blue-800);
+      line-height: 1.6;
+      margin-bottom: 56px;
+      max-width: 800px;
+    }
+    .impact-tiers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .impact-tier {
+      background: var(--blue-800);
+      border-radius: 12px;
+      padding: 32px 24px;
+      color: var(--white);
+      text-align: center;
+    }
+    .impact-tier h4 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .impact-tier p { font-size: 13px; color: rgba(255,255,255,0.65); }
+    .impact-outcomes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .impact-outcome {
+      background: var(--sand-100);
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    .impact-outcome h4 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue-500);
+      margin-bottom: 12px;
+    }
+    .impact-outcome p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--black);
+    }
+
+    /* ─── Responsive ────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .impact-outcomes { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .nav-links { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; gap: 4px; }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { white-space: nowrap; font-size: 13px; }
+      .nav-cta { display: none; }
+    }
+    @media (max-width: 768px) {
+      .sec-inner { padding: 40px 20px; }
+      .sec-hero-content { padding: 24px 20px; }
+      .impact-tiers { grid-template-columns: 1fr; }
+      .impact-outcomes { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 0 16px; height: 56px; }
+      .nav-logo { font-size: 18px; }
+      .nav-links { gap: 2px; }
+      .nav-links a { font-size: 12px; padding: 5px 8px; }
+    }
+    @media (max-width: 380px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div id="gate" style="display:none; position:fixed; inset:0; z-index:1000; background:#323C7C; align-items:center; justify-content:center; flex-direction:column; gap:32px; font-family:'Inter',sans-serif;">
+    <div style="text-align:center; color:#fff;">
+      <div style="font-family:'MentiCompressed',sans-serif; font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:8px;">Mentimeter</div>
+      <div style="font-size:15px; color:rgba(255,255,255,0.6);">Internal resource — enter password to continue</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:320px;">
+      <input id="gate-input" type="password" placeholder="Password" autofocus
+        style="width:100%; padding:14px 18px; border-radius:8px; border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; font-size:15px; outline:none; font-family:'Inter',sans-serif;"
+        onkeydown="if(event.key==='Enter') checkPassword()">
+      <div id="gate-error" style="color:#FF7471; font-size:13px; text-align:center; min-height:18px;"></div>
+      <button onclick="checkPassword()"
+        style="width:100%; padding:14px; border-radius:8px; border:none; background:#5769E7; color:#fff; font-size:15px; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;">
+        Enter
+      </button>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">Mentimeter</a>
+    <ul class="nav-links">
+      <li><a href="the-science.html">The Science</a></li>
+      <li><a href="our-opinions.html">Our Opinions</a></li>
+      <li><a href="scientific-mechanism.html">Scientific Mechanism</a></li>
+      <li><a href="active-participation.html">Active Participation</a></li>
+      <li><a href="impact-at-scale.html" class="active">Impact at Scale</a></li>
+    </ul>
+    <a href="https://www.mentimeter.com" target="_blank" class="nav-cta">Try Mentimeter ↗</a>
+  </nav>
+
+  <section>
+    <div class="sec-hero">
+      <div class="sec-hero-bg" style="background-image:url('assets/images/impact-at-scale.jpg');"></div>
+      <div class="sec-hero-content">
+        <span class="sec-label">05 — Impact at Scale</span>
+        <p class="sec-hero-sub">What happens when every meeting, every training, every conversation improves.</p>
+      </div>
+    </div>
+    <div class="sec-body">
+      <div class="sec-inner">
+        <h2 class="opinions-headline">CREATING IMPACT AT SCALE</h2>
+        <div class="impact-definition">Performance is the quality and speed of how people think, decide, learn, align, and act together to drive outcomes.</div>
+        <p class="impact-intro-text">Imagine how many meetings, trainings, and communication moments happen in an average organization every single week. Hundreds. Thousands. Each one an opportunity — or a missed one. Now imagine that all of them improve. <strong>People think more clearly. Leaders ask better questions. Decisions are based on real input.</strong> Learning sticks. Alignment happens faster. When Menti is built into an organization's ways of working, a compounding effect is created — small improvements multiply across every interaction, every team, every quarter.</p>
+        <div class="impact-tiers">
+          <div class="impact-tier"><h4>Faster Value Creation</h4><p>Speed of execution increases when people are aligned earlier and decisions are made on real input.</p></div>
+          <div class="impact-tier"><h4>Better Strategic Outcomes</h4><p>Better thinking leads to better decisions — at every level of the organization.</p></div>
+          <div class="impact-tier"><h4>Stronger Organizational Performance</h4><p>Engagement, learning, and leadership effectiveness compound over time into sustained competitive advantage.</p></div>
+        </div>
+        <div class="impact-outcomes">
+          <div class="impact-outcome"><h4>Speed of Execution</h4><p>When people think and contribute early, decisions are clearer, buy-in is stronger, and execution is faster.</p></div>
+          <div class="impact-outcome"><h4>Innovation &amp; Change</h4><p>When diverse thinking is surfaced through active participation, organizations generate better ideas and adapt more effectively.</p></div>
+          <div class="impact-outcome"><h4>Decision Quality</h4><p>When decisions are based on powerful questions and real input from many, they are more accurate, less biased, and more robust.</p></div>
+          <div class="impact-outcome"><h4>Continuous Learning</h4><p>When people actively think, contribute, and reflect, learning deepens, memory strengthens and capability grows over time.</p></div>
+          <div class="impact-outcome"><h4>Leadership Effectiveness</h4><p>Leaders who activate thinking and engagement create stronger alignment, ownership, and follow-through.</p></div>
+          <div class="impact-outcome"><h4>Employee Engagement</h4><p>When people think and contribute, engagement increases — driving motivation, ownership, and sustained participation over time.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Mentimeter</div>
+    <p>Internal resource — Thought Leadership & Science · 2025</p>
+    <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
+  <script>
+    function checkPassword() {
+      const val = document.getElementById('gate-input').value;
+      if (val === 'Menti2026') {
+        sessionStorage.setItem('menti-auth', '1');
+        document.getElementById('gate').style.display = 'none';
+        document.body.style.overflow = '';
+      } else {
+        document.getElementById('gate-error').textContent = 'Incorrect password — try again.';
+        document.getElementById('gate-input').value = '';
+        document.getElementById('gate-input').focus();
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>
