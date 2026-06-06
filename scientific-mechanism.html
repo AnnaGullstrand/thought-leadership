@@ -429,6 +429,46 @@
       gap: 0;
     }
 
+    /* ── WHY IT MATTERS section ─────── */
+    .modal-why-section {
+      background: var(--coral-100);
+      padding: 28px 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      border-bottom: 3px solid var(--coral-500);
+    }
+    .modal-why-section .modal-big-label {
+      color: var(--coral-800);
+      border-bottom-color: rgba(128,46,45,0.2);
+    }
+    .modal-why-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--black);
+      font-weight: 400;
+    }
+    .modal-at-scale {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .modal-at-scale-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--coral-800);
+    }
+    .modal-at-scale-text {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--sand-800);
+    }
+
     /* ── Two-panel modal sections ────── */
     .modal-science-section {
       background: var(--blue-100);
@@ -649,8 +689,11 @@
       .modal-panel.open { transform: translateY(0); }
       .modal-header { padding: 20px 20px 16px; }
       .modal-headline { font-size: 24px; }
-      .modal-body { padding: 16px 20px 40px; gap: 20px; }
-      .modal-principle { font-size: 14px; padding: 14px 16px; }
+      .modal-why-section { padding: 20px 20px 24px; }
+      .modal-science-section { padding: 20px 20px 24px; }
+      .modal-menti-section { padding: 20px 20px 40px; }
+      .modal-why-text { font-size: 14px; }
+      .modal-body { padding: 0; gap: 0; }
       .modal-tag-label { min-width: 70px; font-size: 10px; }
       .sec-hero-content { padding: 24px 20px; }
     }
@@ -919,6 +962,15 @@
         .map(b => `<li>${b}</li>`).join('');
 
       document.getElementById('modal-body').innerHTML = `
+        <div class="modal-why-section">
+          <div class="modal-big-label">WHY IT MATTERS</div>
+          <p class="modal-why-text">${skill.whyItMatters || ''}</p>
+          <div class="modal-at-scale">
+            <div class="modal-at-scale-label">At Scale</div>
+            <p class="modal-at-scale-text">${skill.atScale || ''}</p>
+          </div>
+        </div>
+
         <div class="modal-science-section">
           <div class="modal-big-label">THE SCIENCE BEHIND</div>
 
