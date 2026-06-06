@@ -1656,6 +1656,257 @@
           "formative-assessment"
         ]
       }
+    },
+    {
+      "id": "divergent-thinking",
+      "domain": "social-psychology",
+      "headline": "Divergent Thinking",
+      "problem": "When groups try to generate and evaluate ideas at the same time, both fail. Judgment silences creativity, and creative pressure distorts judgment. The result is fewer ideas, shallower thinking, and convergence driven by social pressure rather than quality.",
+      "solution": "In the divergent phase, suspend all evaluation. The goal is quantity, variety, and novelty — not quality. Leaders must actively protect this phase from premature criticism and use open, generative prompts that invite wild and unconventional thinking.",
+      "source": {
+        "text": "Guilford (1967) — The Nature of Human Intelligence; Osborn (1953) — Applied Imagination; Diehl & Stroebe (1987)",
+        "url": "https://doi.org/10.1037/0033-2909.117.3.403"
+      },
+      "whyItMatters": "The quality of convergence is entirely dependent on the richness of divergence that preceded it. Leaders who protect the divergent phase consistently produce more creative solutions, uncover hidden options, and avoid the premature closure that leads to poor decisions. Divergent thinking is not a soft exercise — it is the foundation of strategic quality.",
+      "atScale": "Organizations that systematically protect divergent thinking across their decision and innovation processes generate measurably more ideas, surface more diverse perspectives, and produce solutions that are more robust and novel. The compounding effect over time is a culture of genuine innovation rather than incremental refinement.",
+      "back": {
+        "principle": "Divergent thinking is the cognitive mode that generates many possible solutions to an open problem. It requires suspending judgment, tolerating ambiguity, and actively pursuing quantity and novelty. It is neurologically and cognitively distinct from convergent evaluation — and the two cannot be performed simultaneously without degrading both.",
+        "whatHappened": "When the prompt asked for 'all possible ideas — no evaluation yet,' more ideas emerged, including ones nobody would have said under normal conditions.",
+        "whyItWorks": "Judgment triggers self-censorship. When people fear evaluation, they filter before they speak — selecting only 'safe' ideas. Removing evaluation removes that filter and unlocks a broader range of thinking.",
+        "scienceBehind": "Guilford (1967) established divergent production as a core dimension of human intelligence. Osborn's (1953) brainstorming research showed that deferred judgment dramatically increases idea quantity and quality. Diehl & Stroebe (1987) demonstrated that evaluation apprehension is one of the primary causes of production blocking in groups.",
+        "inPractice": "Ask generative, open-ended questions: 'What are ALL the ways we could...?' / 'What if there were no constraints?' / 'What's the most unusual solution anyone can think of?' / 'Build on that — where does it take you?' Respond to every idea with 'yes, and...' never 'yes, but...'. Set a time limit and a quantity target. Capture everything — no editing.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "mentiApplication": [
+        "Use an anonymous open-text question in Menti Live — 'What are ALL the possible approaches? No idea is too wild.' Display responses without reactions, and keep them visible while asking for more.",
+        "In Menti Workshop, run the full divergent phase before unlocking any voting or ranking — the tool enforces the separation structurally, preventing evaluation from bleeding into generation.",
+        "Use a word cloud to surface the broadest possible spread of ideas across the group before any discussion — quantity and diversity visible in one view."
+      ],
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory",
+        "training"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop"
+      ],
+      "higherEd": {
+        "whyItMatters": "Students who are asked to generate ideas under evaluation pressure produce fewer, less original, and more conformist thinking. Teachers who protect divergent phases in seminars and design tasks develop the creative and analytical flexibility that is the core purpose of higher education — and that employers consistently identify as missing in graduates.",
+        "atScale": "At the institutional level, embedding divergent thinking into course and seminar design produces cohorts with measurably stronger creative and critical capacities, better performance on open-ended and research-based assessments, and greater readiness for the complexity of academic and professional life.",
+        "mentiApplication": [
+          "Use an anonymous open-text question in Menti Live to capture all student ideas before any discussion — 'What are ALL the possible explanations for this? No evaluation yet.'",
+          "In Menti Workshop, structure seminars so the generation phase is fully completed before any ranking or evaluation begins — the tool enforces the phase boundary.",
+          "Use a word cloud to display the full spread of student thinking — then use the diversity as the teaching content: 'Look at the range we've generated. Now let's evaluate.'"
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment"
+        ]
+      }
+    },
+    {
+      "id": "convergent-thinking",
+      "domain": "decision-science",
+      "headline": "Convergent Thinking",
+      "problem": "After divergence, groups often converge badly — collapsing to the loudest voice, the first idea, or the highest-status opinion rather than the best option. Without structure, evaluation is driven by social dynamics rather than quality criteria.",
+      "solution": "In the convergent phase, introduce explicit criteria, independent evaluation, and structured comparison before discussion. Leaders must shift their prompts from generative to evaluative — asking people to assess, compare, and prioritise rather than create.",
+      "source": {
+        "text": "De Bono (1985) — Six Thinking Hats; Paulus & Nijstad (2003) — Group Creativity; Kahneman, Sibony & Sunstein (2021) — Noise",
+        "url": "https://doi.org/10.1093/acprof:oso/9780195147308.001.0001"
+      },
+      "whyItMatters": "Convergence done poorly is one of the most common causes of poor decisions. Leaders who structure the convergent phase — with criteria, independent rating, and deliberate comparison — consistently produce better choices, stronger alignment, and decisions that are easier to execute. Convergence is where quality is either created or destroyed.",
+      "atScale": "When structured convergence is embedded across organizational decision-making — in meetings, workshops, and strategic forums — decision quality improves systemically. Organizations make fewer reversals, generate stronger alignment behind choices, and waste less time relitigating decisions that were made poorly.",
+      "back": {
+        "principle": "Convergent thinking is the cognitive mode that narrows a set of possibilities to the best option through systematic evaluation against criteria. It requires analytical precision, resistance to social pressure, and structured comparison. Like divergent thinking, it is cognitively distinct — and mixing the two phases degrades both.",
+        "whatHappened": "When evaluation criteria were defined before rating began, and when individuals rated independently before discussing, the group arrived at a higher-quality decision with stronger shared understanding.",
+        "whyItWorks": "Independent evaluation prevents anchoring and conformity. Shared criteria reduce noise — the unwanted variability in judgment that makes group decisions unreliable. Systematic comparison surfaces which options actually win on the dimensions that matter.",
+        "scienceBehind": "De Bono's (1985) Six Thinking Hats framework demonstrates that separating evaluation modes reduces conflict and improves decision quality. Paulus & Nijstad (2003) show that convergent structure after unstructured divergence produces significantly better group decisions. Kahneman et al. (2021) demonstrate that noise — inconsistent judgment — is dramatically reduced by predefined criteria and independent evaluation.",
+        "inPractice": "Before any evaluation: 'What criteria should we use to evaluate these options?' Then: 'Rate each option independently before we discuss.' Ask focused evaluative questions: 'Which option best meets criterion X?' / 'What are the strongest arguments for and against this one?' / 'If you could only choose one, what would it be and why?' Avoid 'What does everyone think?' — it triggers social convergence, not analytical convergence.",
+        "relatedOpinion": "Structure How People Think and Decide Together"
+      },
+      "mentiApplication": [
+        "Before any evaluation in Menti Live, use a scale or ranking question with shared criteria defined in the previous slide — everyone evaluates against the same standard independently.",
+        "In Menti Workshop, use the convergent phase tools — voting, ranking, and rating — only after the divergent phase is fully closed. The structure enforces the cognitive shift from generating to evaluating.",
+        "Display the rating distribution in Menti Live after independent evaluation — visible spread shows where the group agrees and where it doesn't, making the most important discussion points immediately clear."
+      ],
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ],
+      "higherEd": {
+        "whyItMatters": "Students who are not taught to evaluate systematically default to gut feeling, authority, or social consensus. Teachers who structure the convergent phase in seminars and assessment tasks develop the critical evaluation and analytical reasoning skills that academic work is designed to build — and that distinguish excellent graduates.",
+        "atScale": "At the institutional level, embedding convergent thinking structures into course design produces students who evaluate evidence more rigorously, make better-supported arguments, and perform more consistently on analytical and evaluative assessment tasks — directly improving academic quality and graduate outcomes.",
+        "mentiApplication": [
+          "Before any evaluation task in Menti Live, define and display the evaluation criteria — 'We'll rate each option against these three criteria.' Independent rating before group discussion.",
+          "In Menti Workshop, use the convergent phase for structured peer evaluation and prioritisation — students evaluate ideas generated in the divergent phase using shared, explicit criteria.",
+          "Use Menti Live ranking questions to force structured comparison between options — ranking reveals genuine preference hierarchy rather than socially driven consensus."
+        ],
+        "useCases": [
+          "seminars",
+          "formative-assessment",
+          "evaluations"
+        ]
+      }
+    },
+    {
+      "id": "reflective-check-in",
+      "domain": "behavioral-science",
+      "headline": "Reflective Check-In",
+      "problem": "Sessions often begin with people cognitively and emotionally unavailable — distracted, guarded, or still processing whatever happened before the meeting. Starting immediately with content or decisions before the group is present produces lower engagement, less honest participation, and poorer outcomes.",
+      "solution": "Use a low-risk, inclusive opening question that invites reflection and signals that everyone's perspective is welcome. A brief reflective check-in activates attention, builds psychological safety, and creates the participatory tone that sustains engagement throughout the session.",
+      "source": {
+        "text": "Edmondson (1999) — Psychological Safety; Schön (1983) — The Reflective Practitioner; Kolb (1984) — Experiential Learning Theory; Icebreaker research: Polzer et al. (2002)",
+        "url": "https://doi.org/10.2307/2666999"
+      },
+      "whyItMatters": "The first two minutes of a session set the participation norm for everything that follows. Leaders who open with a genuine, inclusive reflection question signal that the space is safe, that all voices matter, and that thinking together is the expectation — not passive reception. This one practice can shift the entire quality of a session.",
+      "atScale": "Across an organization where every meeting, training, and team session begins with a reflective check-in, participation becomes the cultural norm rather than the exception. Engagement rates rise, psychological safety strengthens, and the quality of collective thinking improves systematically — because the right conditions for it are created at the start of every session.",
+      "back": {
+        "principle": "Reflective check-ins activate two things simultaneously: cognitive readiness (attention and presence) and social readiness (psychological safety and belonging). When both are present at the start of a session, participation is broader, honesty is higher, and the group's collective intelligence is more accessible.",
+        "whatHappened": "When the session opened with a low-stakes, inclusive question — before any content or agenda — people arrived in the room cognitively and socially.",
+        "whyItWorks": "A reflective opening reduces social risk by normalising contribution from the start. It activates prior knowledge, signals the session's participatory norms, and helps people transition from whatever they were doing before.",
+        "scienceBehind": "Edmondson (1999) established that psychological safety is the primary predictor of team learning and performance — and that it is established through early behavioural signals. Schön (1983) and Kolb (1984) show that reflection activates the experiential learning cycle. Polzer et al. (2002) demonstrate that early mutual familiarity and inclusive signals significantly improve group performance throughout a session.",
+        "inPractice": "Open with a question that is genuinely low-risk, personal, and quick to answer: 'One word for how you're arriving today.' / 'What's one thing on your mind before we start?' / 'Rate your current energy on a scale of 1–5.' / 'What would make this session most useful for you?' The question signals: your presence matters here.",
+        "relatedOpinion": "Activate Participation"
+      },
+      "mentiApplication": [
+        "Use a Menti Live scale or word cloud as the very first slide: 'Rate your energy today 1–5' or 'In one word, how are you arriving?' — everyone responds simultaneously, no social pressure, and the results are visible to the whole group.",
+        "Use anonymous mode for the check-in question — it reduces the social cost of honesty and surfaces how the group is really doing, not how people think they should be doing.",
+        "Use Menti Pulse to send a pre-session check-in before recurring meetings: 'What's on your mind as we go into today?' — responses help the facilitator adapt the session before it begins."
+      ],
+      "useCases": [
+        "team-meeting",
+        "training",
+        "townhall",
+        "workshop",
+        "check-in",
+        "onboarding"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-pulse"
+      ],
+      "higherEd": {
+        "whyItMatters": "Students who arrive to lectures and seminars distracted, anxious, or disconnected from the topic engage poorly with content and participate minimally. Teachers who open with a low-risk reflective question create the conditions for genuine intellectual engagement — and signal that this is a classroom where every student's thinking is welcome, not just the most confident.",
+        "atScale": "When reflective check-ins are embedded across a faculty's teaching practice, student engagement scores improve, participation becomes more equitable, and the psychological safety that enables honest learning — including asking questions and admitting confusion — becomes a shared institutional norm.",
+        "mentiApplication": [
+          "Use Menti Live to open every class with one low-risk question: 'Rate your familiarity with today's topic 1–5' or 'In one word, what do you associate with this subject?' — every student responds simultaneously, normalising participation from the first moment.",
+          "Use anonymous mode for the opening check-in — students who feel nervous, behind, or disconnected can signal that honestly without social exposure.",
+          "In Menti Q&A, open a channel at the start of every lecture for students to submit questions as they arise — the check-in becomes continuous engagement throughout the session."
+        ],
+        "useCases": [
+          "lectures",
+          "seminars"
+        ]
+      }
+    },
+    {
+      "id": "scale-design-quality",
+      "domain": "decision-science",
+      "headline": "Scale Design Quality",
+      "problem": "Poorly designed rating scales produce unreliable, uninterpretable, and misleading data. Scales with too many points, unlabelled midpoints, asymmetric options, or biased anchors introduce systematic noise — making the resulting insights look precise while being fundamentally flawed.",
+      "solution": "Design scales that are balanced, clearly labelled, appropriate in length, and matched to the construct being measured. Good scale design is the difference between data that informs decisions and data that merely creates the illusion of measurement.",
+      "source": {
+        "text": "Likert (1932) — A Technique for the Measurement of Attitudes; Krosnick & Fabrigar (1997) — Designing Good Rating Scales; Schwarz et al. (1991) — Numerical labels in survey scales",
+        "url": "https://doi.org/10.1037/0033-2909.104.1.3"
+      },
+      "whyItMatters": "Every organisation that measures engagement, satisfaction, or performance relies on rating scales. Poorly designed scales silently corrupt the data — producing averages that don't mean what people think they mean, trends that reflect scale design artefacts rather than real change, and decisions based on measurement noise. Scale design quality is the foundation of trustworthy insight.",
+      "atScale": "At scale, the cumulative effect of poor scale design is enormous. When thousands of employees answer poorly designed surveys, the resulting data drives flawed strategy, misallocated investment, and false confidence in insights that don't hold up. Rigorous scale design across an organisation's measurement practices is one of the highest-return improvements available to any data function.",
+      "back": {
+        "principle": "Response scales are not neutral instruments — they actively shape the data they collect. Scale length, label wording, midpoint presence, and anchor symmetry all introduce systematic biases that alter responses independently of the underlying construct. A well-designed scale minimises these artefacts and produces data that reliably reflects what it is intended to measure.",
+        "whatHappened": "When the same question was asked with a well-designed scale versus a poorly-designed one, the distribution of responses — and the conclusions drawn from them — differed significantly.",
+        "whyItWorks": "Well-labelled, symmetric, appropriately-lengthed scales reduce cognitive ambiguity in respondents — enabling them to express their genuine view rather than navigating an unclear instrument. This produces data that is more reliable, more valid, and more useful for decision-making.",
+        "scienceBehind": "Likert's (1932) original work established the psychometric principles for attitude measurement scales. Krosnick & Fabrigar (1997) demonstrated that scale design decisions — label frequency, number of points, balance — produce systematic and predictable biases in response distributions. Schwarz et al. (1991) showed that numerical scale labels alone (vs. verbal labels) change response patterns significantly.",
+        "inPractice": "Use 5- or 7-point scales for most measurement purposes — beyond 7 points, respondents cannot reliably distinguish between points. Always label every point, not just the endpoints. Use symmetric response options (equally spaced positive and negative). Avoid agree/disagree formats where possible — use construct-specific labels. Include a neutral midpoint for attitudinal measures. Pre-test scales before deployment.",
+        "relatedOpinion": "Ask Better Questions"
+      },
+      "mentiApplication": [
+        "In Menti Live, use 5-point scales with fully labelled options for all attitudinal or evaluative questions — resist the temptation to use 10-point scales where 5 points communicate the same precision with less respondent cognitive load.",
+        "In Menti Form, review every rating scale before publishing: is it symmetric? Are all points labelled? Is the number of points appropriate for the precision you actually need? One scale design review cycle pays for itself in data quality.",
+        "Use Menti Pulse for recurring pulse measurements — and maintain the same scale design every time. Consistency in scale design is what makes trend data meaningful; changing the scale between rounds corrupts comparability."
+      ],
+      "useCases": [
+        "advisory",
+        "check-in",
+        "team-meeting",
+        "training"
+      ],
+      "tools": [
+        "menti-form",
+        "menti-pulse",
+        "menti-live"
+      ],
+      "higherEd": {
+        "whyItMatters": "Student surveys, course evaluations, and formative assessments all depend on scale quality. Poorly designed scales in student feedback instruments produce unreliable data that misleads teachers about their own effectiveness and misleads institutions about teaching quality. Scale design quality is the foundation of trustworthy student voice data.",
+        "atScale": "At the institutional level, poor scale design in student satisfaction surveys, module evaluations, and learning assessments corrupts the data that informs curriculum decisions, teaching development, and accreditation reporting. Investing in scale quality across institutional measurement practices produces more accurate insight and better-informed decisions — at no additional data collection cost.",
+        "mentiApplication": [
+          "In Menti Form course evaluations, use 5-point fully labelled scales — 'Very Poor / Poor / Neutral / Good / Excellent' — rather than 1–10 numeric scales where the meaning of each point is ambiguous.",
+          "In Menti Live formative assessments, use construct-specific scale labels rather than generic 'agree/disagree' — 'How well do you understand this concept? (Not at all → Completely)' produces more useful teaching data.",
+          "For recurring student pulse surveys in Menti Pulse, maintain identical scale design across all measurement points so that changes in student responses reflect real changes in experience, not design artefacts."
+        ],
+        "useCases": [
+          "formative-assessment",
+          "student-voice",
+          "course-feedback",
+          "evaluations"
+        ]
+      }
+    },
+    {
+      "id": "action-ownership-clarity",
+      "domain": "behavioral-science",
+      "headline": "Action Ownership Clarity",
+      "problem": "Meetings, workshops, and decisions regularly end without clear action ownership. Vague commitments — 'we should', 'someone will', 'the team can' — are systematically not acted on. When nobody's name is on it, it belongs to nobody.",
+      "solution": "Every action that emerges from a session must be assigned to a named individual with a clear deliverable and an explicit deadline. Ownership clarity is the single most reliable predictor of whether a decision will be executed.",
+      "source": {
+        "text": "Gollwitzer (1999) — Implementation Intentions; Hackman (2002) — Leading Teams; Locke & Latham (2002) — Goal Setting Theory; Cialdini (2001) — Commitment and Consistency",
+        "url": "https://doi.org/10.1037/0003-066X.54.7.493"
+      },
+      "whyItMatters": "The gap between decision and execution is one of the most costly in organisations. Leaders who end every session with named owners, clear deliverables, and explicit deadlines close this gap reliably. This is not an administrative nicety — it is the mechanism that turns thinking into action and meetings into outcomes.",
+      "atScale": "Across an organisation, the compounding effect of vague action items is enormous: projects stall, decisions are relitigated, and trust in the value of meetings erodes. When action ownership clarity becomes the cultural standard, execution velocity increases, alignment strengthens, and the organisation becomes meaningfully more effective at turning decisions into results.",
+      "back": {
+        "principle": "Psychological ownership requires specificity. Vague group commitments trigger diffusion of responsibility — each person assumes another will act. A named individual with a clear deliverable and deadline activates personal accountability, commitment consistency, and the implementation intention that actually drives follow-through.",
+        "whatHappened": "When the session ended with a named owner, specific deliverable, and deadline for each action — rather than a vague group commitment — the action was dramatically more likely to be completed.",
+        "whyItWorks": "Named ownership eliminates diffusion of responsibility. A specific deliverable creates a clear success criterion. A deadline activates the planning and prioritisation that turns intention into action.",
+        "scienceBehind": "Gollwitzer's (1999) implementation intention research shows that specifying who, what, when, and where increases follow-through by 2–3×. Hackman (2002) demonstrates that clear role and task assignment is a core predictor of team effectiveness. Locke & Latham (2002) show that specific goals with deadlines produce significantly higher performance than 'do your best' goals. Cialdini (2001) shows that public, specific commitment activates consistency motivation.",
+        "inPractice": "End every session with an action review. For each action ask: Who? (name, not 'the team') / What exactly? (specific deliverable, not a vague task) / By when? (specific date, not 'soon'). Make commitments visible — display them to the group before the session ends. Never close a meeting without this. 30 seconds per action is enough; the discipline compounds over time.",
+        "relatedOpinion": "Reinforce Performance Over Time"
+      },
+      "mentiApplication": [
+        "Use an open-text question in Menti Live at the end of every session: 'What is your specific next action, and by when?' Individual written commitment, visible to the group, is dramatically more powerful than a verbal 'we'll do X.'",
+        "In Menti Workshop, build an action capture step into the session structure — named owner, deliverable, deadline — displayed on screen before the session closes so everyone leaves with shared visibility of who owns what.",
+        "Use Menti Form to send a structured action review 48 hours after the session: 'What action did you commit to? Have you started? What's in the way?' — closing the loop between commitment and execution."
+      ],
+      "useCases": [
+        "team-meeting",
+        "workshop",
+        "advisory"
+      ],
+      "tools": [
+        "menti-live",
+        "menti-workshop",
+        "menti-form"
+      ],
+      "higherEd": {
+        "whyItMatters": "Students who end a seminar or group project session without named responsibilities and deadlines systematically underdeliver — not from lack of ability, but from lack of clarity. Teachers and facilitators who close every group activity with explicit ownership assignment produce measurably higher completion rates and more equitable contribution across the student group.",
+        "atScale": "At the institutional level, teaching students to assign and receive explicit action ownership builds one of the most transferable professional skills graduates carry into work. Programs that make ownership clarity a consistent teaching norm produce graduates who are more effective in collaborative work environments — improving graduate outcome metrics.",
+        "mentiApplication": [
+          "Use a Menti Live open-text question at the end of every group task or seminar: 'What is your specific next step for this project, and by when?' Written, individual, visible — far more reliable than group verbal agreement.",
+          "In Menti Workshop, build an explicit task assignment step into group project sessions — who, what, by when — captured in the tool and visible to the full group before the session closes.",
+          "Use Menti Form to send a structured follow-up to student groups mid-project: 'What did you commit to? Have you completed it? What's blocking you?' — creates accountability without requiring teacher presence."
+        ],
+        "useCases": [
+          "seminars",
+          "evaluations"
+        ]
+      }
     }
   ]
 }
