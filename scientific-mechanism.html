@@ -421,11 +421,9 @@
     }
 
     .modal-close {
-      position: absolute;
-      top: 20px;
-      right: 24px;
       width: 36px;
       height: 36px;
+      flex-shrink: 0;
       border-radius: 50%;
       background: var(--sand-100);
       border: none;
@@ -817,9 +815,15 @@
   <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
   <div class="modal-panel" id="modal-panel">
     <div class="modal-header" id="modal-header">
-      <button class="modal-close" onclick="closeModal()" aria-label="Close">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+        <div class="audience-toggle" style="background:rgba(0,0,0,0.06);">
+          <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
+          <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')">Higher Ed</button>
+        </div>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
       <div class="modal-domain-tag" id="modal-tag"></div>
       <h2 class="modal-headline" id="modal-headline"></h2>
     </div>
