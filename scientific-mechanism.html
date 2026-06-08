@@ -378,6 +378,31 @@
       color: var(--black);
     }
 
+    /* ─── Copy button on cards ──────────────────────────────── */
+    .card { position: relative; }
+    .card-copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.1);
+      background: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sand-500);
+      opacity: 0;
+      transition: var(--transition);
+      z-index: 2;
+    }
+    .card:hover .card-copy-btn { opacity: 1; }
+    .card-copy-btn:hover { background: var(--sand-100); color: var(--blue-500); border-color: var(--blue-500); }
+    .card-copy-btn.copied { color: var(--blue-500); background: var(--blue-100); border-color: var(--blue-500); opacity: 1; }
+    .card-copy-btn svg { pointer-events: none; }
+
     /* ─── Modal ─────────────────────────────────────────────── */
     .modal-overlay {
       position: fixed;
@@ -496,9 +521,9 @@
     .modal-at-scale-label {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--coral-800);
+      color: var(--blue-500);
     }
     .modal-at-scale-text {
       font-size: 13px;
@@ -815,17 +840,18 @@
   <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
   <div class="modal-panel" id="modal-panel">
     <div class="modal-header" id="modal-header">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
-        <div class="audience-toggle" style="background:rgba(0,0,0,0.06);">
-          <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
-          <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')">Higher Ed</button>
-        </div>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:12px;">
         <button class="modal-close" onclick="closeModal()" aria-label="Close">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
-      <div class="modal-domain-tag" id="modal-tag"></div>
       <h2 class="modal-headline" id="modal-headline"></h2>
+      <div style="margin-top:10px;">
+        <div class="audience-toggle" style="background:rgba(0,0,0,0.06);display:inline-flex;">
+          <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')" style="font-size:10px;padding:3px 11px;">Business</button>
+          <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')" style="font-size:10px;padding:3px 11px;">Higher Ed</button>
+        </div>
+      </div>
     </div>
     <div class="modal-body" id="modal-body"></div>
   </div>
@@ -1011,10 +1037,27 @@
       empty.classList.toggle('visible', visible === 0);
     }
 
+    const copyIcon = `<svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="4.5" y="4.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M2 8.5V2.5A1 1 0 013 1.5H8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>`;
+    const checkIcon = `<svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2.5 7L5.5 10L10.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+    function copyCard(event, skillId) {
+      event.stopPropagation();
+      const skill = data.scienceSkills.find(s => s.id === skillId);
+      if (!skill) return;
+      const text = `Problem: ${skill.problem}\n\nSolution: ${skill.solution}\n\nSource: ${skill.source.text} — ${skill.source.url}`;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = event.currentTarget;
+        btn.innerHTML = checkIcon;
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = copyIcon; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
     function cardHTML(skill) {
       const color = domainColor(skill.domain);
       return `
         <div class="card">
+          <button class="card-copy-btn" onclick="copyCard(event,'${skill.id}')" title="Copy to clipboard">${copyIcon}</button>
           <div class="card-domain-tag" style="--tag-color:${color}">${domainLabel(skill.domain)}</div>
           <div class="card-headline">${skill.headline}</div>
           <div class="card-problem">${skill.problem}</div>
@@ -1042,8 +1085,6 @@
       const mentiApp = isHigherEd ? skill.higherEd.mentiApplication : skill.mentiApplication;
       const color = domainColor(skill.domain);
 
-      document.getElementById('modal-tag').style.background = color;
-      document.getElementById('modal-tag').textContent = domainLabel(skill.domain);
       document.getElementById('modal-headline').textContent = skill.headline;
 
       // Build use case + tool labels
@@ -1069,7 +1110,7 @@
           <div class="modal-big-label">WHY IT MATTERS ${audienceTag}</div>
           <p class="modal-why-text">${why || ''}</p>
           <div class="modal-at-scale">
-            <div class="modal-at-scale-label">At Scale</div>
+            <div class="modal-at-scale-label">Impact at Scale</div>
             <p class="modal-at-scale-text">${atScale || ''}</p>
           </div>
         </div>
