@@ -809,7 +809,7 @@
     <div class="skills-section" style="padding-top:40px;">
       <div class="filter-bar">
         <div class="filter-bar-inner">
-          <div class="filter-group"><span class="filter-group-label">Domain</span><div class="filter-chips" id="filter-domains"></div></div>
+          <div class="filter-group"><span class="filter-group-label">Opinion</span><div class="filter-chips" id="filter-opinions"></div></div>
           <div class="filter-group"><span class="filter-group-label">Use Case</span><div class="filter-chips" id="filter-usecases"></div></div>
           <div class="filter-group"><span class="filter-group-label">Tool</span><div class="filter-chips" id="filter-tools"></div></div>
         </div>
@@ -865,7 +865,7 @@
 
   <script>
     let data = null;
-    let activeFilters = { domains: new Set(), useCases: new Set(), tools: new Set() };
+    let activeFilters = { opinions: new Set(), useCases: new Set(), tools: new Set() };
     let audience = 'business'; // 'business' | 'higher-ed'
 
     function setAudience(mode) {
@@ -875,6 +875,7 @@
       });
       // Clear use case filters (they change between modes) and rebuild chips
       activeFilters.useCases = new Set();
+      activeFilters.opinions = new Set();
       rebuildUseCaseChips();
       updateResetBtn();
       renderCards();
@@ -937,7 +938,7 @@
 
     // ── Filters ───────────────────────────────────────────────
     function buildFilters() {
-      renderChips('filter-domains', data.filters.domains, 'domains', true);
+      renderChips('filter-opinions', data.filters.opinions, 'opinions', false);
       rebuildUseCaseChips(); // audience-aware
       renderChips('filter-tools', data.filters.tools, 'tools', false);
     }
@@ -971,23 +972,23 @@
     }
 
     function resetFilters() {
-      activeFilters = { domains: new Set(), useCases: new Set(), tools: new Set() };
+      activeFilters = { opinions: new Set(), useCases: new Set(), tools: new Set() };
       document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
       updateResetBtn();
       renderCards();
     }
 
     function updateResetBtn() {
-      const hasActive = activeFilters.domains.size || activeFilters.useCases.size || activeFilters.tools.size;
+      const hasActive = activeFilters.opinions.size || activeFilters.useCases.size || activeFilters.tools.size;
       document.getElementById('reset-btn').classList.toggle('visible', !!hasActive);
     }
 
     function skillMatches(skill) {
-      const { domains, useCases, tools } = activeFilters;
+      const { opinions, useCases, tools } = activeFilters;
       const ucList = (audience === 'higher-ed' && skill.higherEd)
         ? (skill.higherEd.useCases || [])
         : (skill.useCases || []);
-      if (domains.size && !domains.has(skill.domain)) return false;
+      if (opinions.size && !(skill.opinions || []).some(o => opinions.has(o))) return false;
       if (useCases.size && !ucList.some(u => useCases.has(u))) return false;
       if (tools.size && !skill.tools.some(t => tools.has(t))) return false;
       return true;
