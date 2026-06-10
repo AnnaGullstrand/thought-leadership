@@ -221,6 +221,58 @@
       color: var(--sand-800);
       white-space: nowrap;
     }
+    /* ── Search bar ──── */
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 280px;
+      min-width: 160px;
+    }
+    .search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--sand-500);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      height: 32px;
+      padding: 0 32px 0 32px;
+      border-radius: 100px;
+      border: 1.5px solid rgba(0,0,0,0.1);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--black);
+      outline: none;
+      transition: var(--transition);
+    }
+    .search-input::placeholder { color: var(--sand-500); }
+    .search-input:focus { border-color: var(--blue-500); }
+    .search-clear {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--sand-500);
+      border: none;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 10px;
+      line-height: 1;
+      padding: 0;
+    }
+    .search-clear.visible { display: flex; }
+    .search-clear:hover { background: var(--blue-500); }
+
     .toggle-btn.active {
       background: var(--white);
       color: var(--blue-800);
@@ -818,11 +870,22 @@
             <span class="filter-count" id="filter-count">Loading…</span>
             <button class="reset-btn" id="reset-btn" onclick="resetFilters()">Clear all filters</button>
           </div>
-          <div style="display:flex;align-items:center;gap:8px;">
-            <span class="toggle-label">Context</span>
-            <div class="audience-toggle">
-              <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
-              <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')">Higher Ed</button>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div class="search-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M9.5 9.5L12.5 12.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+              <input id="search-input" class="search-input" type="text" placeholder="Search skills…"
+                oninput="onSearch(this.value)">
+              <button class="search-clear" id="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span class="toggle-label">Context</span>
+              <div class="audience-toggle">
+                <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
+                <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')">Higher Ed</button>
+              </div>
             </div>
           </div>
         </div>
@@ -867,6 +930,7 @@
     let data = null;
     let activeFilters = { opinions: new Set(), useCases: new Set(), tools: new Set() };
     let audience = 'business'; // 'business' | 'higher-ed'
+    let searchTerm = '';
 
     function setAudience(mode) {
       audience = mode;
@@ -971,15 +1035,29 @@
       renderCards();
     }
 
-    function resetFilters() {
-      activeFilters = { opinions: new Set(), useCases: new Set(), tools: new Set() };
-      document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+    function onSearch(val) {
+      searchTerm = val.trim().toLowerCase();
+      document.getElementById('search-clear').classList.toggle('visible', searchTerm.length > 0);
       updateResetBtn();
       renderCards();
     }
 
+    function clearSearch() {
+      searchTerm = '';
+      document.getElementById('search-input').value = '';
+      document.getElementById('search-clear').classList.remove('visible');
+      updateResetBtn();
+      renderCards();
+    }
+
+    function resetFilters() {
+      activeFilters = { opinions: new Set(), useCases: new Set(), tools: new Set() };
+      document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+      clearSearch();
+    }
+
     function updateResetBtn() {
-      const hasActive = activeFilters.opinions.size || activeFilters.useCases.size || activeFilters.tools.size;
+      const hasActive = activeFilters.opinions.size || activeFilters.useCases.size || activeFilters.tools.size || searchTerm.length > 0;
       document.getElementById('reset-btn').classList.toggle('visible', !!hasActive);
     }
 
@@ -991,6 +1069,22 @@
       if (opinions.size && !(skill.opinions || []).some(o => opinions.has(o))) return false;
       if (useCases.size && !ucList.some(u => useCases.has(u))) return false;
       if (tools.size && !skill.tools.some(t => tools.has(t))) return false;
+      if (searchTerm) {
+        const haystack = [
+          skill.headline,
+          skill.problem,
+          skill.solution,
+          skill.domain,
+          domainLabel(skill.domain),
+          (skill.opinions || []).map(o => {
+            const found = data.filters.opinions.find(op => op.id === o);
+            return found ? found.label : '';
+          }).join(' '),
+          skill.back?.principle || '',
+          skill.back?.inPractice || ''
+        ].join(' ').toLowerCase();
+        if (!haystack.includes(searchTerm)) return false;
+      }
       return true;
     }
 
