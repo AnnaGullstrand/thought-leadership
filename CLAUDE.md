@@ -215,7 +215,17 @@ Two pages have context toggles:
 - Opinion mappings (1–2 of the 7 opinions)
 - Tool tags
 
-**`ScienceSkills.md` auto-regenerates** via PostToolUse hook when `content.json` is saved. No manual update needed.
+### Two things that must happen every time a skill is added
+
+**1. `ScienceSkills.md` auto-regenerates** via the PostToolUse hook when `content.json` is saved. No manual update needed — verify it ran (the hook output appears after the save).
+
+**2. Update the Academic Glossary if the new skill introduces new terms.** The glossary is the `GLOSSARY` array hard-coded in the `<script>` of `scientific-mechanism.html` (~63 terms, alphabetical). It does NOT auto-generate. When a new skill brings in scientific concepts not already defined:
+- Scan the new skill's `problem`, `solution`, `back.scienceBehind`, and `back.principle` for technical terms a reader might not know.
+- For each genuinely new term, add a `{ term: '...', def: '...' }` entry to the `GLOSSARY` array, keeping it **alphabetically sorted by `term`**.
+- Definitions: 1–2 sentences, plain-language, name the originating researcher where relevant (e.g. Kahneman, Ebbinghaus). Match the tone of existing entries.
+- Do not duplicate terms already present — check first.
+
+> Always do both steps as part of adding a skill, without being asked.
 
 ---
 
@@ -246,9 +256,34 @@ A PostToolUse hook in `.claude/settings.local.json` runs `scripts/generate_scien
 
 Since each HTML file has its own inline CSS, a style change needed on all pages (e.g. nav, footer, typography) must be applied to **all 6 files**. Use `sed` or an agent to apply consistently. The most commonly shared elements:
 - Navigation (`.nav`, `.nav-links`, `.nav-logo`)
-- Footer (`.footer-top`, `.footer-glossary`, `.suggest-*`)
+- Footer (`.footer-top`, `.footer-glossary`, `.suggest-*`) — the footer logo links to `analytics.html`
 - CSS variables (`:root`)
 - Hero section (`.sec-hero`, `.sec-hero-title`, `.sec-hero-sub`)
+- GA4 tracking snippet in `<head>` (the `gtag` block with `G-XXXXXXXXXX`) — present on all 6 content pages
+
+---
+
+## Optimize for both web and mobile (always)
+
+**Every change must work on desktop AND mobile.** This is a non-negotiable standard for this site — staff browse it from laptops and phones across all offices (Toronto, Berlin, Stockholm, Sydney).
+
+When adding or changing any UI:
+- **Test both layouts.** Verify at desktop width and at mobile width (≤640px) before considering the work done. Use the preview tools (`preview_resize` to 390px) to check.
+- **Respect the existing breakpoints:** `1200px` (grid 5→4 cols), `900px` (grid→3 cols, nav scrolls, CTA hidden), `640px` (mobile layout: 2-col grid, mobile filter sheet, bottom-sheet modal), `380px` (1-col grid).
+- **Touch targets** on mobile should be ≥40px tall and comfortably tappable.
+- **No horizontal overflow** — content must never force the page to scroll sideways on a phone.
+- **Filters on `scientific-mechanism.html`** use a single "Filter" button → bottom sheet on mobile (≤640px), and the full inline chip rows on desktop. Both share the same chip state via `data-group`/`data-id`. Keep them in sync if you touch filtering.
+- Honor safe-area insets on mobile sheets (`env(safe-area-inset-bottom)`).
+
+---
+
+## Secret analytics page (`analytics.html`)
+
+- **Access:** click the Mentimeter logo in the footer (bottom-left) of any page → goes to `analytics.html`. It is `noindex, nofollow` and password-gated like the rest of the site.
+- **Purpose:** lets Anna prove the internal resource is used and see how — visits, unique visitors, per-page data, most-opened science cards, source-link clicks.
+- **How tracking works:** Google Analytics 4. The gtag snippet is in the `<head>` of all 6 content pages with a placeholder Measurement ID `G-XXXXXXXXXX`. **To activate:** create a free GA4 property at analytics.google.com, then replace `G-XXXXXXXXXX` in all 6 HTML files with the real ID (e.g. `G-ABC123XYZ`) and push. The analytics page itself has an in-page setup guide.
+- **Custom events fired:** `science_card_view` (card modal opened), `source_link_click` (DOI/source clicked, card or modal), `filter_applied` (filter chip toggled), plus automatic `page_view`. If you add new interactive features worth measuring, add a matching `gtag('event', ...)` call and document it in the analytics page's "What's being tracked" table.
+- **Live dashboard:** the page can embed a Looker Studio report (paste embed URL in-page; stored in `localStorage`). Geographic breakdown (the 4 offices) comes from GA4's built-in location data — no extra setup.
 
 ---
 
