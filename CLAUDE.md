@@ -38,6 +38,7 @@ Homepage/
 ├── scientific-mechanism.html     ← Science Dictionary (filterable card grid)
 ├── active-participation.html     ← Ask→Think→Share→Act model
 ├── impact-at-scale.html          ← Business + Higher Ed impact (with toggle)
+├── analytics.html                ← Secret analytics page (accessible via footer logo click)
 ├── data/
 │   └── content.json              ← SOURCE OF TRUTH for all science skills
 ├── assets/

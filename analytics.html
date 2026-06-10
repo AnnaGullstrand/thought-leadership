@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    (function() {
+      if (sessionStorage.getItem('menti-auth') !== '1') {
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('gate').style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        });
+      }
+    })();
+  </script>
+  <title>Site Analytics — Mentimeter TL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-800: #323C7C;
+      --blue-500: #5769E7;
+      --blue-100: #D5DAF7;
+      --coral-500: #FF7471;
+      --coral-100: #FFDEDD;
+      --sand-800: #615B55;
+      --sand-500: #A59D94;
+      --sand-100: #F3EDE7;
+      --white: #FFFFFF;
+      --black: #111111;
+      --green: #52AD6E;
+      --green-light: #E8F5ED;
+    }
+    @font-face {
+      font-family: 'MentiCompressed';
+      src: url('assets/fonts/MentiCompressed-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-display: swap;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--sand-100); color: var(--black); -webkit-font-smoothing: antialiased; }
+
+    /* ─── Header ─────────────────────────────────────── */
+    .analytics-header {
+      background: var(--blue-800);
+      padding: 28px 40px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .analytics-header-left { display: flex; flex-direction: column; gap: 6px; }
+    .back-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 200ms;
+      margin-bottom: 4px;
+    }
+    .back-link:hover { color: var(--white); }
+    .analytics-title {
+      font-family: 'MentiCompressed', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+    .analytics-subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+    }
+    .ga-id-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      align-self: flex-start;
+    }
+    .ga-status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--sand-500);
+      flex-shrink: 0;
+    }
+    .ga-status-dot.active { background: #52AD6E; box-shadow: 0 0 0 2px rgba(82,173,110,0.3); }
+
+    /* ─── Main layout ─────────────────────────────────── */
+    .analytics-body { max-width: 1100px; margin: 0 auto; padding: 40px 40px 80px; }
+
+    /* ─── Setup banner ────────────────────────────────── */
+    .setup-banner {
+      background: var(--white);
+      border: 2px solid var(--blue-100);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+    }
+    .setup-banner.hidden { display: none; }
+    .setup-banner-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .setup-step-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--blue-500);
+      background: var(--blue-100);
+      padding: 3px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .setup-title {
+      font-family: 'MentiCompressed', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--blue-800);
+      margin-bottom: 8px;
+    }
+    .setup-desc { font-size: 14px; color: var(--sand-800); line-height: 1.6; max-width: 560px; }
+    .setup-steps { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+    .setup-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--blue-500);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text { font-size: 14px; line-height: 1.6; color: var(--black); }
+    .step-text a { color: var(--blue-500); }
+    .step-text code {
+      background: var(--sand-100);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+    }
+    .setup-config {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .config-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px 14px;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      color: var(--black);
+      outline: none;
+      transition: border-color 200ms;
+    }
+    .config-input:focus { border-color: var(--blue-500); }
+    .config-btn {
+      padding: 10px 20px;
+      background: var(--blue-500);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      white-space: nowrap;
+      transition: background 200ms;
+    }
+    .config-btn:hover { background: var(--blue-800); }
+    .config-hint { font-size: 12px; color: var(--sand-500); margin-top: 8px; }
+
+    /* ─── Quick stat cards ────────────────────────────── */
+    .stat-section { margin-bottom: 32px; }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      margin-bottom: 14px;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .stat-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-family: 'MentiCompressed', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--blue-800);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-value.pending { color: var(--sand-500); font-size: 22px; }
+    .stat-sub { font-size: 12px; color: var(--sand-500); }
+
+    /* ─── Dashboard embed section ─────────────────────── */
+    .dashboard-section {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.07);
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+    .dashboard-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .dashboard-header-left { display: flex; flex-direction: column; gap: 3px; }
+    .dashboard-title { font-size: 16px; font-weight: 600; color: var(--black); }
+    .dashboard-desc { font-size: 13px; color: var(--sand-500); }
+    .dashboard-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .dash-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      transition: all 200ms;
+      white-space: nowrap;
+    }
+    .dash-btn-primary { background: var(--blue-500); color: var(--white); border: none; }
+    .dash-btn-primary:hover { background: var(--blue-800); }
+    .dash-btn-secondary { background: var(--sand-100); color: var(--sand-800); border: 1px solid rgba(0,0,0,0.1); }
+    .dash-btn-secondary:hover { background: var(--blue-100); color: var(--blue-500); border-color: var(--blue-500); }
+    .dashboard-embed-area { min-height: 500px; position: relative; }
+    .dashboard-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      text-align: center;
+      gap: 16px;
+    }
+    .placeholder-icon {
+      width: 64px; height: 64px;
+      background: var(--blue-100);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .placeholder-title { font-size: 18px; font-weight: 600; color: var(--black); }
+    .placeholder-text { font-size: 14px; color: var(--sand-800); max-width: 400px; line-height: 1.65; }
+    .embed-url-form { display: flex; gap: 8px; width: 100%; max-width: 520px; margin-top: 8px; flex-wrap: wrap; }
+    .embed-iframe { width: 100%; height: 600px; border: none; }
+
+    /* ─── Events guide ────────────────────────────────── */
+    .events-section {
+      background: var(--white);
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.07);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .events-title { font-size: 16px; font-weight: 600; color: var(--black); margin-bottom: 4px; }
+    .events-desc { font-size: 13px; color: var(--sand-500); margin-bottom: 20px; }
+    .events-table { width: 100%; border-collapse: collapse; }
+    .events-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      padding: 8px 12px;
+      border-bottom: 2px solid rgba(0,0,0,0.06);
+    }
+    .events-table td {
+      padding: 10px 12px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .events-table tr:last-child td { border-bottom: none; }
+    .event-name {
+      font-family: monospace;
+      font-size: 12px;
+      background: var(--blue-100);
+      color: var(--blue-800);
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* ─── Links section ───────────────────────────────── */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .link-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,0.07);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 200ms;
+    }
+    .link-card:hover { border-color: var(--blue-500); box-shadow: 0 4px 16px rgba(87,105,231,0.12); }
+    .link-card-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--blue-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-500);
+    }
+    .link-card-title { font-size: 14px; font-weight: 600; color: var(--black); }
+    .link-card-desc { font-size: 12px; color: var(--sand-500); line-height: 1.5; }
+    .link-card-arrow { font-size: 12px; color: var(--blue-500); margin-top: auto; }
+
+    /* ─── Password gate ───────────────────────────────── */
+    #gate {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: var(--blue-800);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 32px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ─── Responsive ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .links-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .analytics-header { padding: 24px 20px; }
+      .analytics-body { padding: 24px 20px 60px; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .links-grid { grid-template-columns: 1fr; }
+      .setup-banner { padding: 20px; }
+    }
+    @media (max-width: 420px) {
+      .stat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div id="gate">
+    <div style="text-align:center; color:#fff;">
+      <div style="font-family:'MentiCompressed',sans-serif; font-size:48px; font-weight:700; letter-spacing:-1px; margin-bottom:8px;">Mentimeter</div>
+      <div style="font-size:15px; color:rgba(255,255,255,0.6);">Internal resource — enter password to continue</div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; width:100%; max-width:320px;">
+      <input id="gate-input" type="password" placeholder="Password" autofocus
+        style="width:100%; padding:14px 18px; border-radius:8px; border:2px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.08); color:#fff; font-size:15px; outline:none; font-family:'Inter',sans-serif;"
+        onkeydown="if(event.key==='Enter') checkPassword()">
+      <div id="gate-error" style="color:#FF7471; font-size:13px; text-align:center; min-height:18px;"></div>
+      <button onclick="checkPassword()"
+        style="width:100%; padding:14px; border-radius:8px; border:none; background:#5769E7; color:#fff; font-size:15px; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif;">
+        Enter
+      </button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="analytics-header">
+    <div class="analytics-header-left">
+      <a href="index.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to site
+      </a>
+      <div class="analytics-title">SITE ANALYTICS</div>
+      <div class="analytics-subtitle">Internal usage data — Thought Leadership resource</div>
+    </div>
+    <div class="ga-id-badge">
+      <span class="ga-status-dot" id="ga-status-dot"></span>
+      <span id="ga-id-display">GA4 not configured</span>
+    </div>
+  </div>
+
+  <div class="analytics-body">
+
+    <!-- Setup Banner -->
+    <div class="setup-banner" id="setup-banner">
+      <div class="setup-banner-header">
+        <div>
+          <div class="setup-step-badge">Setup required</div>
+          <div class="setup-title" style="margin-top:10px;">Connect Google Analytics 4</div>
+          <p class="setup-desc">To track visits across all offices (Toronto, Berlin, Stockholm, Sydney), connect this site to a free Google Analytics 4 property. Takes about 5 minutes.</p>
+        </div>
+      </div>
+      <div class="setup-steps">
+        <div class="setup-step">
+          <div class="step-num">1</div>
+          <div class="step-text">Go to <a href="https://analytics.google.com" target="_blank">analytics.google.com</a> → Admin → Create Property → choose Web → enter <code>annagullstrand.github.io/thought-leadership</code></div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">2</div>
+          <div class="step-text">Copy your <strong>Measurement ID</strong> — it looks like <code>G-ABC123XYZ</code></div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">3</div>
+          <div class="step-text">Paste it below, then find <code>G-XXXXXXXXXX</code> in all 6 HTML files and replace it with your real ID — then push to GitHub</div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">4</div>
+          <div class="step-text"><strong>Optional:</strong> Create a <a href="https://lookerstudio.google.com" target="_blank">Looker Studio</a> report connected to your GA4 property → embed it below for a live dashboard on this page</div>
+        </div>
+      </div>
+      <div>
+        <div class="setup-config">
+          <input class="config-input" id="ga-id-input" placeholder="G-XXXXXXXXXX — paste your Measurement ID here">
+          <button class="config-btn" onclick="saveGaId()">Save ID</button>
+        </div>
+        <p class="config-hint">Saved locally in your browser for display — you still need to replace it in the HTML files for tracking to work.</p>
+      </div>
+    </div>
+
+    <!-- Quick stats (informational until GA4 is live) -->
+    <div class="stat-section">
+      <div class="section-label">Overview — once GA4 is active, find these in your dashboard</div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">Page Views (28 days)</div>
+          <div class="stat-value pending" id="stat-views">—</div>
+          <div class="stat-sub">Available in GA4: Reports → Engagement → Overview</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Unique Visitors (28 days)</div>
+          <div class="stat-value pending" id="stat-users">—</div>
+          <div class="stat-sub">Available in GA4: Reports → Acquisition → Overview</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Science Cards Opened</div>
+          <div class="stat-value pending" id="stat-cards">—</div>
+          <div class="stat-sub">Custom event: <code style="font-size:11px;">science_card_view</code></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Source Clicks</div>
+          <div class="stat-value pending" id="stat-sources">—</div>
+          <div class="stat-sub">Custom event: <code style="font-size:11px;">source_link_click</code></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Looker Studio Dashboard Embed -->
+    <div class="dashboard-section" id="dashboard-section">
+      <div class="dashboard-header">
+        <div class="dashboard-header-left">
+          <div class="dashboard-title">Live Dashboard</div>
+          <div class="dashboard-desc">Embed a Looker Studio report connected to your GA4 data</div>
+        </div>
+        <div class="dashboard-actions">
+          <a href="https://lookerstudio.google.com" target="_blank" class="dash-btn dash-btn-secondary">
+            Open Looker Studio ↗
+          </a>
+          <button class="dash-btn dash-btn-secondary" onclick="toggleEmbedConfig()" id="config-toggle-btn">
+            Configure embed
+          </button>
+        </div>
+      </div>
+      <div class="dashboard-embed-area">
+        <div id="embed-config-panel" style="padding:20px; border-bottom:1px solid rgba(0,0,0,0.06); background:var(--sand-100); display:none;">
+          <p style="font-size:13px; color:var(--sand-800); margin-bottom:10px;">In Looker Studio: File → Embed report → Copy the iframe <code>src</code> URL. Paste it here.</p>
+          <div class="embed-url-form">
+            <input class="config-input" id="looker-url-input" placeholder="https://lookerstudio.google.com/embed/reporting/...">
+            <button class="config-btn" onclick="saveLookerUrl()">Save & embed</button>
+            <button class="config-btn" onclick="clearLookerUrl()" style="background:var(--sand-100);color:var(--sand-800);border:1px solid rgba(0,0,0,0.1);">Remove</button>
+          </div>
+        </div>
+        <div id="embed-placeholder" class="dashboard-placeholder">
+          <div class="placeholder-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <rect x="3" y="3" width="22" height="22" rx="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M8 19l4-5 3 3 3-4 4 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="placeholder-title">No dashboard configured yet</div>
+          <p class="placeholder-text">Once GA4 is set up, create a Looker Studio report and embed it here for a live view of visits, page data, and custom events — directly on this page.</p>
+          <button class="config-btn" onclick="toggleEmbedConfig()" style="margin-top:4px;">Configure embed</button>
+        </div>
+        <iframe id="looker-embed" class="embed-iframe" style="display:none;" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- What's tracked -->
+    <div class="events-section">
+      <div class="events-title">What's being tracked</div>
+      <div class="events-desc">These GA4 events fire automatically once you replace <code>G-XXXXXXXXXX</code> with a real Measurement ID.</div>
+      <table class="events-table">
+        <thead>
+          <tr>
+            <th>Event name</th>
+            <th>When it fires</th>
+            <th>Useful for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="event-name">page_view</span></td>
+            <td>Every page load on the site</td>
+            <td>Visits per page, day/week/month trends, unique visitors</td>
+          </tr>
+          <tr>
+            <td><span class="event-name">science_card_view</span></td>
+            <td>When a science card modal is opened</td>
+            <td>Most-viewed science mechanisms; card popularity ranking</td>
+          </tr>
+          <tr>
+            <td><span class="event-name">source_link_click</span></td>
+            <td>When a source/DOI link is clicked (card or modal)</td>
+            <td>Engagement with academic sources; which cards generate research interest</td>
+          </tr>
+          <tr>
+            <td><span class="event-name">filter_applied</span></td>
+            <td>When a filter chip is toggled on the Science page</td>
+            <td>Which filters (opinions, tools, use cases) are most used</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Quick access links -->
+    <div class="section-label">Quick access</div>
+    <div class="links-grid">
+      <a href="https://analytics.google.com" target="_blank" class="link-card">
+        <div class="link-card-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect x="2" y="9" width="3" height="7" rx="1" fill="currentColor"/>
+            <rect x="7.5" y="5" width="3" height="11" rx="1" fill="currentColor"/>
+            <rect x="13" y="2" width="3" height="14" rx="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="link-card-title">Google Analytics 4</div>
+        <div class="link-card-desc">Full visit data, page reports, user acquisition, geographic breakdown</div>
+        <div class="link-card-arrow">Open GA4 dashboard ↗</div>
+      </a>
+      <a href="https://lookerstudio.google.com" target="_blank" class="link-card">
+        <div class="link-card-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect x="2" y="2" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M5 12l3-4 2.5 2.5L13 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="link-card-title">Looker Studio</div>
+        <div class="link-card-desc">Create a shareable dashboard connecting GA4 to custom charts and tables</div>
+        <div class="link-card-arrow">Open Looker Studio ↗</div>
+      </a>
+      <a href="https://github.com/AnnaGullstrand/thought-leadership" target="_blank" class="link-card">
+        <div class="link-card-icon" style="background:var(--sand-100); color:var(--sand-800);">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 3.32 2.15 6.14 5.13 7.13.37.07.5-.16.5-.36v-1.26c-2.08.45-2.52-.99-2.52-.99-.34-.87-.83-1.1-.83-1.1-.68-.46.05-.45.05-.45.75.05 1.15.77 1.15.77.67 1.15 1.76.82 2.19.62.07-.48.26-.82.47-1.01-1.66-.19-3.4-.83-3.4-3.7 0-.82.29-1.49.77-2.01-.08-.19-.33-.95.07-1.98 0 0 .63-.2 2.06.77a7.19 7.19 0 013.76 0c1.43-.97 2.06-.77 2.06-.77.4 1.03.15 1.79.07 1.98.48.52.77 1.19.77 2.01 0 2.88-1.75 3.51-3.41 3.7.27.23.51.68.51 1.37v2.03c0 .2.13.44.51.36A7.51 7.51 0 0016.5 9c0-4.14-3.36-7.5-7.5-7.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="link-card-title">GitHub Repository</div>
+        <div class="link-card-desc">Source code and deployment history for the TL site</div>
+        <div class="link-card-arrow">Open GitHub ↗</div>
+      </a>
+    </div>
+
+    <p style="font-size:12px; color:var(--sand-500); text-align:center; margin-top:32px;">
+      This page is not indexed by search engines and is only accessible by clicking the logo in the site footer.
+    </p>
+
+  </div>
+
+  <script>
+    function checkPassword() {
+      const val = document.getElementById('gate-input').value;
+      if (val === 'Menti2026') {
+        sessionStorage.setItem('menti-auth', '1');
+        document.getElementById('gate').style.display = 'none';
+        document.body.style.overflow = '';
+      } else {
+        document.getElementById('gate-error').textContent = 'Incorrect password — try again.';
+        document.getElementById('gate-input').value = '';
+        document.getElementById('gate-input').focus();
+      }
+    }
+
+    // ── GA4 ID config ──────────────────────────────────
+    function saveGaId() {
+      const id = document.getElementById('ga-id-input').value.trim();
+      if (!id.startsWith('G-')) { alert('Measurement ID must start with G-'); return; }
+      localStorage.setItem('menti-ga-id', id);
+      updateGaStatus(id);
+      document.getElementById('setup-banner').classList.add('hidden');
+    }
+
+    function updateGaStatus(id) {
+      const dot = document.getElementById('ga-status-dot');
+      const display = document.getElementById('ga-id-display');
+      if (id) {
+        dot.classList.add('active');
+        display.textContent = id;
+      } else {
+        dot.classList.remove('active');
+        display.textContent = 'GA4 not configured';
+      }
+    }
+
+    // ── Looker embed config ────────────────────────────
+    function toggleEmbedConfig() {
+      const panel = document.getElementById('embed-config-panel');
+      const btn = document.getElementById('config-toggle-btn');
+      const isOpen = panel.style.display !== 'none';
+      panel.style.display = isOpen ? 'none' : 'block';
+      btn.textContent = isOpen ? 'Configure embed' : 'Close config';
+      if (!isOpen) {
+        const saved = localStorage.getItem('menti-looker-url');
+        if (saved) document.getElementById('looker-url-input').value = saved;
+      }
+    }
+
+    function saveLookerUrl() {
+      const url = document.getElementById('looker-url-input').value.trim();
+      if (!url) { alert('Paste a Looker Studio embed URL first.'); return; }
+      localStorage.setItem('menti-looker-url', url);
+      renderEmbed(url);
+      toggleEmbedConfig();
+    }
+
+    function clearLookerUrl() {
+      localStorage.removeItem('menti-looker-url');
+      document.getElementById('looker-url-input').value = '';
+      document.getElementById('looker-embed').style.display = 'none';
+      document.getElementById('looker-embed').src = '';
+      document.getElementById('embed-placeholder').style.display = 'flex';
+      toggleEmbedConfig();
+    }
+
+    function renderEmbed(url) {
+      const iframe = document.getElementById('looker-embed');
+      const placeholder = document.getElementById('embed-placeholder');
+      iframe.src = url;
+      iframe.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+
+    // ── Init ───────────────────────────────────────────
+    (function init() {
+      const savedId = localStorage.getItem('menti-ga-id');
+      if (savedId) {
+        updateGaStatus(savedId);
+        document.getElementById('setup-banner').classList.add('hidden');
+        document.getElementById('ga-id-input').value = savedId;
+      }
+      const savedUrl = localStorage.getItem('menti-looker-url');
+      if (savedUrl) renderEmbed(savedUrl);
+    })();
+  </script>
+</body>
+</html>

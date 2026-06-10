@@ -13,6 +13,9 @@
       }
     })();
   </script>
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   <title>Scientific Mechanism — Mentimeter</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -939,6 +942,143 @@
       line-height: 1.6;
     }
 
+    /* ─── Mobile Filter Trigger ────────────────────────────── */
+    .mobile-filter-row {
+      display: none;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .filter-trigger-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: var(--radius-chip);
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--white);
+      color: var(--black);
+      border: 1.5px solid rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-body);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .filter-trigger-btn:hover { border-color: var(--blue-500); color: var(--blue-500); }
+    .filter-trigger-btn.has-active { border-color: var(--blue-500); color: var(--blue-500); background: var(--blue-100); }
+    .filter-badge {
+      display: none;
+      background: var(--blue-500);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 100px;
+      padding: 1px 6px;
+      min-width: 16px;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .filter-badge.visible { display: inline-block; }
+
+    /* ─── Filter Bottom Sheet ───────────────────────────────── */
+    .filter-sheet-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 250ms ease;
+    }
+    .filter-sheet-backdrop.open { opacity: 1; pointer-events: auto; }
+    .filter-sheet {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-radius: 20px 20px 0 0;
+      z-index: 301;
+      max-height: 82dvh;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 300ms cubic-bezier(0.32, 0.72, 0, 1);
+      box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
+    }
+    .filter-sheet.open { transform: translateY(0); }
+    .filter-sheet-handle {
+      width: 36px;
+      height: 4px;
+      background: rgba(0,0,0,0.1);
+      border-radius: 2px;
+      margin: 12px auto 4px;
+      flex-shrink: 0;
+    }
+    .filter-sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px 14px;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .filter-sheet-title { font-size: 16px; font-weight: 600; color: var(--black); }
+    .filter-sheet-clear {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue-500);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms;
+      font-family: var(--font-body);
+    }
+    .filter-sheet-clear.visible { opacity: 1; pointer-events: auto; }
+    .filter-sheet-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px 20px 8px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .filter-sheet-group { margin-bottom: 20px; }
+    .filter-sheet-group:last-child { margin-bottom: 8px; }
+    .filter-sheet-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--sand-500);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .filter-sheet-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-sheet-footer {
+      padding: 12px 20px;
+      padding-bottom: max(12px, env(safe-area-inset-bottom, 12px));
+      flex-shrink: 0;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .filter-sheet-apply {
+      width: 100%;
+      padding: 14px;
+      background: var(--blue-500);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 200ms ease;
+      font-family: var(--font-body);
+    }
+    .filter-sheet-apply:active { background: var(--blue-800); }
+
     /* ─── Responsive ────────────────────────────────────────── */
     @media (max-width: 1200px) {
       .skills-grid { grid-template-columns: repeat(4, 1fr); }
@@ -957,12 +1097,9 @@
       .nav-links a { font-size: 12px; padding: 5px 8px; }
       .skills-section { padding: 32px 16px 48px; }
       .filter-bar { padding: 12px 0 14px; top: 56px; }
-      .filter-group { gap: 6px; margin-bottom: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 2px; }
-      .filter-group::-webkit-scrollbar { display: none; }
-      .filter-group-label { min-width: 56px; font-size: 10px; flex-shrink: 0; }
-      .filter-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-      .filter-chips::-webkit-scrollbar { display: none; }
-      .chip { font-size: 12px; padding: 4px 10px; white-space: nowrap; flex-shrink: 0; }
+      .filter-bar-inner { display: none !important; }
+      .mobile-filter-row { display: flex; }
+      .filter-meta-context { display: none; }
       .filter-meta { flex-direction: column; align-items: flex-start; gap: 4px; }
       .filter-count { font-size: 12px; }
       .skills-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -1037,6 +1174,22 @@
     </div>
     <div class="skills-section" style="padding-top:40px;">
       <div class="filter-bar">
+        <!-- Mobile: single-row trigger (shown on mobile only) -->
+        <div class="mobile-filter-row">
+          <button class="filter-trigger-btn" id="filter-trigger-btn" onclick="openFilterSheet()">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 3.5h12M3 7h8M5 10.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Filter
+            <span class="filter-badge" id="filter-badge"></span>
+          </button>
+          <div style="flex:1;"></div>
+          <div class="audience-toggle">
+            <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
+            <button class="toggle-btn" data-mode="higher-ed" onclick="setAudience('higher-ed')">Higher Ed</button>
+          </div>
+        </div>
+        <!-- Desktop: full filter chip rows (hidden on mobile) -->
         <div class="filter-bar-inner">
           <div class="filter-group"><span class="filter-group-label">Opinion</span><div class="filter-chips" id="filter-opinions"></div></div>
           <div class="filter-group"><span class="filter-group-label">Use Case</span><div class="filter-chips" id="filter-usecases"></div></div>
@@ -1057,7 +1210,7 @@
                 oninput="onSearch(this.value)">
               <button class="search-clear" id="search-clear" onclick="clearSearch()" title="Clear search">✕</button>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;">
+            <div class="filter-meta-context" style="display:flex;align-items:center;gap:8px;">
               <span class="toggle-label">Context</span>
               <div class="audience-toggle">
                 <button class="toggle-btn active" data-mode="business" onclick="setAudience('business')">Business</button>
@@ -1067,6 +1220,33 @@
           </div>
         </div>
       </div>
+      <!-- Filter bottom sheet (mobile) -->
+      <div class="filter-sheet-backdrop" id="filter-sheet-backdrop" onclick="closeFilterSheet()"></div>
+      <div class="filter-sheet" id="filter-sheet">
+        <div class="filter-sheet-handle"></div>
+        <div class="filter-sheet-header">
+          <span class="filter-sheet-title">Filter</span>
+          <button class="filter-sheet-clear" id="filter-sheet-clear" onclick="resetFilters()">Clear all</button>
+        </div>
+        <div class="filter-sheet-scroll">
+          <div class="filter-sheet-group">
+            <span class="filter-sheet-group-label">Opinion</span>
+            <div class="filter-sheet-chips" id="filter-sheet-opinions"></div>
+          </div>
+          <div class="filter-sheet-group">
+            <span class="filter-sheet-group-label">Use Case</span>
+            <div class="filter-sheet-chips" id="filter-sheet-usecases"></div>
+          </div>
+          <div class="filter-sheet-group">
+            <span class="filter-sheet-group-label">Tool</span>
+            <div class="filter-sheet-chips" id="filter-sheet-tools"></div>
+          </div>
+        </div>
+        <div class="filter-sheet-footer">
+          <button class="filter-sheet-apply" id="filter-sheet-apply" onclick="closeFilterSheet()">Show skills</button>
+        </div>
+      </div>
+
       <div class="skills-grid" id="skills-grid">
         <div class="empty-state" id="empty-state">
           <h3>No skills match these filters</h3>
@@ -1130,7 +1310,7 @@
 
   <footer>
     <div class="footer-top">
-      <div class="footer-logo"><img src="assets/images/Footer-Menti_Brand_Logo.png" alt="Mentimeter"></div>
+      <div class="footer-logo"><a href="analytics.html" title="Site Analytics" style="display:block;opacity:1;"><img src="assets/images/Footer-Menti_Brand_Logo.png" alt="Mentimeter"></a></div>
       <p>Internal resource — Our Science-Informed Thought Leadership · 2026 - version 1.0</p>
       <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
         <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
@@ -1175,19 +1355,14 @@
     }
 
     function rebuildUseCaseChips() {
-      const container = document.getElementById('filter-usecases');
-      container.innerHTML = '';
       const items = audience === 'higher-ed'
         ? data.filters.higherEdUseCases
         : data.filters.useCases;
-      items.forEach(item => {
-        const chip = document.createElement('div');
-        chip.className = 'chip';
-        chip.dataset.id = item.id;
-        chip.dataset.group = 'useCases';
-        chip.textContent = item.label;
-        chip.addEventListener('click', () => toggleFilter(chip, 'useCases', item.id));
-        container.appendChild(chip);
+      ['filter-usecases', 'filter-sheet-usecases'].forEach(cid => {
+        const container = document.getElementById(cid);
+        if (!container) return;
+        container.innerHTML = '';
+        items.forEach(item => container.appendChild(createChip(item, 'useCases', false)));
       });
     }
 
@@ -1222,35 +1397,42 @@
 
     // ── Filters ───────────────────────────────────────────────
     function buildFilters() {
-      renderChips('filter-opinions', data.filters.opinions, 'opinions', false);
-      rebuildUseCaseChips(); // audience-aware
-      renderChips('filter-tools', data.filters.tools, 'tools', false);
+      renderChips(['filter-opinions', 'filter-sheet-opinions'], data.filters.opinions, 'opinions', false);
+      rebuildUseCaseChips();
+      renderChips(['filter-tools', 'filter-sheet-tools'], data.filters.tools, 'tools', false);
     }
 
-    function renderChips(containerId, items, group, isDomain) {
-      const container = document.getElementById(containerId);
-      items.forEach(item => {
-        const chip = document.createElement('div');
-        chip.className = 'chip' + (isDomain ? ' domain-chip' : '');
-        if (isDomain) chip.style.setProperty('--chip-color', item.color);
-        chip.dataset.id = item.id;
-        chip.dataset.group = group;
-
-        if (isDomain) {
-          chip.innerHTML = `<span class="chip-dot" style="background:${item.color}"></span>${item.label}`;
-        } else {
-          chip.textContent = item.label;
-        }
-
-        chip.addEventListener('click', () => toggleFilter(chip, group, item.id));
-        container.appendChild(chip);
+    function renderChips(containerIds, items, group, isDomain) {
+      const ids = Array.isArray(containerIds) ? containerIds : [containerIds];
+      ids.forEach(cid => {
+        const container = document.getElementById(cid);
+        if (!container) return;
+        items.forEach(item => container.appendChild(createChip(item, group, isDomain)));
       });
     }
 
-    function toggleFilter(chip, group, id) {
+    function createChip(item, group, isDomain) {
+      const chip = document.createElement('div');
+      chip.className = 'chip' + (isDomain ? ' domain-chip' : '');
+      if (isDomain) chip.style.setProperty('--chip-color', item.color);
+      chip.dataset.id = item.id;
+      chip.dataset.group = group;
+      if (isDomain) {
+        chip.innerHTML = `<span class="chip-dot" style="background:${item.color}"></span>${item.label}`;
+      } else {
+        chip.textContent = item.label;
+      }
+      chip.addEventListener('click', () => toggleFilter(group, item.id));
+      return chip;
+    }
+
+    function toggleFilter(group, id) {
       const set = activeFilters[group];
-      if (set.has(id)) { set.delete(id); chip.classList.remove('active'); }
-      else             { set.add(id);    chip.classList.add('active'); }
+      const nowActive = !set.has(id);
+      if (nowActive) set.add(id); else set.delete(id);
+      document.querySelectorAll(`.chip[data-group="${group}"][data-id="${id}"]`)
+        .forEach(c => c.classList.toggle('active', nowActive));
+      if (typeof gtag === 'function') gtag('event', 'filter_applied', { filter_group: group, filter_value: id, event_category: 'engagement' });
       updateResetBtn();
       renderCards();
     }
@@ -1279,6 +1461,29 @@
     function updateResetBtn() {
       const hasActive = activeFilters.opinions.size || activeFilters.useCases.size || activeFilters.tools.size || searchTerm.length > 0;
       document.getElementById('reset-btn').classList.toggle('visible', !!hasActive);
+      updateMobileUI();
+    }
+
+    function updateMobileUI() {
+      const n = activeFilters.opinions.size + activeFilters.useCases.size + activeFilters.tools.size;
+      const badge = document.getElementById('filter-badge');
+      if (badge) { badge.textContent = n; badge.classList.toggle('visible', n > 0); }
+      const triggerBtn = document.getElementById('filter-trigger-btn');
+      if (triggerBtn) triggerBtn.classList.toggle('has-active', n > 0);
+      const sheetClear = document.getElementById('filter-sheet-clear');
+      if (sheetClear) sheetClear.classList.toggle('visible', n > 0 || searchTerm.length > 0);
+    }
+
+    function openFilterSheet() {
+      document.getElementById('filter-sheet').classList.add('open');
+      document.getElementById('filter-sheet-backdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFilterSheet() {
+      document.getElementById('filter-sheet').classList.remove('open');
+      document.getElementById('filter-sheet-backdrop').classList.remove('open');
+      document.body.style.overflow = '';
     }
 
     function skillMatches(skill) {
@@ -1340,6 +1545,11 @@
         wrapper.className = 'card-wrapper';
         wrapper.innerHTML = cardHTML(skill);
         wrapper.querySelector('.card').addEventListener('click', () => openModal(skill));
+        const sourceLink = wrapper.querySelector('.card-source');
+        if (sourceLink) sourceLink.addEventListener('click', e => {
+          e.stopPropagation();
+          if (typeof gtag === 'function') gtag('event', 'source_link_click', { card_name: skill.headline, link_type: 'card', event_category: 'engagement' });
+        });
         grid.insertBefore(wrapper, empty);
       });
 
@@ -1350,6 +1560,8 @@
         : `Showing <strong>${visible}</strong> of <strong>${total}</strong> skills`;
 
       empty.classList.toggle('visible', visible === 0);
+      const applyBtn = document.getElementById('filter-sheet-apply');
+      if (applyBtn) applyBtn.textContent = `Show ${visible} skill${visible !== 1 ? 's' : ''}`;
     }
 
     const copyIcon = `<svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="4.5" y="4.5" width="7.5" height="7.5" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M2 8.5V2.5A1 1 0 013 1.5H8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>`;
@@ -1394,6 +1606,7 @@
     // ── Modal ─────────────────────────────────────────────────
     function openModal(skill) {
       document.getElementById('modal-panel').dataset.skillId = skill.id;
+      if (typeof gtag === 'function') gtag('event', 'science_card_view', { card_name: skill.headline, card_domain: domainLabel(skill.domain), event_category: 'engagement' });
       const isHigherEd = audience === 'higher-ed' && skill.higherEd;
       const why = isHigherEd ? skill.higherEd.whyItMatters : skill.whyItMatters;
       const atScale = isHigherEd ? skill.higherEd.atScale : skill.atScale;
@@ -1481,6 +1694,11 @@
       document.getElementById('modal-overlay').classList.add('open');
       document.getElementById('modal-panel').classList.add('open');
       document.body.style.overflow = 'hidden';
+      document.getElementById('modal-body').querySelectorAll('.modal-source-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (typeof gtag === 'function') gtag('event', 'source_link_click', { card_name: skill.headline, link_type: 'modal', event_category: 'engagement' });
+        });
+      });
     }
 
     function closeModal() {
