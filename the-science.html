@@ -646,6 +646,183 @@
     footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
     footer a:hover { color: var(--white); }
 
+    /* ─── Footer expanded ───────────────────────────────────── */
+    footer {
+      background: var(--blue-800);
+      color: rgba(255,255,255,0.6);
+      padding: 0;
+    }
+    .footer-top {
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-top p { font-size: 13px; }
+    .footer-top a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .footer-top a:hover { color: var(--white); }
+    .footer-logo img { height: 40px; display: block; }
+    .footer-suggest-btn {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      padding: 7px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 200ms ease;
+    }
+    .footer-suggest-btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
+    /* ─── Glossary ───────────────────────────────────────────── */
+    .footer-glossary {
+      padding: 28px 40px 40px;
+    }
+    .footer-glossary-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .footer-glossary-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .glossary-toggle-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      transition: color 200ms ease;
+    }
+    .footer-glossary-header:hover .glossary-toggle-label { color: rgba(255,255,255,0.8); }
+    .glossary-body {
+      display: none;
+      margin-top: 28px;
+    }
+    .glossary-body.open { display: block; }
+    .glossary-letter-section { margin-bottom: 24px; }
+    .glossary-letter-heading {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--coral-500);
+      line-height: 1;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .glossary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 24px;
+    }
+    .glossary-item { padding: 8px 0; }
+    .glossary-term {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+    .glossary-def {
+      font-size: 12px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.5);
+    }
+    /* ─── Suggestion modal ───────────────────────────────────── */
+    .suggest-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 400;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+    .suggest-overlay.open { display: flex; }
+    .suggest-modal {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      width: 100%;
+      max-width: 440px;
+      margin: 20px;
+    }
+    .suggest-modal h3 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--blue-800);
+      margin-bottom: 8px;
+    }
+    .suggest-modal .suggest-desc {
+      font-size: 14px;
+      color: var(--sand-800);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    .suggest-field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .suggest-field label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--sand-800);
+    }
+    .suggest-field input {
+      padding: 10px 14px;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: var(--font-body);
+      color: var(--black);
+      outline: none;
+      transition: border-color 200ms ease;
+    }
+    .suggest-field input:focus { border-color: var(--blue-500); }
+    .suggest-actions { display: flex; gap: 10px; margin-top: 20px; }
+    .suggest-submit-btn {
+      flex: 1;
+      padding: 12px;
+      background: var(--blue-500);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 200ms ease;
+      font-family: var(--font-body);
+    }
+    .suggest-submit-btn:hover { background: var(--blue-800); }
+    .suggest-cancel-btn {
+      padding: 12px 16px;
+      background: var(--sand-100);
+      color: var(--sand-800);
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    .suggest-success { text-align: center; padding: 16px 0; display: none; }
+    .suggest-success .s-icon { font-size: 44px; margin-bottom: 12px; }
+    .suggest-success h4 { font-size: 18px; font-weight: 600; color: var(--black); margin-bottom: 8px; }
+    .suggest-success p { font-size: 14px; color: var(--sand-800); line-height: 1.6; }
+    @media (max-width: 768px) {
+      .footer-top { padding: 24px 20px; }
+      .footer-glossary { padding: 20px 20px 32px; }
+      .glossary-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .glossary-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── Responsive ────────────────────────────────────────── */
     @media (max-width: 1200px) {
       .skills-grid { grid-template-columns: repeat(4, 1fr); }
@@ -1200,11 +1377,54 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Suggestion modal -->
+  <div class="suggest-overlay" id="suggestOverlay" onclick="if(event.target===this)closeSuggestModal()">
+    <div class="suggest-modal">
+      <h3>Add a Science Mechanism</h3>
+      <p class="suggest-desc">Know a research-backed principle that belongs in the registry? Share the name and source — we'll verify and add it.</p>
+      <div id="suggestForm">
+        <div class="suggest-field">
+          <label>What's the name of the skill?</label>
+          <input type="text" id="suggestName" placeholder="e.g. Spaced Interleaving">
+        </div>
+        <div class="suggest-field">
+          <label>What is the main academic source?</label>
+          <input type="text" id="suggestSource" placeholder="e.g. Roediger &amp; Karpicke (2006)">
+        </div>
+        <div class="suggest-field">
+          <label>Your e-mail</label>
+          <input type="email" id="suggestEmail" placeholder="you@mentimeter.com">
+        </div>
+        <div class="suggest-actions">
+          <button class="suggest-submit-btn" onclick="submitSuggestion()">Send suggestion</button>
+          <button class="suggest-cancel-btn" onclick="closeSuggestModal()">Cancel</button>
+        </div>
+      </div>
+      <div class="suggest-success" id="suggestSuccess">
+        <div class="s-icon">🧠</div>
+        <h4>Thanks for your suggestion!</h4>
+        <p>We'll review the source and add it to the registry once verified.</p>
+        <button class="suggest-submit-btn" onclick="closeSuggestModal()" style="margin-top:16px;max-width:160px;margin-left:auto;margin-right:auto;display:block;">Close</button>
+      </div>
+    </div>
+  </div>
+
   <footer>
-    <div class="footer-logo"><img src="assets/images/Footer-Menti_Brand_Logo.png" alt="Mentimeter" style="height:40px;display:block;"></div>
-    <p>Internal resource — Our Science-Informed Thought Leadership · 2026 - version 1.0</p>
-    <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    <div class="footer-top">
+      <div class="footer-logo"><img src="assets/images/Footer-Menti_Brand_Logo.png" alt="Mentimeter"></div>
+      <p>Internal resource — Our Science-Informed Thought Leadership · 2026 - version 1.0</p>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+        <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <button class="footer-suggest-btn" onclick="openSuggestModal()">+ Add Science Mechanism</button>
+      </div>
+    </div>
+    <div class="footer-glossary">
+      <div class="footer-glossary-header" onclick="toggleGlossary()">
+        <div class="footer-glossary-title">Academic Glossary A–Z</div>
+        <span class="glossary-toggle-label" id="glossaryToggleLabel">Show ↓</span>
+      </div>
+      <div class="glossary-body" id="glossaryBody"></div>
+    </div>
   </footer>
 
   <script>
@@ -1224,6 +1444,144 @@
     window.addEventListener('scroll', () => {
       document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
     });
+
+    // ── Suggestion form ────────────────────────────────────────
+    // To enable Slack DM notifications, replace '' with your Slack Incoming Webhook URL
+    // See CLAUDE.md for setup instructions
+    const SLACK_WEBHOOK_URL = '';
+
+    function openSuggestModal() {
+      document.getElementById('suggestOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSuggestModal() {
+      document.getElementById('suggestOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        document.getElementById('suggestForm').style.display = 'block';
+        document.getElementById('suggestSuccess').style.display = 'none';
+        ['suggestName','suggestSource','suggestEmail'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.value = '';
+        });
+      }, 300);
+    }
+    async function submitSuggestion() {
+      const name   = (document.getElementById('suggestName')?.value || '').trim();
+      const source = (document.getElementById('suggestSource')?.value || '').trim();
+      const email  = (document.getElementById('suggestEmail')?.value || '').trim();
+      if (!name || !source || !email) { alert('Please fill in all three fields.'); return; }
+      if (SLACK_WEBHOOK_URL) {
+        try {
+          await fetch(SLACK_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              text: `🧠 *New Science Mechanism Suggested*\n\n*Skill:* ${name}\n*Source:* ${source}\n*Suggested by:* ${email}\n\n_Via the Thought Leadership website_`
+            })
+          });
+        } catch(e) { /* silent fail */ }
+      }
+      document.getElementById('suggestForm').style.display = 'none';
+      document.getElementById('suggestSuccess').style.display = 'block';
+    }
+
+    // ── Academic Glossary ──────────────────────────────────────
+    const GLOSSARY = [
+      { term: 'Amygdala', def: 'The brain region involved in emotional processing and memory consolidation. Activation strengthens encoding for emotionally significant events.' },
+      { term: 'Anchoring Effect', def: 'A cognitive bias where individuals rely too heavily on the first piece of information encountered when making decisions or judgments.' },
+      { term: 'Attention', def: 'The selective concentration of cognitive resources on specific information. Limited in capacity — it must be actively managed to support thinking and learning.' },
+      { term: 'Autonomy', def: 'One of three core needs in Self-Determination Theory. The experience of having genuine choice and control over one\'s own behavior and goals.' },
+      { term: 'Behavioral Science', def: 'An interdisciplinary field studying human behavior through psychology, economics, and neuroscience — focused on why people act as they do.' },
+      { term: 'Bounded Rationality', def: 'The concept that decision-making is constrained by limited information, cognitive capacity, and time — leading to "good enough" rather than optimal choices.' },
+      { term: 'Choice Architecture', def: 'The design of how options are presented to decision-makers, which significantly influences choices without restricting freedom.' },
+      { term: 'Cognitive Bias', def: 'A systematic deviation from rationality in judgment, arising from mental shortcuts (heuristics) that can lead to inaccurate conclusions.' },
+      { term: 'Cognitive Flexibility', def: 'The mental ability to switch between concepts or adapt thinking in response to changing demands and new information.' },
+      { term: 'Cognitive Load', def: 'The total mental effort in working memory at any given time. High cognitive load impairs learning, comprehension, and decision quality.' },
+      { term: 'Collective Intelligence', def: 'The enhanced problem-solving capacity that emerges when groups think together effectively, exceeding what individuals can achieve alone.' },
+      { term: 'Competence', def: 'One of three core needs in Self-Determination Theory. The experience of effectiveness and mastery in one\'s activities.' },
+      { term: 'Conformity', def: 'The tendency to align beliefs or behaviors with those of a group, often at the expense of independent judgment and honest input.' },
+      { term: 'Consolidation (Memory)', def: 'The stabilization of newly formed memories into long-term storage — primarily occurring during sleep via hippocampal-cortical transfer.' },
+      { term: 'Convergent Thinking', def: 'The cognitive mode that narrows a set of possibilities to the best option through systematic evaluation against criteria.' },
+      { term: 'Default Effect', def: 'The tendency to stick with the pre-selected option. Defaults are one of the most powerful levers in behavior design.' },
+      { term: 'Desirable Difficulties', def: 'Learning conditions that slow short-term progress but produce stronger long-term retention — such as spacing, testing, and interleaving.' },
+      { term: 'Diffusion of Responsibility', def: 'The tendency to feel less personally responsible for action when others are present, reducing accountability in group settings.' },
+      { term: 'Divergent Thinking', def: 'A cognitive process for generating many possible solutions or ideas, characterized by quantity, variety, and suspension of judgment.' },
+      { term: 'Dopamine', def: 'A neurotransmitter associated with reward, motivation, and attention. Novelty and personal relevance trigger dopamine release, supporting focused learning.' },
+      { term: 'Dual Process Theory', def: 'A framework distinguishing fast, automatic "System 1" thinking from slow, deliberate "System 2" reasoning. Popularized by Kahneman.' },
+      { term: 'Effortful Processing', def: 'Intentional, conscious mental effort during encoding. More effortful processing generally produces stronger and more durable memory formation.' },
+      { term: 'Elaborative Encoding', def: 'A memory strategy that connects new information to existing knowledge, creating richer associations that improve later retrieval.' },
+      { term: 'Emotional Salience', def: 'The degree to which information carries emotional significance. High salience strengthens memory encoding via amygdala activation.' },
+      { term: 'Encoding', def: 'The initial process of transforming information into a memory representation. The quality of encoding determines how well it can later be retrieved.' },
+      { term: 'Evaluation Apprehension', def: 'The concern about being negatively judged by others, which reduces willingness to share ideas honestly in group settings.' },
+      { term: 'Extrinsic Motivation', def: 'Motivation driven by external rewards or pressures (grades, money, deadlines) rather than genuine interest. Produces compliance but rarely deep engagement.' },
+      { term: 'Forgetting Curve', def: 'A representation of how memory decays rapidly over time without reinforcement, then levels off. Described by Ebbinghaus (1885).' },
+      { term: 'Framing Effect', def: 'The phenomenon where identical information presented differently (positively vs. negatively) produces systematically different responses and decisions.' },
+      { term: 'Friction', def: 'In behavioral science, the resistance that makes desired behaviors harder to perform — often unconsciously reducing follow-through on good intentions.' },
+      { term: 'Generation Effect', def: 'The finding that information is remembered significantly better when actively generated by the learner rather than passively read or heard.' },
+      { term: 'Goal-Setting Theory', def: 'A motivational theory (Locke & Latham) establishing that specific, challenging goals produce higher performance than vague or easy ones.' },
+      { term: 'Groupthink', def: 'A psychological phenomenon where the desire for group harmony leads to irrational decisions and suppression of dissenting views.' },
+      { term: 'Habit Formation', def: 'The process by which behaviors become automatic and context-triggered, reducing the need for conscious decision-making or willpower.' },
+      { term: 'Hidden Profile Effect', def: 'The group tendency to over-discuss information shared by all members while ignoring unique information held by individuals — leading to suboptimal decisions.' },
+      { term: 'Hippocampus', def: 'A brain region critical for forming new declarative memories and connecting new information to existing knowledge structures.' },
+      { term: 'Implementation Intentions', def: 'Specific "if-then" plans linking an action to a situational cue ("If X, then I will Y"), significantly increasing the likelihood of follow-through.' },
+      { term: 'Information Sampling Bias', def: 'The group tendency to over-discuss information already known to everyone, while under-sampling unique information held by individuals.' },
+      { term: 'Intrinsic Motivation', def: 'Motivation arising from genuine interest or enjoyment in an activity, independent of external rewards. Associated with deeper engagement and persistence.' },
+      { term: 'Learning Transfer', def: 'The application of knowledge or skills learned in one context to a different, new situation. Transfer is the ultimate goal of education and training.' },
+      { term: 'Long-term Memory', def: 'The memory system for storing information over extended periods. New information requires effortful, repeated processing to reach long-term storage.' },
+      { term: 'Long-term Potentiation', def: 'A persistent strengthening of synaptic connections between neurons — considered a key cellular mechanism underlying learning and memory.' },
+      { term: 'Massed Practice', def: 'Studying in one concentrated session (cramming). Effective for short-term performance but produces far weaker long-term retention than spaced practice.' },
+      { term: 'Memory Consolidation', def: 'The stabilization of newly formed memories into long-term storage, primarily occurring during sleep via hippocampal replay.' },
+      { term: 'Metacognition', def: 'The awareness and regulation of one\'s own thinking — knowing what you know, knowing what you don\'t, and adjusting learning strategies accordingly.' },
+      { term: 'Noise', def: 'In decision science (Kahneman), unwanted variability in judgment causing different people — or the same person at different times — to reach inconsistent conclusions.' },
+      { term: 'Nudge', def: 'A choice architecture intervention that predictably steers behavior in a desired direction without restricting options or changing incentives.' },
+      { term: 'Prefrontal Cortex', def: 'The brain region responsible for executive functions: attention, planning, working memory, and decision-making. Highly sensitive to stress and cognitive overload.' },
+      { term: 'Prior Knowledge', def: 'Existing knowledge structures learners bring to a new situation. New information encodes more effectively when anchored to what someone already knows.' },
+      { term: 'Production Blocking', def: 'In groups, the inability to share ideas because only one person can speak at a time — reducing total idea generation and diversity.' },
+      { term: 'Prospect Theory', def: 'A behavioral theory (Kahneman & Tversky) showing losses feel significantly more impactful than equivalent gains, explaining risk-averse behavior.' },
+      { term: 'Psychological Ownership', def: 'The feeling of possessing something — a project, decision, or idea — leading to stronger commitment, care, and follow-through.' },
+      { term: 'Psychological Safety', def: 'A shared belief that the group is safe for interpersonal risk-taking — speaking up, asking questions, or disagreeing without fear of negative consequences.' },
+      { term: 'Relatedness', def: 'One of three core needs in Self-Determination Theory. The experience of connection, belonging, and caring relationships within a group.' },
+      { term: 'Retrieval', def: 'The process of recalling information from memory. The act of retrieval itself — not just re-reading — is one of the most powerful ways to strengthen memory.' },
+      { term: 'Retrieval Cue', def: 'A stimulus that helps trigger memory recall, often by recreating the context or associations present during original encoding.' },
+      { term: 'Retrieval Practice', def: 'A learning strategy involving repeated self-testing on previously learned material. Consistently produces stronger long-term retention than additional study time.' },
+      { term: 'Schema', def: 'An organized mental framework representing knowledge about a concept or event. New information is interpreted and stored relative to existing schemas.' },
+      { term: 'Self-Determination Theory', def: 'A psychological framework (Deci & Ryan) proposing that autonomy, competence, and relatedness are universal needs whose fulfilment drives intrinsic motivation.' },
+      { term: 'Social Loafing', def: 'The tendency to exert less individual effort when working in a group than alone, due to reduced personal accountability and visibility.' },
+      { term: 'Social Proof', def: 'The phenomenon where people copy the actions of others in uncertain situations, assuming those actions reflect correct or expected behavior.' },
+      { term: 'Spaced Practice', def: 'Studying material across multiple sessions separated by time intervals. Produces significantly stronger long-term retention than massed practice.' },
+      { term: 'Testing Effect', def: 'The finding that taking a test produces greater long-term retention than additional study time — even when test feedback is delayed.' },
+      { term: 'Transfer-Appropriate Processing', def: 'The principle that learning is strongest when the mental processes used during encoding match those required during retrieval or application.' },
+      { term: 'Working Memory', def: 'A limited-capacity system for temporarily holding and manipulating information — the brain\'s "mental workspace." Typically holds just 4±1 items at a time.' },
+    ];
+
+    function buildGlossary() {
+      const container = document.getElementById('glossaryBody');
+      if (!container || container.innerHTML) return;
+      const byLetter = {};
+      GLOSSARY.forEach(t => {
+        const l = t.term[0].toUpperCase();
+        (byLetter[l] = byLetter[l] || []).push(t);
+      });
+      let html = '';
+      Object.keys(byLetter).sort().forEach(letter => {
+        html += `<div class="glossary-letter-section"><div class="glossary-letter-heading">${letter}</div><div class="glossary-grid">`;
+        byLetter[letter].forEach(t => {
+          html += `<div class="glossary-item"><div class="glossary-term">${t.term}</div><div class="glossary-def">${t.def}</div></div>`;
+        });
+        html += `</div></div>`;
+      });
+      container.innerHTML = html;
+    }
+
+    function toggleGlossary() {
+      const body  = document.getElementById('glossaryBody');
+      const label = document.getElementById('glossaryToggleLabel');
+      if (!body) return;
+      const isOpen = body.classList.toggle('open');
+      label.textContent = isOpen ? 'Hide ↑' : 'Show ↓';
+      if (isOpen) buildGlossary();
+    }
   </script>
 </body>
 </html>
