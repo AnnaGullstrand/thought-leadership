@@ -159,7 +159,7 @@
       "id": "reset-attention",
       "domain": "individual-cognition",
       "headline": "Reset Attention Continuously",
-      "problem": "Attention fluctuates. People drift — not because they don't care, but because passive listening isn't enough to stay present.",
+      "problem": "Attention fluctuates. People drift — not because they don't care, but because passive listening isn't enough.",
       "solution": "Build interaction moments into every session to re-orient focus and bring people back into active processing.",
       "source": {
         "text": "Posner & Petersen (1990); Mayer (2009)",
@@ -656,7 +656,7 @@
       "id": "distribute-participation",
       "domain": "social-psychology",
       "headline": "Distribute Participation",
-      "problem": "A few voices dominate. Most people stay silent — not because they have nothing to say, but because the structure doesn't invite them.",
+      "problem": "A few voices dominate. Most people stay silent — not from having nothing to say, but because the structure doesn't invite them.",
       "solution": "Use tools and formats that ensure everyone contributes, not just the confident or the senior.",
       "source": {
         "text": "Woolley et al. (2010); Stasser & Titus (1985)",
@@ -1044,8 +1044,8 @@
       "id": "slow-thinking-down",
       "domain": "individual-cognition",
       "headline": "Slow Thinking Down",
-      "problem": "Fast, intuitive thinking leads to biased judgments. People act on System 1 shortcuts without engaging deliberate reasoning.",
-      "solution": "Create structured reflection moments that slow thinking down and prompt deliberate, effortful processing before conclusions are drawn.",
+      "problem": "Fast intuitive thinking leads to biased judgments. People act on System 1 shortcuts without engaging deliberate reasoning.",
+      "solution": "Create structured reflection moments before decisions to prompt deliberate, effortful processing.",
       "source": {
         "text": "Kahneman (2011) — Thinking, Fast and Slow; Evans & Stanovich (2013)",
         "url": "https://doi.org/10.1146/annurev-psych-113011-143754"
@@ -1098,8 +1098,8 @@
       "id": "activate-personal-relevance",
       "domain": "individual-cognition",
       "headline": "Activate Personal Relevance",
-      "problem": "Low personal relevance reduces cognitive engagement. People don't invest mental effort in content that feels abstract or disconnected from their reality.",
-      "solution": "Connect content to personal goals, roles, and real situations to increase relevance and strengthen cognitive engagement.",
+      "problem": "Low personal relevance reduces engagement. People don't invest effort in content that feels abstract or disconnected.",
+      "solution": "Connect content to personal goals and real situations to increase relevance and deepen cognitive engagement.",
       "source": {
         "text": "Craik & Lockhart (1972) — Levels of Processing; Rogers et al. (1977); Hidi & Renninger (2006)",
         "url": "https://doi.org/10.1016/S0022-5371(72)80001-X"
@@ -1152,7 +1152,7 @@
       "id": "strengthen-memory-with-emotion",
       "domain": "learning-science",
       "headline": "Strengthen Memory with Emotion",
-      "problem": "Emotionally neutral content is poorly encoded and quickly forgotten. Relevance and emotional engagement are not luxuries — they are memory prerequisites.",
+      "problem": "Emotionally neutral content is poorly encoded and quickly forgotten — regardless of how clearly it is explained.",
       "solution": "Increase emotional salience and personal meaning to strengthen memory encoding and long-term retention.",
       "source": {
         "text": "McGaugh (2000) — Memory consolidation and emotion; Immordino-Yang & Damasio (2007)",
@@ -1205,7 +1205,7 @@
       "id": "apply-learning-in-context",
       "domain": "learning-science",
       "headline": "Apply Learning in Context",
-      "problem": "Knowledge does not transfer without application. People can recall information in the same format they learned it, but fail to use it in practice.",
+      "problem": "Knowledge doesn't transfer without application. People can recall information but fail to use it when the context changes.",
       "solution": "Use application, practice, and varied contexts to build transferable, usable knowledge.",
       "source": {
         "text": "Schmidt & Bjork (1992) — New conceptualizations of practice; Rohrer & Taylor (2007)",
@@ -1261,8 +1261,8 @@
       "id": "separate-generation-from-evaluation",
       "domain": "social-psychology",
       "headline": "Separate Idea Generation from Evaluation",
-      "problem": "When evaluation happens too early, people self-censor and idea diversity collapses. Groups converge before they have fully explored the possibility space.",
-      "solution": "Explicitly separate the divergent phase (idea generation) from the convergent phase (evaluation and prioritisation).",
+      "problem": "When evaluation happens too early, people self-censor and idea diversity collapses before the space is fully explored.",
+      "solution": "Explicitly separate divergent generation from convergent evaluation — two distinct phases, never mixed.",
       "source": {
         "text": "Osborn (1953) — Applied Imagination; Diehl & Stroebe (1987); Nijstad & Stroebe (2006)",
         "url": "https://doi.org/10.1037/0033-2909.117.3.403"
@@ -1314,8 +1314,8 @@
       "id": "ask-single-focus-questions",
       "domain": "decision-science",
       "headline": "Ask Precise, Single-Focus Questions",
-      "problem": "Weak or compound questions produce ambiguous, unreliable input. When a question asks multiple things at once, answers become impossible to interpret.",
-      "solution": "Ask one precise, single-focus question at a time to improve input quality and interpretability.",
+      "problem": "Weak or compound questions produce ambiguous, unreliable input that cannot be clearly interpreted or acted on.",
+      "solution": "Ask one precise, single-focus question at a time. Clarity in the question is the foundation of reliable input.",
       "source": {
         "text": "Tourangeau, Rips & Rasinski (2000) — The Psychology of Survey Response; Krosnick (1999)",
         "url": "https://doi.org/10.1017/CBO9780511819322"
@@ -1375,8 +1375,8 @@
       "id": "use-neutral-wording",
       "domain": "decision-science",
       "headline": "Use Neutral Question Wording",
-      "problem": "Wording unintentionally introduces bias. Leading phrasing, loaded language, and asymmetrical response options push people toward predetermined answers.",
-      "solution": "Use neutral, balanced wording and symmetrical response options to collect honest, unbiased input.",
+      "problem": "Leading question wording pushes people toward predetermined answers — corrupting input before they've formed their own view.",
+      "solution": "Use neutral, balanced wording and symmetrical response options to capture what people actually think.",
       "source": {
         "text": "Tversky & Kahneman (1981) — Framing Effects; Schwarz (1999) — Survey methodology",
         "url": "https://doi.org/10.1126/science.7455683"
@@ -1432,8 +1432,8 @@
       "id": "match-format-to-decision",
       "domain": "decision-science",
       "headline": "Match Format to Decision Type",
-      "problem": "Input format doesn't match the judgment needed. Asking people to rate when they should rank, or vote when they should evaluate, produces unreliable and misleading data.",
-      "solution": "Match the question format to the cognitive task — ranking, rating, open text, or binary choice each serve different decision types.",
+      "problem": "The wrong question format distorts input. Rating when you should rank, or voting when you should evaluate, misleads.",
+      "solution": "Match format to the cognitive task — ranking, rating, open text, and binary each serve different judgment types.",
       "source": {
         "text": "Payne, Bettman & Johnson (1993) — The Adaptive Decision Maker; Hsee & Rottenstreich (2004)",
         "url": "https://doi.org/10.1017/CBO9781139173933"
@@ -1486,8 +1486,8 @@
       "id": "reduce-noise-in-evaluation",
       "domain": "decision-science",
       "headline": "Reduce Noise in Evaluation",
-      "problem": "Evaluation is inconsistent. Different people apply different standards to the same information — and the same person applies different standards on different days. This 'noise' is as damaging as bias.",
-      "solution": "Use predefined criteria and standardised scoring to increase fairness, consistency, and decision quality.",
+      "problem": "Evaluation is inconsistent — the same information judged differently by different people, or on different days.",
+      "solution": "Use predefined criteria and standardised scoring to reduce the inconsistency that corrupts judgment.",
       "source": {
         "text": "Kahneman, Sibony & Sunstein (2021) — Noise: A Flaw in Human Judgment",
         "url": "https://doi.org/10.1002/ejsp.2862"
@@ -1539,8 +1539,8 @@
       "id": "calibrate-rigor-to-stakes",
       "domain": "decision-science",
       "headline": "Calibrate Rigor to Stakes",
-      "problem": "High-stakes decisions are often made with the same low-rigor process as everyday choices. The cost of that mismatch is disproportionate.",
-      "solution": "Apply structured analytic techniques and escalate process depth in proportion to the impact of the decision.",
+      "problem": "Treating every decision with the same lightweight process — regardless of its impact — systematically produces poor outcomes.",
+      "solution": "Match process depth to decision impact — light touch for low-stakes, structured rigor for high-stakes.",
       "source": {
         "text": "Clemen & Reilly (2014) — Making Hard Decisions; Hammond, Keeney & Raiffa (1999) — Smart Choices",
         "url": "https://doi.org/10.1287/mnsc.40.1.5"
@@ -1593,8 +1593,8 @@
       "id": "design-for-habit",
       "domain": "behavioral-science",
       "headline": "Design for Habit, Not Willpower",
-      "problem": "Behavior decays when it relies on motivation and willpower. These are finite resources that erode under stress, busyness, and competing demands.",
-      "solution": "Repeat behaviors in stable contexts until situational cues trigger them automatically — making the desired action the path of least effort.",
+      "problem": "Behaviors that rely on willpower are fragile — they work when energy is high and fail when it isn't.",
+      "solution": "Repeat behaviors in consistent contexts until situational cues trigger them automatically, bypassing willpower.",
       "source": {
         "text": "Wood & Neal (2007) — A new look at habits; Lally et al. (2010) — How habits are formed",
         "url": "https://doi.org/10.1037/0033-295X.114.4.843"
@@ -1645,8 +1645,8 @@
       "id": "reduce-friction",
       "domain": "behavioral-science",
       "headline": "Reduce Friction — Design the Default",
-      "problem": "Undesired behaviors are often easier than desired ones. People take the path of least resistance — and if that path leads somewhere you don't want, effort won't fix it.",
-      "solution": "Redesign defaults and reduce friction so the target behavior becomes the path of least resistance.",
+      "problem": "Undesired behaviors are often the path of least resistance. When the default is wrong, motivation alone doesn't fix it.",
+      "solution": "Redesign defaults so the right behavior is the easiest one. Remove friction from the desired path.",
       "source": {
         "text": "Thaler & Sunstein (2008) — Nudge; Johnson & Goldstein (2003) — Do defaults save lives?",
         "url": "https://doi.org/10.1126/science.1091721"
@@ -1699,8 +1699,8 @@
       "id": "foster-intrinsic-motivation",
       "domain": "behavioral-science",
       "headline": "Foster Intrinsic Motivation",
-      "problem": "New behaviors don't last when people feel controlled or lack personal ownership. External pressure creates compliance — not commitment.",
-      "solution": "Foster autonomy, competence, and relatedness to increase intrinsic motivation and lasting behavior internalization.",
+      "problem": "External pressure produces compliance, not commitment. People need autonomy, competence, and belonging to genuinely engage.",
+      "solution": "Foster autonomy, competence, and relatedness — the conditions for motivation that persists without enforcement.",
       "source": {
         "text": "Deci & Ryan (1985, 2000) — Self-Determination Theory; Ryan & Deci (2017)",
         "url": "https://doi.org/10.1037/0003-066X.55.1.68"
@@ -1755,8 +1755,8 @@
       "id": "use-social-norms",
       "domain": "behavioral-science",
       "headline": "Use Social Norms to Reinforce Behavior",
-      "problem": "New behaviors fade when they are not socially reinforced. Individual commitment weakens when the surrounding culture doesn't reflect or reward the behavior.",
-      "solution": "Reinforce behaviors through shared norms, role identity, and visible social proof — until the behavior aligns with who people see themselves as.",
+      "problem": "New behaviors fade without social reinforcement. What people believe peers are doing shapes what they do themselves.",
+      "solution": "Reinforce desired behaviors through shared norms and visible social proof until they align with group identity.",
       "source": {
         "text": "Cialdini (2001) — Influence; Pierce, Kostova & Dirks (2001) — Psychological ownership; Nolan et al. (2008)",
         "url": "https://doi.org/10.1037/0022-3514.91.6.1015"
@@ -1811,8 +1811,8 @@
       "id": "divergent-thinking",
       "domain": "social-psychology",
       "headline": "Divergent Thinking",
-      "problem": "When groups try to generate and evaluate ideas at the same time, both fail. Judgment silences creativity, and creative pressure distorts judgment. The result is fewer ideas, shallower thinking, and convergence driven by social pressure rather than quality.",
-      "solution": "In the divergent phase, suspend all evaluation. The goal is quantity, variety, and novelty — not quality. Leaders must actively protect this phase from premature criticism and use open, generative prompts that invite wild and unconventional thinking.",
+      "problem": "When groups generate and evaluate simultaneously, judgment silences creativity before the best ideas can emerge.",
+      "solution": "In the divergent phase, suspend all evaluation. Prioritise quantity, variety, and novelty — not quality or feasibility.",
       "source": {
         "text": "Guilford (1967) — The Nature of Human Intelligence; Osborn (1953) — Applied Imagination; Diehl & Stroebe (1987)",
         "url": "https://doi.org/10.1037/0033-2909.117.3.403"
@@ -1864,8 +1864,8 @@
       "id": "convergent-thinking",
       "domain": "decision-science",
       "headline": "Convergent Thinking",
-      "problem": "After divergence, groups often converge badly — collapsing to the loudest voice, the first idea, or the highest-status opinion rather than the best option. Without structure, evaluation is driven by social dynamics rather than quality criteria.",
-      "solution": "In the convergent phase, introduce explicit criteria, independent evaluation, and structured comparison before discussion. Leaders must shift their prompts from generative to evaluative — asking people to assess, compare, and prioritise rather than create.",
+      "problem": "Without structure, groups converge to the loudest voice or highest-status opinion — not the best option available.",
+      "solution": "Define criteria upfront, evaluate independently, then discuss. Structure the shift from generating to judging.",
       "source": {
         "text": "De Bono (1985) — Six Thinking Hats; Paulus & Nijstad (2003) — Group Creativity; Kahneman, Sibony & Sunstein (2021) — Noise",
         "url": "https://doi.org/10.1093/acprof:oso/9780195147308.001.0001"
@@ -1918,8 +1918,8 @@
       "id": "reflective-check-in",
       "domain": "behavioral-science",
       "headline": "Reflective Check-In",
-      "problem": "Sessions often begin with people cognitively and emotionally unavailable — distracted, guarded, or still processing whatever happened before the meeting. Starting immediately with content or decisions before the group is present produces lower engagement, less honest participation, and poorer outcomes.",
-      "solution": "Use a low-risk, inclusive opening question that invites reflection and signals that everyone's perspective is welcome. A brief reflective check-in activates attention, builds psychological safety, and creates the participatory tone that sustains engagement throughout the session.",
+      "problem": "Sessions often begin with people cognitively unavailable — distracted or still processing what came right before.",
+      "solution": "Open with a low-risk, inclusive question that invites reflection and signals that everyone's perspective is welcome.",
       "source": {
         "text": "Edmondson (1999) — Psychological Safety; Schön (1983) — The Reflective Practitioner; Kolb (1984) — Experiential Learning Theory; Icebreaker research: Polzer et al. (2002)",
         "url": "https://doi.org/10.2307/2666999"
@@ -1973,8 +1973,8 @@
       "id": "scale-design-quality",
       "domain": "decision-science",
       "headline": "Scale Design Quality",
-      "problem": "Poorly designed rating scales produce unreliable, uninterpretable, and misleading data. Scales with too many points, unlabelled midpoints, asymmetric options, or biased anchors introduce systematic noise — making the resulting insights look precise while being fundamentally flawed.",
-      "solution": "Design scales that are balanced, clearly labelled, appropriate in length, and matched to the construct being measured. Good scale design is the difference between data that informs decisions and data that merely creates the illusion of measurement.",
+      "problem": "Poorly designed rating scales produce unreliable data. Asymmetric options and unclear anchors introduce systematic bias.",
+      "solution": "Design scales that are balanced, clearly labelled, and matched to what you're actually measuring.",
       "source": {
         "text": "Likert (1932) — A Technique for the Measurement of Attitudes; Krosnick & Fabrigar (1997) — Designing Good Rating Scales; Schwarz et al. (1991) — Numerical labels in survey scales",
         "url": "https://doi.org/10.1037/0033-2909.104.1.3"
@@ -2029,8 +2029,8 @@
       "id": "action-ownership-clarity",
       "domain": "behavioral-science",
       "headline": "Action Ownership Clarity",
-      "problem": "Meetings, workshops, and decisions regularly end without clear action ownership. Vague commitments — 'we should', 'someone will', 'the team can' — are systematically not acted on. When nobody's name is on it, it belongs to nobody.",
-      "solution": "Every action that emerges from a session must be assigned to a named individual with a clear deliverable and an explicit deadline. Ownership clarity is the single most reliable predictor of whether a decision will be executed.",
+      "problem": "Meetings end without clear ownership. Vague commitments — 'we should', 'someone will' — are systematically not acted on.",
+      "solution": "Every action needs a named owner, a specific deliverable, and a deadline. Without a name on it, it belongs to nobody.",
       "source": {
         "text": "Gollwitzer (1999) — Implementation Intentions; Hackman (2002) — Leading Teams; Locke & Latham (2002) — Goal Setting Theory; Cialdini (2001) — Commitment and Consistency",
         "url": "https://doi.org/10.1037/0003-066X.54.7.493"
@@ -2082,8 +2082,8 @@
       "id": "focused-attention",
       "domain": "individual-cognition",
       "headline": "Focused Attention & Single-Tasking",
-      "problem": "Multitasking is a myth. What people experience as multitasking is rapid task-switching — and every switch carries a cognitive cost. Divided attention dramatically reduces encoding quality, comprehension, and learning. Distracted learning is not slower learning; it is non-learning.",
-      "solution": "Set a clear goal before a learning session. Structure the environment to eliminate competing inputs. Protect uninterrupted attention as a deliberate design choice — both for yourself and for anyone you are teaching or leading.",
+      "problem": "Multitasking is a myth. Every task-switch carries a cost — divided attention degrades encoding and produces non-learning.",
+      "solution": "Set a clear goal, eliminate distractions, and structure sessions in focused units with active interaction breaks.",
       "source": {
         "text": "Ophir, Nass & Wagner (2009) — Cognitive control in multitaskers; Sana, Weston & Cepeda (2013) — Laptop multitasking impairs learning; Rubinstein, Meyer & Evans (2001) — Executive control and task switching",
         "url": "https://doi.org/10.1073/pnas.0903620106"
@@ -2136,8 +2136,8 @@
       "id": "metacognition",
       "domain": "learning-science",
       "headline": "Metacognition — Thinking About Your Thinking",
-      "problem": "Learners routinely overestimate how well they understand something — the 'illusion of knowing' causes people to stop learning before they should. Without the ability to accurately monitor their own understanding, people cannot identify gaps, adjust their strategy, or ask for help in time.",
-      "solution": "Build in structured metacognitive prompts that ask learners to reflect on their own thinking process — what they understand, what remains unclear, what strategy they are using, and what they would do differently. Thinking about thinking is a trainable skill that dramatically improves learning outcomes.",
+      "problem": "Learners overestimate their own understanding — stopping too early because gaps stay invisible until assessment reveals them.",
+      "solution": "Build in specific prompts: 'How well could you explain this? What remains unclear? What strategy are you using?'",
       "source": {
         "text": "Flavell (1979) — Metacognition and cognitive monitoring; Kruger & Dunning (1999) — Unskilled and Unaware; Nelson & Narens (1990) — Metamemory model; Hattie & Timperley (2007) — The Power of Feedback",
         "url": "https://doi.org/10.1037/0003-066X.34.10.906"
@@ -2191,8 +2191,8 @@
       "id": "learning-by-teaching",
       "domain": "learning-science",
       "headline": "Learning by Teaching",
-      "problem": "Passive reception of information produces weak encoding. Learners who receive content but never explain, articulate, or apply it to another person encode it shallowly and forget it quickly. The expectation of simply understanding is a fundamentally weaker learning condition than the expectation of teaching.",
-      "solution": "Ask people to explain, teach, or share what they have learned — to a colleague, to the group, or even as a written explanation to an imaginary reader. The act of teaching activates retrieval, forces organisation of knowledge, and exposes gaps that passive understanding hides.",
+      "problem": "Passive reception produces weak encoding. Learners who only receive content encode it shallowly and forget it quickly.",
+      "solution": "Ask people to teach or explain what they learned — to a colleague, the group, or in writing.",
       "source": {
         "text": "Nestojko et al. (2014) — Expecting to teach enhances learning; Fiorella & Mayer (2013, 2016) — The relative benefits of learning by teaching; Bargh & Schul (1980) — On the cognitive benefits of teaching",
         "url": "https://doi.org/10.3758/s13421-014-0416-z"
@@ -2243,8 +2243,8 @@
       "id": "sleep-and-memory-consolidation",
       "domain": "learning-science",
       "headline": "Sleep and Memory Consolidation",
-      "problem": "Most learning programs pack maximum content into minimum time — all-day events, back-to-back sessions, intensive single-day workshops. This ignores a fundamental biological constraint: the brain consolidates and strengthens memories during sleep. Learning that is not followed by sleep is not yet complete.",
-      "solution": "Design learning programs to include sleep between sessions. Space learning events across days rather than hours. The most effective reinforcement intervention is simply giving the brain time to sleep before the next round of learning or practice.",
+      "problem": "Most learning packs content into single sessions, ignoring that memory consolidation requires sleep to complete.",
+      "solution": "Space learning across days with sleep between sessions. Memory consolidation happens during sleep — not during study.",
       "source": {
         "text": "Walker & Stickgold (2006) — Sleep, memory, and plasticity; Stickgold (2005) — Sleep-dependent memory consolidation; Diekelmann & Born (2010) — The memory function of sleep; Payne & Kensinger (2010) — Sleep's role in emotional memory",
         "url": "https://doi.org/10.1126/science.1110540"
